@@ -1,0 +1,159 @@
+@keyframes slide-out {
+  100% {
+    transform: translateX(200vw);
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(200vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+nav {
+  box-sizing: border-box;
+  position: absolute;
+  width: 85%;
+  max-width: var(--nav-width);
+  height: 100%;
+  top: 49px;
+  left: -200vw;
+  background-color: var(--n-dark);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  z-index: 110;
+}
+
+nav :focus-visible {
+  outline: 1px dotted var(--focus-color);
+  outline-offset: -2px;
+}
+
+nav ul {
+  display: none;
+  list-style-type: none;
+  margin: 1rem;
+}
+nav > ul {
+  height: 80vh;
+  overflow-y: auto;
+}
+nav ul li + li {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px dotted currentColor;
+}
+
+nav p.skip-link {
+  display: none;
+}
+
+nav ul.level2 {
+  margin: 0 0 0 28px;
+}
+nav ul.level2 li + li {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+a,
+a:visited {
+  display: block;
+  color: var(--text-inv);
+  background-color: var(--main-dark);
+  padding: 0.5em 0;
+}
+a:hover,
+a[aria-current] {
+  color: var(--sec-light);
+}
+
+button.level1 {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  width: 100%;
+  font-family: var(--stack-b);
+  background-color: var(--main-dark);
+  padding: 0.5em 0;
+}
+button.level1:hover {
+  color: var(--sec-light);
+}
+
+button.level1[aria-expanded='false'] + ul.level2 {
+  display: none;
+}
+button.level1[aria-expanded='true'] + ul.level2 {
+  display: block;
+}
+
+svg {
+  flex: 0 0 24px;
+  fill: currentColor;
+  margin-top: -3px;
+  transform-origin: 50%;
+  transform: rotate(-90deg);
+  transition: all 0.2s;
+}
+button.level1[aria-expanded='true'] svg {
+  transform: rotate(0);
+}
+
+nav.opened {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-name: slide-out;
+}
+nav.closed {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: slide-in;
+}
+
+nav.opened ul,
+nav.opened p.skip-link {
+  display: block;
+}
+
+div.overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 49px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+nav.opened + div.overlay {
+  display: block;
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 1000px) {
+  nav,
+  nav.opened {
+    position: relative;
+    width: 100%;
+    top: 2rem;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: slide-out;
+    box-shadow: none;
+    z-index: 110;
+  }
+  nav > ul {
+    display: block;
+    overflow-y: auto;
+    height: calc(100vh - 250px);
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+  }
+  nav.opened + div.overlay {
+    display: none;
+  }
+}

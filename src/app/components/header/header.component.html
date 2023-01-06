@@ -1,0 +1,32 @@
+<header>
+  <!-- Logo -->
+  <h1 appFocusOnPageChange>
+    <a routerLink="/home" class="logo" routerLinkActive="active">
+      <picture>
+        <source
+          srcset="./assets/img/creamNG-logo.svg"
+          media="(min-width: {{ mediumRes }})" />
+        <img
+          src="./assets/img/creamNG-logo-sml.svg"
+          alt="Cream-NG, your accessible Angular Lib" />
+      </picture>
+    </a>
+  </h1>
+
+  <button
+    id="navControl"
+    class="nav-control"
+    [attr.aria-expanded]="mainNav.isExpanded"
+    aria-controls="mainNavigation"
+    (click)="mainNav.toggleOpen()">
+    <svg role="img" width="24" height="24" aria-describedby="controlLabel">
+      <title id="controlLabel">Open/Close navigation</title>
+      <use href="./assets/img/sprite.svg#bt-menu"></use>
+    </svg>
+  </button>
+  <app-main-navigation
+    setId="mainNavigation"
+    #mainNav
+    currentRoute="currentUrl">
+  </app-main-navigation>
+</header>

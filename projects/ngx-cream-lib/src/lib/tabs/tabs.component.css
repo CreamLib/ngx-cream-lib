@@ -1,0 +1,270 @@
+div.tabsContainer {
+  position: relative;
+  width: 100%;
+}
+
+ul[role='tablist'] {
+  --radius: 0;
+  display: flex;
+  overflow-x: auto;
+  gap: 0.25rem;
+  list-style-type: none;
+  border-bottom: 2px solid var(--main-color);
+}
+
+ul[role='tablist'] li {
+  position: relative;
+}
+
+button.tabber {
+  position: relative;
+  width: 100%;
+  line-height: 1.3;
+  font-family: var(--stack-b);
+  white-space: nowrap;
+  text-align: left;
+  color: var(--body-text);
+  background-color: var(--n-light);
+  padding: 0.5em 1em 0.4em;
+  border-color: var(--main-color);
+  border-radius: 0;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  z-index: 2;
+}
+button.tabber:hover {
+  color: var(--text-inv);
+  background-color: var(--hot-color);
+}
+button.tabber:active {
+  cursor: move;
+}
+
+button.tabber[aria-selected='true'] {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+div.tabsContainer app-tab-panel > div.content[aria-hidden='true'] {
+  display: none;
+}
+div.tabsContainer app-tab-panel > div.content[aria-hidden='false'] {
+  background-color: var(--body-bg);
+  padding: 1rem;
+  margin-top: 2px;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+/* Deletable tabs - delete button */
+
+button.delete {
+  /*display: none;*/
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: 0.6em;
+  right: 0.6em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+  z-index: 2;
+}
+button.delete svg {
+  vertical-align: initial;
+}
+
+button.tabber.deletable {
+  padding-right: 2.5em;
+}
+
+button.tabber[aria-selected='true'] + button.delete {
+  display: block;
+}
+
+/* Discrete */
+
+c3m-tabs.discrete > div.tabsContainer ul[role='tablist'] {
+  position: relative;
+  border: none;
+}
+
+c3m-tabs.discrete > div.tabsContainer ul[role='tablist']::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 3px;
+  background-color: var(--n-medium);
+  z-index: 3;
+}
+
+c3m-tabs.discrete > div.tabsContainer ul[role='tablist'] li button.tabber {
+  color: var(--body-text);
+  background-color: var(--body-bg);
+  padding: 0.5em 0.8em;
+  border: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 4px solid var(--body-bg);
+}
+c3m-tabs.discrete > div.tabsContainer ul[role='tablist'] li button.tabber:hover,
+c3m-tabs.discrete
+  > div.tabsContainer
+  ul[role='tablist']
+  button.tabber[aria-selected='true'] {
+  background-color: var(--body-bg);
+  border-color: var(--main-color);
+}
+
+c3m-tabs.discrete
+  > div.tabsContainer
+  ul[role='tablist']
+  li
+  button.tabber:focus-visible {
+  outline-offset: -3px;
+}
+
+c3m-tabs.discrete
+  > div.tabsContainer
+  app-tab-panel
+  > div.content[aria-hidden='false'] {
+  background-color: var(--body-bg);
+  padding: 1rem 0 0;
+}
+
+/* Block style */
+
+c3m-tabs.block-style > div.tabsContainer > ul[role='tablist'] {
+  position: relative;
+  border: none;
+}
+
+c3m-tabs.block-style > div.tabsContainer > ul[role='tablist'] li button.tabber {
+  color: var(--body-text);
+  background-color: var(--body-bg);
+  padding: 0.5em 0.8em;
+  border: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 4px solid var(--body-bg);
+}
+c3m-tabs.block-style
+  > div.tabsContainer
+  > ul[role='tablist']
+  li
+  button.tabber:hover,
+c3m-tabs.block-style
+  > div.tabsContainer
+  > ul[role='tablist']
+  button.tabber[aria-selected='true'] {
+  background-color: var(--n-light);
+  border-color: var(--n-light);
+}
+
+c3m-tabs.block-style
+  > div.tabsContainer
+  > ul[role='tablist']
+  li
+  button.tabber:focus-visible {
+  outline-offset: -3px;
+}
+
+c3m-tabs.block-style
+  > div.tabsContainer
+  > app-tab-panel
+  > div.content[aria-hidden='false'] {
+  background-color: var(--n-light);
+  padding: 1rem;
+  margin-top: 0;
+}
+
+/* Tab icons */
+
+button.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+button.with-icon svg {
+  fill: var(--body-text);
+}
+button[aria-selected='true'].with-icon svg,
+button.with-icon:hover svg {
+  fill: var(--text-inv);
+}
+
+/* Drag n drop */
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  list-style-type: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  opacity: 0.5;
+}
+
+.cdk-drag-placeholder {
+  cursor: move;
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Scroll */
+
+ul[role='tablist'].hasScroll {
+  margin-right: 80px;
+  -ms-overflow-style: thin; /* Internet Explorer 10+ */
+  scrollbar-width: thin; /* Firefox */
+}
+
+/* Safari and Chrome */
+ul[role='tablist'].hasScroll::-webkit-scrollbar {
+  height: 5px;
+  background-color: #eee;
+}
+
+div.tabsContainer.handle-scroll > ul[role='tablist'] {
+  -ms-overflow-style: thin; /* Internet Explorer 10+ */
+  scrollbar-width: thin; /* Firefox */
+}
+div.tabsContainer.handle-scroll > ul[role='tablist']::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+div.tabsContainer.handle-scroll > p.scroll-bts {
+  position: absolute;
+  display: flex;
+  width: 74px;
+  height: 36px;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+div.tabsContainer.handle-scroll > p.scroll-bts button {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--body-bg);
+  padding: 0;
+  border-radius: 0;
+  border-left: 1px solid var(--n-medium);
+  z-index: 10;
+}
+div.tabsContainer.handle-scroll > p.scroll-bts button svg {
+  flex: 0 0 37px;
+}

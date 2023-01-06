@@ -4,15 +4,19 @@
   "description": "ngx cream lib",
   "homepage": "https://github.com/CreamLib/ngx-cream-lib",
   "repository": {
-      "type": "git",
-      "url": "git@github.com:CreamLib/ngx-cream-lib.git"
+    "type": "git",
+    "url": "git@github.com:CreamLib/ngx-cream-lib.git"
   },
   "bugs": {
-      "url": "https://github.com/CreamLib/ngx-cream-lib/issues"
+    "url": "https://github.com/CreamLib/ngx-cream-lib/issues"
   },
   "peerDependencies": {
+    "@angular/animations": "^15.0.0",
     "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0"
+    "@angular/core": "^15.0.0",
+    "@angular/cdk/drag-drop": "^15.0.0",
+    "@angular/platform-browser": "^15.0.0",
+    "@angular/platform-browser-dynamic": "^15.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

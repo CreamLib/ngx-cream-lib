@@ -1,0 +1,44 @@
+div.hgroup {
+    margin-bottom: calc(1.5rem + 2vw);
+  }
+  
+  div.hgroup h2 {
+    font: 1.2em var(--stack);
+    color: var(--text-inv);
+    background-color: var(--main-color);
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+  }
+  
+  div.hgroup ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem 1rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    border-left: 5px solid var(--main-light);
+  }
+  
+  div.hgroup li {
+    min-width: 30%;
+    flex-basis: 20%;
+    text-transform: lowercase;
+  }
+  
+  div.hgroup li a {
+    display: block;
+    text-decoration: none;
+  }
+  div.hgroup li a::first-letter {text-transform: uppercase;}
+  
+  
+  /* ------------------ MEDIA QUERIES ------------------ */
+  
+  @media screen and (min-width: 800px) {
+    div.hgroup ul {flex-direction: row;}
+  }
+  
+  @media screen and (min-width: 1000px) {
+    div.hgroup h2 {font-size: 2em;}
+  }
+  
