@@ -64,7 +64,7 @@ export class AccordionItemComponent implements OnDestroy, OnChanges, OnInit {
   /* changes */
   ngOnChanges(changes: SimpleChanges) {
     for (const change in changes) {
-      if (changes.hasOwnProperty(change)) {
+      if (Object.prototype.hasOwnProperty.call(changes, change)) {
         const changedProp = changes[change];
 
         if (!changedProp.isFirstChange()) {

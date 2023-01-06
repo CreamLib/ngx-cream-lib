@@ -43,8 +43,8 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
 
   @Output() activeTab = '';
   @Output() deletedTabIndex!: number;
-  @Output() onChange: EventEmitter<any> = new EventEmitter();
-  @Output() onClose: EventEmitter<any> = new EventEmitter();
+  @Output() changeTab: EventEmitter<any> = new EventEmitter();
+  @Output() closeTab: EventEmitter<any> = new EventEmitter();
 
   /* Variables */
   tabs: TabPanelComponent[] = [];
@@ -160,11 +160,11 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
         [toTabId].nativeElement.querySelector('button')
         .focus();
     }
-    this.onChange.emit({ originalEvent: event, index: i });
+    this.changeTab.emit({ originalEvent: event, index: i });
   }
 
   // Delete Tab
-  deleteTab(e: any, i: number) {
+  deleteTab(e: Event, i: number) {
     this.deletedTabIndex = i;
     const currentLi = this.tabsElement.toArray()[i].nativeElement;
     const theTabs = currentLi.parentNode.querySelectorAll('li');
@@ -194,7 +194,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
       panel.remove();
     }
 
-    this.onClose.emit({ originalEvent: e, index: i });
+    this.closeTab.emit({ originalEvent: e, index: i });
     this.stageScroll();
   }
 
@@ -214,6 +214,6 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
         event.currentIndex
       );
     }
-    this.onChange.emit({ originalEvent: event, index: event.currentIndex });
+    this.changeTab.emit({ originalEvent: event, index: event.currentIndex });
   }
 }
