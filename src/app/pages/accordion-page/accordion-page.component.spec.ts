@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NgxCreamLibModule } from '../../../../projects/ngx-cream-lib/src/lib/ngx-cream-lib.module';
 import { AccordionPageComponent } from './accordion-page.component';
 
 describe('AccordionPageComponent', () => {
@@ -9,6 +9,7 @@ describe('AccordionPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AccordionPageComponent],
+      imports: [NgxCreamLibModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AccordionPageComponent);
