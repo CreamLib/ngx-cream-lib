@@ -1,3 +1,4 @@
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TabsComponent } from './tabs.component';
 
@@ -8,6 +9,7 @@ describe('TabsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [TabsComponent],
+      imports: [DragDropModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TabsComponent);
