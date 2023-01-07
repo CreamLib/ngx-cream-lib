@@ -7,7 +7,6 @@ Main stylesheet
 
 @import 'vars.css';
 
-
 /*
 INDEX:
 - RESET
@@ -22,47 +21,124 @@ INDEX:
 - MEDIA QUERIES
 */
 
-
 /* ------------------------- RESET ------------------------- */
 
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, form, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i,dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+form,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 html {
-	height: 100%;
-	scroll-behavior: auto;
+  height: 100%;
+  scroll-behavior: auto;
 }
 
-header, footer, main, nav, aside,
-  article, section, figure, figcaption {
+header,
+footer,
+main,
+nav,
+aside,
+article,
+section,
+figure,
+figcaption {
   display: block;
-	margin: 0;
-	padding: 0;
-	border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 /* ------------------------ DEFAULTS ----------------------- */
 
 body {
-	font: 100%/1 var(--stack);
-	color: var(--body-text);
-	background-color: var(--body-bg);
+  font: 100%/1 var(--stack);
+  color: var(--body-text);
+  background-color: var(--body-bg);
 }
 
-h2, h3, h4, h5, h6 {font-weight: normal;}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
 
-p, li, dt, dd, h5, th, td {font-size: 0.95em;}
-li li, li p, li dt, li dd {font-size: 100%;}
+p,
+li,
+dt,
+dd,
+h5,
+th,
+td {
+  font-size: 0.95em;
+}
+li li,
+li p,
+li dt,
+li dd {
+  font-size: 100%;
+}
 
 a {
   text-decoration: none;
@@ -77,10 +153,10 @@ a:hover {
   text-decoration: none;
 }
 
-a[target="_blank"]::after {
+a[target='_blank']::after {
   display: inline-block;
   overflow: hidden;
-  content: "Opens in new tab";
+  content: 'Opens in new tab';
   width: 1em;
   height: 1em;
   text-indent: 50em;
@@ -91,7 +167,8 @@ a[target="_blank"]::after {
   margin-left: 0.3em;
 }
 
-ol, ul {
+ol,
+ul {
   list-style-type: none;
 }
 
@@ -104,10 +181,12 @@ button {
   border-radius: var(--radius);
   cursor: pointer;
 }
-button:hover {background-color: var(--sec-color);}
+button:hover {
+  background-color: var(--sec-color);
+}
 button[disabled] {
-	filter: grayscale(100%) opacity(40%);
-	cursor: initial;
+  filter: grayscale(100%) opacity(40%);
+  cursor: initial;
 }
 
 :focus-visible {
@@ -136,7 +215,9 @@ table {
   margin-bottom: calc(1.5rem + 1vw);
 }
 
-hr {display: none;}
+hr {
+  display: none;
+}
 
 code {
   font: 100% 'Courrier New', Courier, monospace;
@@ -145,9 +226,7 @@ code {
   vertical-align: baseline;
 }
 
-
 /* ------------------------- ANIMATIONS ------------------------- */
-
 
 /* ------------------ PAGE STRUCTURE & GRIDS -------------------- */
 
@@ -161,8 +240,9 @@ main {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
-  .grid2 > * {flex: 1 1 50%;}
-
+.grid2 > * {
+  flex: 1 1 50%;
+}
 
 /* -------------------------- FORMS ----------------------------- */
 
@@ -172,7 +252,9 @@ label {
   padding-bottom: 0.3em;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   font: 100%/1 var(--stack);
   color: var(--n-dark);
   background-color: var(--body-bg);
@@ -182,7 +264,9 @@ input, select, textarea {
   transition: all;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   border-color: var(--body-bg);
   border-bottom-color: var(--sec-light);
   border-radius: 0;
@@ -202,126 +286,141 @@ input[disabled] {
   flex-wrap: wrap;
   gap: 1rem;
 }
-input:not([type=submit]), input:not([type=reset]), select {
-	font: 100%/1 var(--stack);
-	padding: 0.8em 1em;
-	border: 1px solid var(--n-medium);
-	border-radius: var(--radius);
-	border-bottom: 1px solid var(--main-dark);
-	transition: all 0.3s;
+input:not([type='submit']),
+input:not([type='reset']),
+select {
+  font: 100%/1 var(--stack);
+  padding: 0.8em 1em;
+  border: 1px solid var(--n-medium);
+  border-radius: var(--radius);
+  border-bottom: 1px solid var(--main-dark);
+  transition: all 0.3s;
 }
 select {
-	-moz-appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
   line-height: 1.2;
-	color: var(--body-text);
+  color: var(--body-text);
   background-color: var(--n-light);
   background-image: var(--select-img);
   background-repeat: no-repeat;
-	background-position: right .5em top 50%;
-	background-size: 1em auto;
-	padding: 0.8em 2em 0.8em 0.8em;
+  background-position: right 0.5em top 50%;
+  background-size: 1em auto;
+  padding: 0.8em 2em 0.8em 0.8em;
 }
 
-select.discrete {padding: 0.25em 2em 0.25em 0.25em;}
-
-input:focus-visible, select:focus-visible {
-	outline: none;
-	border-color: var(--main-dark);
+select.discrete {
+  padding: 0.25em 2em 0.25em 0.25em;
 }
 
-input[type=submit], button[type=submit], button.as-submit,
-	input[type=reset], button[type=reset], button.as-reset {
-	font-size: 120%;
+input:focus-visible,
+select:focus-visible {
+  outline: none;
+  border-color: var(--main-dark);
+}
+
+input[type='submit'],
+button[type='submit'],
+button.as-submit,
+input[type='reset'],
+button[type='reset'],
+button.as-reset {
+  font-size: 120%;
   line-height: 1;
   font-variation-settings: var(--bold);
-	color: var(--text-inv);
-	background-color: var(--main-dark);
-	padding: 0.7em 1.5em 0.65em;
-	margin-bottom: 0.5rem;
-	border: 2px solid var(--main-dark);
-	border-radius: 0.3em;
-	box-shadow: 0 2px 3px rgba(0,0,0,.3);
-	cursor: pointer;
+  color: var(--text-inv);
+  background-color: var(--main-dark);
+  padding: 0.7em 1.5em 0.65em;
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--main-dark);
+  border-radius: 0.3em;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
-input[type=submit]:focus-visible, input[type=reset]:focus-visible {
-	outline: 3px dotted var(--focus-color);
-	outline-offset: 2px;
-}
-
-input[type=reset], button[type=reset], button.as-reset {
-	color: var(--main-dark);
-	background-color: var(--body-bg);
-	border-color: var(--main-dark);
+input[type='submit']:focus-visible,
+input[type='reset']:focus-visible {
+  outline: 3px dotted var(--focus-color);
+  outline-offset: 2px;
 }
 
-input[type=submit].optional, button[type=submit].optional,
-	.as-submit.optional {
-	color: var(--text-inv);
-	background-color: var(--main-color);
-	border-color: var(--main-color);
+input[type='reset'],
+button[type='reset'],
+button.as-reset {
+  color: var(--main-dark);
+  background-color: var(--body-bg);
+  border-color: var(--main-dark);
 }
 
-input[type=submit]:not([disabled]):hover,
-	button[type=submit]:not([disabled]):hover,
-	.as-submit:not([disabled]):hover,
-	input[type=reset]:not([disabled]):hover,
-	button[type=reset]:not([disabled]):hover,
-	.as-reset:not([disabled]):hover,
-	input[type=submit].optional:not([disabled]):hover,
-	button[type=submit].optional:not([disabled]):hover,
-		.as-submit.optional:not([disabled]):hover {
-	color: var(--n-dark);
-	background-color: var(--hot-color);
-	border-color: var(--hot-color);
-	box-shadow: none;
+input[type='submit'].optional,
+button[type='submit'].optional,
+.as-submit.optional {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+input[type='submit']:not([disabled]):hover,
+button[type='submit']:not([disabled]):hover,
+.as-submit:not([disabled]):hover,
+input[type='reset']:not([disabled]):hover,
+button[type='reset']:not([disabled]):hover,
+.as-reset:not([disabled]):hover,
+input[type='submit'].optional:not([disabled]):hover,
+button[type='submit'].optional:not([disabled]):hover,
+.as-submit.optional:not([disabled]):hover {
+  color: var(--n-dark);
+  background-color: var(--hot-color);
+  border-color: var(--hot-color);
+  box-shadow: none;
 }
 
 /* Disabled */
 
-input[type=submit][disabled], input[type=reset][disabled],
-	.as-submit[disabled], .as-reset[disabled],
-		button[type=submit][disabled], button[type=reset][disabled] {
-	opacity: 0.7;
-	box-shadow: none;
-	cursor: initial;
+input[type='submit'][disabled],
+input[type='reset'][disabled],
+.as-submit[disabled],
+.as-reset[disabled],
+button[type='submit'][disabled],
+button[type='reset'][disabled] {
+  opacity: 0.7;
+  box-shadow: none;
+  cursor: initial;
 }
 
 textarea {
-	width: 85%;
-	max-width: 25rem;
-	font: 100%/1 var(--stack);
-	padding: 0.5em;
-	border: 1px solid var(--n-medium);
-	border-left-color: var(--main-dark);
-	border-radius: var(--radius);
+  width: 85%;
+  max-width: 25rem;
+  font: 100%/1 var(--stack);
+  padding: 0.5em;
+  border: 1px solid var(--n-medium);
+  border-left-color: var(--main-dark);
+  border-radius: var(--radius);
 }
 textarea:focus {
-	border-color: var(--high-medium);
-	outline: none;
+  border-color: var(--high-medium);
+  outline: none;
 }
 
 input[readonly] {
-	background-color: var(--n-light);
-	border-top: none;
-	border-right: none;
-	border-left: none;
+  background-color: var(--n-light);
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
-input[aria-invalid=true], select[aria-invalid=true],
-	textarea[aria-invalid=true] {
-	color: var(--alert-color);
-	border-color: var(--alert-color);
+input[aria-invalid='true'],
+select[aria-invalid='true'],
+textarea[aria-invalid='true'] {
+  color: var(--alert-color);
+  border-color: var(--alert-color);
 }
 
 .comment {
-	display: block;
-	font-size: 90%;
-	padding: 0.5em;
+  display: block;
+  font-size: 90%;
+  padding: 0.5em;
 }
-
-
 
 /* -------------------------- TABLES ---------------------------- */
 
@@ -333,7 +432,8 @@ caption {
   padding: 0.5em;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   line-height: 1.25;
   padding: 0.5em;
@@ -347,7 +447,9 @@ th {
 
 /* !!! Max-width query */
 @media screen and (max-width: 600px) {
-  th {display: none;}
+  th {
+    display: none;
+  }
   tr {
     display: block;
     border-top: 2px solid var(--n-light);
@@ -366,7 +468,6 @@ th {
     font-family: var(--stack-b);
   }
 }
-
 
 /* -------------------------- BLOCKS ---------------------------- */
 
@@ -395,7 +496,9 @@ div.introduction {
   margin-bottom: calc(1.5rem + 1vw);
 }
 
-div.intro-text {max-width: 45em;}
+div.intro-text {
+  max-width: 45em;
+}
 
 div.explain {
   background-color: var(--sec-u-light);
@@ -406,7 +509,6 @@ div.explain p {
   font-size: 0.9rem;
   line-height: 1.45;
 }
-
 
 /* -------------------------- EDITORIAL -------------------------- */
 
@@ -427,13 +529,19 @@ article.editorial {
   margin-bottom: 1em;
 }
 
-.editorial p {line-height: 1.58;}
-.editorial p + p {margin-top: 0.8em;}
+.editorial p {
+  line-height: 1.58;
+}
+.editorial p + p {
+  margin-top: 0.8em;
+}
 
 .editorial ul {
   margin: 2rem 1rem;
 }
-.editorial li + li {margin-top: 0.5em;}
+.editorial li + li {
+  margin-top: 0.5em;
+}
 
 .editorial a {
   text-decoration: underline;
@@ -443,7 +551,6 @@ article.editorial {
 .editorial a:visited {
   color: var(--n-dark);
 }
-
 
 /* ------------------------ TOOLS ---------------------------- */
 
@@ -458,21 +565,24 @@ article.editorial {
 
 /* Skip navigation */
 .skip-link {
-	font-size: 0.85em;
-	text-align: center;
+  font-size: 0.85em;
+  text-align: center;
 }
 
-	.skip-link a {
-		display: block;
-		position: absolute;
-		overflow: hidden;
-		left: -10000px;
-		top: auto;
-		width: 1px;
-		height: 1px;
-	}
-	.skip-link a:focus {position: static; width: auto; height: auto;}
-
+.skip-link a {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+}
+.skip-link a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
 
 /* --- TOOLTIPS --- */
 /* controled by tooltip directive */
@@ -480,7 +590,7 @@ article.editorial {
 span.tooltip {
   position: absolute;
   max-width: 10rem;
-	width: auto;
+  width: auto;
   height: auto;
   top: 2.5rem;
   left: 0;
@@ -504,7 +614,7 @@ span.tooltip::before {
   display: block;
   width: 10px;
   height: 10px;
-  content: "";
+  content: '';
   background: var(--main-dark);
   margin-left: -5px;
   border-top: 1px solid var(--main-dark);
@@ -513,30 +623,42 @@ span.tooltip::before {
 }
 
 span.tooltip.to-left {
-	left: auto;
-	right: 0;
+  left: auto;
+  right: 0;
 }
 span.tooltip.to-left::before {
-	left: auto;
-	right: 15px;
+  left: auto;
+  right: 15px;
 }
-
 
 /* ------------------ MEDIA QUERIES ------------------ */
 
 @media screen and (min-width: 1000px) {
-  :root {--nav-width: 300px;}
+  :root {
+    --nav-width: 300px;
+  }
 
-  p, li, dt, dd {font-size: 1.1em;}
+  p,
+  li,
+  dt,
+  dd {
+    font-size: 1.1em;
+  }
 
   main#page-body {
     margin: 1.5rem 1.5rem 2rem calc(var(--nav-width) + 2vw);
   }
-  div.component-sheet h3 {font-size: 1.6em;}
+  div.component-sheet h3 {
+    font-size: 1.6em;
+  }
 
-  div.demo {padding: 2rem;}
+  div.demo {
+    padding: 2rem;
+  }
 }
 
 @media screen and (min-width: 1300px) {
-  div.introduction {flex-direction: row;}
+  div.introduction {
+    flex-direction: row;
+  }
 }

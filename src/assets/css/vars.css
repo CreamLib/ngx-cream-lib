@@ -8,7 +8,7 @@
 @font-face {
   font-family: 'quicksandbold';
   src: url('/assets/fonts/quicksand-bold-webfont.woff2') format('woff2'),
-  url('/assets/fonts/quicksand-bold-webfont.woff') format('woff');
+    url('/assets/fonts/quicksand-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @font-face {
   font-family: 'quicksandlight';
   src: url('/assets/fonts/quicksand-light-webfont.woff2') format('woff2'),
-  url('/assets/fonts/quicksand-light-webfont.woff') format('woff');
+    url('/assets/fonts/quicksand-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +24,7 @@
 @font-face {
   font-family: 'quicksandmedium';
   src: url('/assets/fonts/quicksand-medium-webfont.woff2') format('woff2'),
-  url('/assets/fonts/quicksand-medium-webfont.woff') format('woff');
+    url('/assets/fonts/quicksand-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -32,7 +32,7 @@
 @font-face {
   font-family: 'quicksandregular';
   src: url('/assets/fonts/quicksand-regular-webfont.woff2') format('woff2'),
-  url('/assets/fonts/quicksand-regular-webfont.woff') format('woff');
+    url('/assets/fonts/quicksand-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -40,42 +40,42 @@
 @font-face {
   font-family: 'quicksanditalic';
   src: url('/assets/fonts/quicksand-italic-webfont.woff2') format('woff2'),
-  url('/assets/fonts/quicksand-italic-webfont.woff') format('woff');
+    url('/assets/fonts/quicksand-italic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
-	--body-text: #000;
-	--body-bg: #FFF;
-	--text-inv: #FFF;
+  --body-text: #000;
+  --body-bg: #fff;
+  --text-inv: #fff;
 
-	--main-color: #15819E;
-	--main-light: #45ABBC;
-	--main-u-light: #E2F4F7;
-	--main-dark: #1E2E39;
-	--sec-color: #35781C;
-	--sec-light: #6CBE45;
-  --sec-u-light: #E6F9DD;
-	--focus-color: #35781C;
-	--hot-color: #BD4D96;
-	--hot-light: #D769A8;
-  --hot-u-light: #FFB9E1;
-	--hot-sec: #ED9C21;
-  --hot-sec-light: #FFEED4;
-	--n-dark: #1E2E39;
-	--n-medium: #CCC;
-	--n-medium-a: #6B6B6B;
-	--n-light: #EEE;
-	--n-lighter: #EFEFEF;
-	--n-s-dark: #000;
-	--alert-color: rgb(177, 0, 0);
+  --main-color: #15819e;
+  --main-light: #45abbc;
+  --main-u-light: #e2f4f7;
+  --main-dark: #1e2e39;
+  --sec-color: #35781c;
+  --sec-light: #6cbe45;
+  --sec-u-light: #e6f9dd;
+  --focus-color: #35781c;
+  --hot-color: #bd4d96;
+  --hot-light: #d769a8;
+  --hot-u-light: #ffb9e1;
+  --hot-sec: #ed9c21;
+  --hot-sec-light: #ffeed4;
+  --n-dark: #1e2e39;
+  --n-medium: #ccc;
+  --n-medium-a: #6b6b6b;
+  --n-light: #eee;
+  --n-lighter: #efefef;
+  --n-s-dark: #000;
+  --alert-color: rgb(177, 0, 0);
 
   --stack: quicksandregular, Calibri, Roboto, Helvetica, sans-serif;
-	--stack-m: quicksandmedium, Calibri, Roboto, Helvetica, sans-serif;
-	--stack-l: quicksandlight, Calibri, Roboto, Helvetica, sans-serif;
-	--stack-b: quicksandbold, Calibri, Roboto, Helvetica, sans-serif;
-	--stack-i: quicksanditalic, Calibri, Roboto, Helvetica, sans-serif;
+  --stack-m: quicksandmedium, Calibri, Roboto, Helvetica, sans-serif;
+  --stack-l: quicksandlight, Calibri, Roboto, Helvetica, sans-serif;
+  --stack-b: quicksandbold, Calibri, Roboto, Helvetica, sans-serif;
+  --stack-i: quicksanditalic, Calibri, Roboto, Helvetica, sans-serif;
 
   --radius: 0.3em;
 
