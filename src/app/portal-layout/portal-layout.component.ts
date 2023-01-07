@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CreamPage } from '../pages/cream-page';
 
 @Component({
   selector: 'app-portal-layout',
@@ -7,28 +8,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./portal-layout.component.css'],
 })
 export class PortalLayoutComponent {
-  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
-
   pageTitle = '';
   pageType = '';
   isThereSubNav = true;
-  sectionNodeList!: any;
+  sections: Section[] = [];
   currentUrl: string = this.router.url;
 
-  onActivate(e: any) {
+  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
+
+  onActivate(e: CreamPage) {
     this.pageTitle = e.pageTitle;
     this.pageType = e.pageType;
     this.cdr.detectChanges();
 
-    this.sectionNodeList = document.querySelectorAll('section');
-    const snLength = this.sectionNodeList.length;
-
-    if (snLength == 0) {
-      this.isThereSubNav = false;
-    } else {
-      this.isThereSubNav = true;
-    }
-
-    this.currentUrl = this.router.url;
+    const sections = document.querySelectorAll('section');
+    sections.forEach(value =>
+      this.sections.push({
+        id: value.id,
+        label: (value.firstChild as HTMLElement).innerText,
+      })
+    );
+    this.isThereSubNav = sections.length > 0;
   }
+}
+
+interface Section {
+  id: string;
+  label: string;
 }

@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  AfterViewChecked,
+  Component,
+  Input,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 
 @Component({
@@ -6,38 +12,14 @@ import { AccordionItemComponent } from './accordion-item/accordion-item.componen
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.css'],
 })
-export class AccordionComponent implements OnInit {
+export class AccordionComponent implements AfterViewChecked {
   @Input() titleLevel = '2';
-  groups: Array<AccordionItemComponent> = [];
+  @ViewChildren(AccordionItemComponent)
+  groups!: QueryList<AccordionItemComponent>;
 
-  ngOnInit(): void {
-    this.groups.forEach((group: AccordionItemComponent) => {
-      group.titleLevel = this.titleLevel;
+  ngAfterViewChecked(): void {
+    this.groups.forEach((item: AccordionItemComponent) => {
+      item.titleLevel = this.titleLevel;
     });
-  }
-
-  addGroup(group: AccordionItemComponent): void {
-    this.groups.push(group);
-  }
-
-  closeOthers(openGroup: AccordionItemComponent): void {
-    this.groups.forEach((group: AccordionItemComponent) => {
-      if (group !== openGroup) {
-        group.isOpen = false;
-      }
-    });
-  }
-
-  closeAll(): void {
-    this.groups.forEach((group: AccordionItemComponent) => {
-      group.isOpen = false;
-    });
-  }
-
-  removeGroup(group: AccordionItemComponent): void {
-    const index = this.groups.indexOf(group);
-    if (index !== -1) {
-      this.groups.splice(index, 1);
-    }
   }
 }

@@ -43,8 +43,8 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
 
   @Output() activeTab = '';
   @Output() deletedTabIndex!: number;
-  @Output() changeTab: EventEmitter<any> = new EventEmitter();
-  @Output() closeTab: EventEmitter<any> = new EventEmitter();
+  @Output() changeTab: EventEmitter<number> = new EventEmitter();
+  @Output() closeTab: EventEmitter<number> = new EventEmitter();
 
   /* Variables */
   tabs: TabPanelComponent[] = [];
@@ -160,7 +160,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
         [toTabId].nativeElement.querySelector('button')
         .focus();
     }
-    this.changeTab.emit({ originalEvent: event, index: i });
+    this.changeTab.emit(i);
   }
 
   // Delete Tab
@@ -194,12 +194,12 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
       panel.remove();
     }
 
-    this.closeTab.emit({ originalEvent: e, index: i });
+    this.closeTab.emit(i);
     this.stageScroll();
   }
 
   // On Drop event / Drag'n drop
-  onDrop(event: CdkDragDrop<any[]>) {
+  onDrop(event: CdkDragDrop<TabPanelComponent[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
@@ -214,6 +214,6 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
         event.currentIndex
       );
     }
-    this.changeTab.emit({ originalEvent: event, index: event.currentIndex });
+    this.changeTab.emit(event.currentIndex);
   }
 }

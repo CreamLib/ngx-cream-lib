@@ -5,9 +5,9 @@
 
   <nav *ngIf="isThereSubNav" aria-label="Sections on this page">
     <ul>
-      <li *ngFor="let section of sectionNodeList">
+      <li *ngFor="let section of sections">
         <a [attr.href]="currentUrl + '#' + section.id">
-          {{ section.firstChild.innerText }}
+          {{ section.label }}
         </a>
       </li>
     </ul>

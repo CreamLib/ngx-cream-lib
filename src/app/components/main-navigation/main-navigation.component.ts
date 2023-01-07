@@ -194,7 +194,7 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
   }
 
   // When last link has focus close menu
-  isLast(e: any) {
+  isLast(e: Event) {
     if (
       this.links.last.nativeElement === e.target &&
       window.innerWidth < 1000
@@ -212,11 +212,11 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
     });
   }
 
-  openAccordion(e: any) {
+  openAccordion(e: Event) {
     this.closeAll();
-    e.target.classList.remove('close');
-    e.target.classList.add('open');
-    e.target.setAttribute('aria-expanded', 'true');
+    (e.target as HTMLElement).classList.remove('close');
+    (e.target as HTMLElement).classList.add('open');
+    (e.target as HTMLElement).setAttribute('aria-expanded', 'true');
   }
 
   randomID() {

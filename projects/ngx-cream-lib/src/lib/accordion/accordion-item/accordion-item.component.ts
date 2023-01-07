@@ -6,15 +6,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import {
-  Component,
-  Input,
-  OnChanges,
-  OnDestroy,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
-import { AccordionComponent } from '../accordion.component';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'c3m-accordion-item',
@@ -26,20 +18,25 @@ import { AccordionComponent } from '../accordion.component';
         'open',
         style({
           height: AUTO_STYLE,
+          opacity: 1,
         })
       ),
       state(
         'closed',
         style({
           height: 0,
+          opacity: 0,
+          paddingTop: 0,
+          paddingBottom: 0,
         })
       ),
-      transition('open => closed', [animate('0.2s ease-out')]),
-      transition('closed => open', [animate('0.2s ease-in')]),
+      transition('open <=> closed', [
+        animate('225ms cubic-bezier(0.4,0.0,0.2,1)'),
+      ]),
     ]),
   ],
 })
-export class AccordionItemComponent implements OnDestroy, OnChanges, OnInit {
+export class AccordionItemComponent {
   @Input() label!: string;
   @Input() isOpen = false;
   @Input() index!: number;
@@ -50,39 +47,14 @@ export class AccordionItemComponent implements OnDestroy, OnChanges, OnInit {
   accID!: string;
   accPanelID!: string;
 
-  /* By default , add item to accordion */
-  constructor(private accordion: AccordionComponent) {
-    this.accordion.addGroup(this);
+  constructor() {
     this.randomIdValue = this.randomID();
-  }
-
-  /* remove item to accordion*/
-  ngOnDestroy() {
-    this.accordion.removeGroup(this);
-  }
-
-  /* changes */
-  ngOnChanges(changes: SimpleChanges) {
-    for (const change in changes) {
-      if (Object.prototype.hasOwnProperty.call(changes, change)) {
-        const changedProp = changes[change];
-
-        if (!changedProp.isFirstChange()) {
-          this.accordion.groups[this.index + 1].toggleOpen();
-        }
-      }
-    }
-  }
-
-  /* initialisation */
-  ngOnInit() {
     this.accID = 'tab' + this.randomIdValue;
     this.accPanelID = 'panel' + this.randomIdValue;
   }
 
   toggleOpen(): void {
     this.isOpen = !this.isOpen;
-    this.accordion.closeOthers(this);
   }
 
   randomID() {
