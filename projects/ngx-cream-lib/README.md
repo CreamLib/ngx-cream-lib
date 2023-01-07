@@ -1,5 +1,7 @@
 # NgxCreamLib
 
+Documentation: https://creamlib.github.io/ngx-cream-lib/
+
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
 ## Code scaffolding
@@ -23,3 +25,15 @@ Run `ng test ngx-cream-lib` to execute the unit tests via [Karma](https://karma-
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## i18n
+
+Project consuming ngx-cream-lib and need other language than en-US can do the following to translate:
+
+- [Add the localize package](https://angular.io/guide/i18n-common-add-package)
+- [Extract the source language file](https://angular.io/guide/i18n-common-translation-files#extract-the-source-language-file)
+- [Create a translation file for each language](https://angular.io/guide/i18n-common-translation-files#create-a-translation-file-for-each-language)
+- [Translate each translation file](https://angular.io/guide/i18n-common-translation-files#translate-each-translation-file)
+- [Merge translations into the application](https://angular.io/guide/i18n-common-merge)
+
+the ngx-cream-portal using ngx-cream-lib use fr language option as exemple if running local with `npm run server:fr`
