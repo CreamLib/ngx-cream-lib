@@ -3,6 +3,16 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <svg
+        c3mTabPanelIcon
+        role="img"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        preserveAspectRatio="xMidYMid meet">
+        <title>delete</title>
+        <use href="./assets/img/sprite.svg#bt-delete"></use>
+      </svg>
       <c3m-accordion titleLevel="4">
         <c3m-accordion-item label="First block" total="5">
           <p>Content of the block</p>
@@ -19,6 +29,11 @@
       </c3m-accordion>
     </c3m-tab-panel>
     <c3m-tab-panel tabTitle="Application">
+      <img
+        c3mTabPanelIcon
+        src="./assets/img/favicon.png"
+        aria-hidden="true"
+        alt="" />
       <pre>
   &lt;c3m-accordion titleLevel=&#34;4&#34;&gt;
     &lt;c3m-accordion-item label=&#34;First block&#34; total=&#34;5&#34;&gt;
@@ -37,6 +52,7 @@
         </pre
       >
     </c3m-tab-panel>
+    <c3m-tab-panel tabTitle="toto"> </c3m-tab-panel>
   </c3m-tabs>
 </section>
 

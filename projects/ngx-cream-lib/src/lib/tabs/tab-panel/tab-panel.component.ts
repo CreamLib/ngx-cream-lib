@@ -4,6 +4,8 @@ import {
   HostListener,
   Input,
   OnInit,
+  TemplateRef,
+  ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
 
@@ -14,9 +16,8 @@ import {
   encapsulation: ViewEncapsulation.None,
 })
 export class TabPanelComponent implements OnInit, AfterViewInit {
+  @ViewChild('icon', { static: true }) c3mTabPanelIcon!: TemplateRef<unknown>;
   @Input() tabTitle = '';
-  @Input() svgName!: string;
-  @Input() svgType!: string;
   @Input() isActive!: boolean;
   @Input() idTab!: number;
   @Input() isDisabled!: boolean;

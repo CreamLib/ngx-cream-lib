@@ -42,22 +42,15 @@
         [attr.tabindex]="setTabindex(tab)"
         role="tab"
         class="tabber {{ tab.tabIcon }}"
-        [ngClass]="{ deletable: deletable, 'with-icon': tab.svgName !== null }"
+        [ngClass]="{
+          deletable: deletable,
+          'with-icon': tab.c3mTabPanelIcon
+        }"
         (click)="selectTab(tab)"
         (keydown)="selectNextTab($event, i)"
         [attr.aria-controls]="tab.panelID"
         [attr.aria-selected]="tab.isActive">
-        <ng-container *ngIf="tab.svgName !== null">
-          <svg
-            role="img"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            preserveAspectRatio="xMidYMid meet">
-            <title>{{ tab.svgType }}</title>
-            <use [attr.href]="'./assets/img/sprite.svg#' + tab.svgName"></use>
-          </svg>
-        </ng-container>
+        <ng-container [ngTemplateOutlet]="tab.c3mTabPanelIcon"></ng-container>
         {{ tab.tabTitle }}
       </button>
 
