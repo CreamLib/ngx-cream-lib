@@ -1,9 +1,9 @@
 import {
-  AfterViewChecked,
+  AfterViewInit,
   Component,
+  ContentChildren,
   Input,
   QueryList,
-  ViewChildren,
 } from '@angular/core';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 
@@ -12,12 +12,12 @@ import { AccordionItemComponent } from './accordion-item/accordion-item.componen
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.css'],
 })
-export class AccordionComponent implements AfterViewChecked {
-  @Input() titleLevel = '2';
-  @ViewChildren(AccordionItemComponent)
+export class AccordionComponent implements AfterViewInit {
+  @Input() titleLevel: '1' | '2' | '3' | '4' | '5' | '6' = '2';
+  @ContentChildren(AccordionItemComponent)
   groups!: QueryList<AccordionItemComponent>;
 
-  ngAfterViewChecked(): void {
+  ngAfterViewInit(): void {
     this.groups.forEach((item: AccordionItemComponent) => {
       item.titleLevel = this.titleLevel;
     });

@@ -6,7 +6,9 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
+import { AccordionService } from '../accordion.service';
 
 @Component({
   selector: 'c3m-accordion-item',
@@ -36,28 +38,44 @@ import { Component, Input } from '@angular/core';
     ]),
   ],
 })
-export class AccordionItemComponent {
+export class AccordionItemComponent implements OnInit, OnDestroy {
   @Input() label!: string;
   @Input() isOpen = false;
-  @Input() index!: number;
-  @Input() titleLevel = '2';
+  @Input() titleLevel: '1' | '2' | '3' | '4' | '5' | '6' = '2';
   @Input() total = '';
 
-  randomIdValue!: number;
   accID!: string;
   accPanelID!: string;
 
-  constructor() {
-    this.randomIdValue = this.randomID();
-    this.accID = 'tab' + this.randomIdValue;
-    this.accPanelID = 'panel' + this.randomIdValue;
+  unsubscribe: Subject<void> = new Subject();
+
+  constructor(private accordionService: AccordionService) {
+    const randomIdValue = this.randomID();
+    this.accID = 'tab' + randomIdValue;
+    this.accPanelID = 'panel' + randomIdValue;
+  }
+
+  ngOnInit(): void {
+    this.accordionService.change$
+      .pipe(takeUntil(this.unsubscribe))
+      .subscribe(accPanelIDOpen => {
+        if (accPanelIDOpen != this.accPanelID) {
+          this.isOpen = false;
+        }
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 
   toggleOpen(): void {
     this.isOpen = !this.isOpen;
+    this.accordionService.open(this.accPanelID);
   }
 
-  randomID() {
+  randomID(): number {
     const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
     return idRandom;
   }
