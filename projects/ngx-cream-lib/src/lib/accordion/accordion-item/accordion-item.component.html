@@ -1,0 +1,21 @@
+<c3m-h class="head" [titleLevel]="titleLevel">
+  <button
+    type="button"
+    (click)="toggleOpen()"
+    [attr.aria-expanded]="isOpen"
+    [attr.aria-controls]="accPanelID"
+    [id]="accID">
+    <span>{{ label }}</span>
+    <span class="total" *ngIf="total !== ''"> ({{ total }}) </span>
+  </button>
+</c3m-h>
+
+<div
+  class="content editorial"
+  role="region"
+  [@openClose]="isOpen ? 'open' : 'closed'"
+  [attr.aria-hidden]="!isOpen"
+  [id]="accPanelID"
+  [attr.aria-labelledby]="accID">
+  <ng-content></ng-content>
+</div>

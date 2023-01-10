@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6651544066815575981" datatype="html">
+        <source>Scroll tabs to right</source>
+        <target>Faites défiler les onglets vers la droite</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="621090498466002487" datatype="html">
+        <source>Scroll tabs to left</source>
+        <target>Faites défiler les onglets vers la gauche</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2073591965529909488" datatype="html">
+        <source>Close tab</source>
+        <target>Fermer l'onglet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

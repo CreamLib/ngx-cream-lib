@@ -1,0 +1,19 @@
+<div class="hgroup">
+  <h2>
+    <strong>{{ pageTitle }}</strong> {{ pageType }}
+  </h2>
+
+  <nav *ngIf="isThereSubNav" aria-label="Sections on this page">
+    <ul>
+      <li *ngFor="let section of sections">
+        <a [attr.href]="currentUrl + '#' + section.id">
+          {{ section.label }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="component-sheet">
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
+</div>

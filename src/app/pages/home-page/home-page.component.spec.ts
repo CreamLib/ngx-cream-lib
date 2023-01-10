@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HomePageComponent } from './home-page.component';
 
-import { NgxCreamHelloComponent } from './ngx-cream-hello.component';
-
-describe('NgxCreamHelloComponent', () => {
-  let component: NgxCreamHelloComponent;
-  let fixture: ComponentFixture<NgxCreamHelloComponent>;
+describe('HomePageComponent', () => {
+  let component: HomePageComponent;
+  let fixture: ComponentFixture<HomePageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NgxCreamHelloComponent],
+      declarations: [HomePageComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(NgxCreamHelloComponent);
+    fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

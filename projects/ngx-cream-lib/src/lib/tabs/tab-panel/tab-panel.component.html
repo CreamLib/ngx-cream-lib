@@ -1,0 +1,14 @@
+<div
+  class="content"
+  role="tabpanel"
+  [id]="panelID"
+  [attr.aria-hidden]="!isActive"
+  [attr.aria-labelledby]="tabID"
+  [ngClass]="{ adaptable: adaptable }"
+  tabindex="0">
+  <ng-content></ng-content>
+</div>
+
+<ng-template #icon>
+  <ng-content select="[c3mTabPanelIcon]"></ng-content>
+</ng-template>

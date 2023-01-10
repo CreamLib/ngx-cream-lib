@@ -1,0 +1,77 @@
+<div class="tabsContainer" [ngClass]="{ 'handle-scroll': handleScroll }">
+  <p class="scroll-bts" *ngIf="hasScroll && handleScroll">
+    <button
+      [disabled]="!isScrollRight"
+      class="scroll toRight"
+      (click)="scroll2Right()">
+      <svg role="img" width="24" height="24" viewBox="0 0 24 24">
+        <title>Scroll tabs to left</title>
+        <use href="./assets/img/sprite.svg#bt-scrollRight"></use>
+      </svg>
+      <ng-container i18n>Scroll tabs to right</ng-container>
+    </button>
+    <button
+      [disabled]="!isScrollLeft"
+      class="scroll toLeft"
+      (click)="scroll2Left()">
+      <svg role="img" width="24" height="24" viewBox="0 0 24 24">
+        <title>Scroll tabs to left</title>
+        <use href="./assets/img/sprite.svg#bt-scrollLeft"></use>
+      </svg>
+      <ng-container i18n>Scroll tabs to left</ng-container>
+    </button>
+  </p>
+
+  <ul
+    role="tablist"
+    [ngClass]="{ hasScroll: handleScroll && hasScroll }"
+    [attr.aria-label]="label"
+    cdkDropList
+    [cdkDropListData]="tabs"
+    (cdkDropListDropped)="onDrop($event)"
+    #chipList="cdkDropList"
+    cdkDropListOrientation="horizontal">
+    <li
+      #tabs
+      cdkDrag
+      role="presentation"
+      *ngFor="let tab of tabs; let i = index"
+      [ngClass]="{ active: tab.isActive, new: hasNew }">
+      <button
+        [id]="tab.tabID"
+        [attr.tabindex]="setTabindex(tab)"
+        role="tab"
+        class="tabber {{ tab.tabIcon }}"
+        [ngClass]="{
+          deletable: deletable,
+          'with-icon': tab.c3mTabPanelIcon
+        }"
+        (click)="selectTab(tab)"
+        (keydown)="selectNextTab($event, i)"
+        [attr.aria-controls]="tab.panelID"
+        [attr.aria-selected]="tab.isActive">
+        <ng-container [ngTemplateOutlet]="tab.c3mTabPanelIcon"></ng-container>
+        {{ tab.tabTitle }}
+      </button>
+
+      <button
+        class="delete"
+        *ngIf="deletable"
+        aria-label="Close tab"
+        [attr.tabindex]="setTabindex(tab)"
+        (click)="deleteTab($event, i)">
+        <svg
+          role="img"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          preserveAspectRatio="xMidYMid meet">
+          <title i18n>Close tab</title>
+          <use href="./assets/img/sprite.svg#bt-delete-tab"></use>
+        </svg>
+      </button>
+    </li>
+  </ul>
+
+  <ng-content></ng-content>
+</div>

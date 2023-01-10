@@ -1,0 +1,61 @@
+header {
+  --focus-color: var(--sec-light);
+  box-sizing: border-box;
+  color: var(--text-inv);
+  background-color: var(--n-dark);
+  padding: 0.5rem;
+}
+
+header h1 {
+  color: currentColor;
+  background-color: var(--n-dark);
+  margin-left: 45px;
+}
+h1 img {
+  max-width: 175px;
+}
+
+button.nav-control {
+  position: absolute;
+  top: 0.75rem;
+  left: calc(1rem - 2px);
+  background-color: initial;
+  padding: 0;
+  margin-right: auto;
+  transition: transform 0.7s;
+}
+button.nav-control svg {
+  fill: var(--text-inv);
+}
+
+/* Rotate Burger Button */
+
+.burgerVertical {
+  transform: rotateZ(90deg);
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 1000px) {
+  header {
+    position: fixed;
+    width: var(--nav-width);
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 0 0;
+    z-index: 2;
+  }
+  header .logo {
+    display: block;
+    text-align: center;
+  }
+  header h1 {
+    padding: 0;
+    margin: 0;
+    z-index: 112;
+  }
+  button.nav-control {
+    display: none;
+  }
+}
