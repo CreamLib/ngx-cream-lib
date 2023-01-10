@@ -1,16 +1,15 @@
-/*div.content:focus {
-  outline: none;
-}
 div.content:focus-visible {
   outline: 2px dotted var(--focus-color);
   outline-offset: -2px;
 }
 
-ul[role=tablist] li button.alert {overflow: hidden;}
-ul[role=tablist] li button.alert::before {
+ul[role='tablist'] li button.alert {
+  overflow: hidden;
+}
+ul[role='tablist'] li button.alert::before {
   position: relative;
   left: -2px;
-  content: "alerte";
+  content: 'alerte';
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -19,10 +18,11 @@ ul[role=tablist] li button.alert::before {
   background-repeat: no-repeat;
 }
 
-div.content > app-radios fieldset, div.content > app-checkbox-group fieldset {
+div.content > c3m-radios fieldset,
+div.content > c3m-checkbox-group fieldset {
   margin-bottom: 1rem;
 }
 
-div.tabsContainer app-tab-panel > div.content[aria-hidden="false"].adaptable {
+div.tabsContainer c3m-tab-panel > div.content[aria-hidden='false'].adaptable {
   padding-right: 0.5rem;
-} */
+}
