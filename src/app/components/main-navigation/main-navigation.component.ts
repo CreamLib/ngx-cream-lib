@@ -96,7 +96,7 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
         {
           label: 'Text Ellipsis',
           url: 'portal/text-ellipsis',
-        }
+        },
       ],
     },
     {
@@ -105,12 +105,12 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
         {
           label: 'Tooltip',
           url: 'portal/tooltip',
-        }
-      ]
+        },
+      ],
     },
     {
-      label: 'Config & Help'
-    }
+      label: 'Config & Help',
+    },
   ];
 
   @ViewChildren('navLink') links!: QueryList<ElementRef>;
@@ -124,8 +124,7 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.links.forEach(link => {
       if (link.nativeElement.getAttribute('href') === this.Location.path()) {
-        const controlButton =
-          link.nativeElement.parentNode.parentNode.previousSibling;
+        const controlButton = link.nativeElement.parentNode.parentNode.previousSibling;
         controlButton.setAttribute('aria-expanded', 'true');
         controlButton.classList.add('opened');
       }
@@ -162,9 +161,7 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
 
   // Return sub array
   getSubData(levelOne: string) {
-    const navData = Object.values(this.navData).filter(
-      data => data.label === levelOne
-    );
+    const navData = Object.values(this.navData).filter(data => data.label === levelOne);
     return navData[0].subs;
   }
 
@@ -197,17 +194,14 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
 
   // When last link has focus close menu
   isLast(e: Event) {
-    if (
-      this.links.last.nativeElement === e.target &&
-      window.innerWidth < 1000
-    ) {
+    if (this.links.last.nativeElement === e.target && window.innerWidth < 1000) {
       this.closeNav();
     }
   }
 
   // Nav collapsibles
   openSection(e: Event) {
-    if((e.target as HTMLElement).getAttribute('aria-expanded') == 'false') {
+    if ((e.target as HTMLElement).getAttribute('aria-expanded') == 'false') {
       (e.target as HTMLElement).classList.remove('close');
       (e.target as HTMLElement).classList.add('open');
       (e.target as HTMLElement).setAttribute('aria-expanded', 'true');

@@ -18,17 +18,12 @@ const components = [
   TabsComponent,
   TabPanelComponent,
   MessageBlockComponent,
-  FocusOnPageChangeDirective
+  FocusOnPageChangeDirective,
 ];
 
 @NgModule({
   declarations: [...components],
-  imports: [
-    CommonModule,
-    DragDropModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-  ],
+  imports: [CommonModule, DragDropModule, BrowserModule, BrowserAnimationsModule],
   exports: [...components],
 })
 export class NgxCreamLibModule {}

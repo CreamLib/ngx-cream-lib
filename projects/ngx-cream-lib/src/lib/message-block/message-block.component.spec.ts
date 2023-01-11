@@ -8,9 +8,8 @@ describe('MessageBlockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MessageBlockComponent ]
-    })
-    .compileComponents();
+      declarations: [MessageBlockComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MessageBlockComponent);
     component = fixture.componentInstance;

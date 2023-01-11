@@ -1,17 +1,11 @@
 import { Component, DebugElement } from '@angular/core';
-import {
-  ComponentFixture,
-  ComponentFixtureAutoDetect,
-  TestBed,
-} from '@angular/core/testing';
+import { ComponentFixture, ComponentFixtureAutoDetect, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { NgxCreamLibModule } from '../ngx-cream-lib.module';
 import { AccordionComponent } from './accordion.component';
 
 @Component({
-  template: `<c3m-accordion
-    ><c3m-accordion-item></c3m-accordion-item
-  ></c3m-accordion>`,
+  template: `<c3m-accordion><c3m-accordion-item></c3m-accordion-item></c3m-accordion>`,
 })
 class TestDefaultTitleLevelComponent {}
 @Component({
@@ -55,9 +49,7 @@ describe('AccordionComponent', () => {
   });
 
   it('should create apply title level 4', () => {
-    const testFixture = TestBed.createComponent(
-      TestDefaultTitleLevel4Component
-    );
+    const testFixture = TestBed.createComponent(TestDefaultTitleLevel4Component);
     testFixture.detectChanges();
     const de: DebugElement = testFixture.debugElement.query(By.css('h4'));
     expect(de).toBeTruthy();

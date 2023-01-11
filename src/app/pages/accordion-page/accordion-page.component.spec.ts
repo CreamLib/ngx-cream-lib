@@ -1,8 +1,4 @@
-import {
-  ComponentFixture,
-  ComponentFixtureAutoDetect,
-  TestBed,
-} from '@angular/core/testing';
+import { ComponentFixture, ComponentFixtureAutoDetect, TestBed } from '@angular/core/testing';
 import { NgxCreamLibModule } from '../../../../projects/ngx-cream-lib/src/lib/ngx-cream-lib.module';
 import { AccordionPageComponent } from './accordion-page.component';
 

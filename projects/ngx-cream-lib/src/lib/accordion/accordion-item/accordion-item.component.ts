@@ -1,11 +1,4 @@
-import {
-  animate,
-  AUTO_STYLE,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
+import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { AccordionService } from '../accordion.service';
@@ -32,9 +25,7 @@ import { AccordionService } from '../accordion.service';
           paddingBottom: 0,
         })
       ),
-      transition('open <=> closed', [
-        animate('225ms cubic-bezier(0.4,0.0,0.2,1)'),
-      ]),
+      transition('open <=> closed', [animate('225ms cubic-bezier(0.4,0.0,0.2,1)')]),
     ]),
   ],
 })
@@ -56,13 +47,11 @@ export class AccordionItemComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.accordionService.change$
-      .pipe(takeUntil(this.unsubscribe))
-      .subscribe(accPanelIDOpen => {
-        if (accPanelIDOpen != this.accPanelID) {
-          this.isOpen = false;
-        }
-      });
+    this.accordionService.change$.pipe(takeUntil(this.unsubscribe)).subscribe(accPanelIDOpen => {
+      if (accPanelIDOpen != this.accPanelID) {
+        this.isOpen = false;
+      }
+    });
   }
 
   ngOnDestroy(): void {

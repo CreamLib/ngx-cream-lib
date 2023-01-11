@@ -5,13 +5,13 @@ import {
   Input,
   OnInit,
   TemplateRef,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
 
 @Component({
   selector: 'c3m-tab-panel',
   templateUrl: './tab-panel.component.html',
-  styleUrls: ['./tab-panel.component.css']
+  styleUrls: ['./tab-panel.component.css'],
 })
 export class TabPanelComponent implements OnInit, AfterViewInit {
   @ViewChild('icon', { static: true }) c3mTabPanelIcon!: TemplateRef<unknown>;

@@ -23,15 +23,17 @@ export class PortalLayoutComponent {
     this.resourceType = e.resourceType;
     this.cdr.detectChanges();
 
-    const sections = document.querySelectorAll('section');
+    const sectionDOM = document.querySelectorAll('section');
 
-    sections.forEach(value =>
+    this.sections = [];
+
+    sectionDOM.forEach(value =>
       this.sections.push({
         id: value.id,
         label: (value.firstChild as HTMLElement).innerText,
       })
     );
-    this.isThereSubNav = sections.length > 0;
+    this.isThereSubNav = sectionDOM.length > 0;
   }
 }
 

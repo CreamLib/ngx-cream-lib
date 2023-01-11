@@ -22,7 +22,7 @@ import { MessagePageComponent } from './pages/message-page/message-page.componen
     FooterComponent,
     MainNavigationComponent,
     TabsPageComponent,
-    MessagePageComponent
+    MessagePageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
   providers: [],
