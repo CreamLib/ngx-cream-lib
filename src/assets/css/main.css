@@ -23,66 +23,12 @@ INDEX:
 
 /* ------------------------- RESET ------------------------- */
 
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-form,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, form, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -93,15 +39,8 @@ html {
   scroll-behavior: auto;
 }
 
-header,
-footer,
-main,
-nav,
-aside,
-article,
-section,
-figure,
-figcaption {
+header, footer, main, nav, aside, article, section,
+figure, figcaption {
   display: block;
   margin: 0;
   padding: 0;
@@ -116,27 +55,14 @@ body {
   background-color: var(--body-bg);
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-p,
-li,
-dt,
-dd,
-h5,
-th,
-td {
+p, li, dt, dd, h5, th, td {
   font-size: 0.95em;
 }
-li li,
-li p,
-li dt,
-li dd {
+li li, li p, li dt, li dd {
   font-size: 100%;
 }
 
@@ -167,8 +93,7 @@ a[target='_blank']::after {
   margin-left: 0.3em;
 }
 
-ol,
-ul {
+ol, ul {
   list-style-type: none;
 }
 
@@ -252,9 +177,7 @@ label {
   padding-bottom: 0.3em;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   font: 100%/1 var(--stack);
   color: var(--n-dark);
   background-color: var(--body-bg);
@@ -264,9 +187,7 @@ textarea {
   transition: all;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+input:focus, select:focus, textarea:focus {
   border-color: var(--body-bg);
   border-bottom-color: var(--sec-light);
   border-radius: 0;
@@ -432,8 +353,15 @@ caption {
   padding: 0.5em;
 }
 
-th,
-td {
+caption code {
+  font-size: initial;
+  color: currentColor;
+  background-color: var(--main-color);
+  margin-top: 0.25em;
+}
+
+
+th, td {
   text-align: left;
   line-height: 1.25;
   padding: 0.5em;
@@ -638,10 +566,7 @@ span.tooltip.to-left::before {
     --nav-width: 300px;
   }
 
-  p,
-  li,
-  dt,
-  dd {
+  p, li, dt, dd {
     font-size: 1.1em;
   }
 

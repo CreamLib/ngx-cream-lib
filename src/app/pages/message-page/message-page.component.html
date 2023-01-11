@@ -1,0 +1,63 @@
+<section id="general">
+  <h3>General Information Message</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <c3m-message-block>
+        <p>This is a generic informative message.</p>
+      </c3m-message-block>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel tabTitle="Application">
+      <pre>
+&lt;c3m-message-block&gt;
+  &lt;NG-CONTENT&gt;
+&lt;/c3m-message-block&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="error">
+  <h3>Error or Alert Message</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <c3m-message-block [isError]="true">
+        <p>This is an important error or alert message!</p>
+      </c3m-message-block>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel tabTitle="Application">
+      <pre>
+&lt;c3m-message-block [isError]=&#34;true&#34;&gt;
+  &lt;NG-CONTENT&gt;
+&lt;/c3m-message-block&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>c3m-message-block</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">[isError]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>Specifies if message is an error or alert.</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>
+

@@ -12,7 +12,7 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-main-navigation',
@@ -21,9 +21,9 @@ import { Router } from '@angular/router';
 })
 export class MainNavigationComponent implements OnInit, AfterViewInit {
   constructor(
-    private router: Router,
     private renderer: Renderer2,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private Location: Location
   ) {}
 
   @Input() setId: string | undefined;
@@ -32,14 +32,12 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
 
   @ViewChild('mainNav') nav!: ElementRef;
 
-  currentUrl: string = this.router.url;
+  currentUrl: string = this.Location.path();
   navSectionID = '';
 
   navData = [
     {
       label: 'Blocks',
-      url: './',
-      svgIcon: 'nav-blocks',
       subs: [
         {
           label: 'Accordion',
@@ -61,8 +59,6 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
     },
     {
       label: 'Feedback',
-      url: './',
-      svgIcon: 'nav-feedbacks',
       subs: [
         {
           label: 'Messages',
@@ -80,8 +76,6 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
     },
     {
       label: 'Utilities',
-      url: './',
-      svgIcon: 'nav-tools',
       subs: [
         {
           label: 'Chip',
@@ -102,13 +96,21 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
         {
           label: 'Text Ellipsis',
           url: 'portal/text-ellipsis',
-        },
+        }
+      ],
+    },
+    {
+      label: 'Directives',
+      subs: [
         {
           label: 'Tooltip',
           url: 'portal/tooltip',
-        },
-      ],
+        }
+      ]
     },
+    {
+      label: 'Config & Help'
+    }
   ];
 
   @ViewChildren('navLink') links!: QueryList<ElementRef>;
@@ -121,7 +123,7 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.links.forEach(link => {
-      if (link.nativeElement.getAttribute('href') === this.router.url) {
+      if (link.nativeElement.getAttribute('href') === this.Location.path()) {
         const controlButton =
           link.nativeElement.parentNode.parentNode.previousSibling;
         controlButton.setAttribute('aria-expanded', 'true');
@@ -203,20 +205,17 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
     }
   }
 
-  // Nav accordion
-  closeAll() {
-    this.sections.forEach(group => {
-      group.nativeElement.classList.remove('open');
-      group.nativeElement.classList.add('close');
-      group.nativeElement.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  openAccordion(e: Event) {
-    this.closeAll();
-    (e.target as HTMLElement).classList.remove('close');
-    (e.target as HTMLElement).classList.add('open');
-    (e.target as HTMLElement).setAttribute('aria-expanded', 'true');
+  // Nav collapsibles
+  openSection(e: Event) {
+    if((e.target as HTMLElement).getAttribute('aria-expanded') == 'false') {
+      (e.target as HTMLElement).classList.remove('close');
+      (e.target as HTMLElement).classList.add('open');
+      (e.target as HTMLElement).setAttribute('aria-expanded', 'true');
+    } else {
+      (e.target as HTMLElement).classList.remove('open');
+      (e.target as HTMLElement).classList.add('close');
+      (e.target as HTMLElement).setAttribute('aria-expanded', 'false');
+    }
   }
 
   randomID() {

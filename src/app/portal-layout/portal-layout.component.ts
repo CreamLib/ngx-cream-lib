@@ -9,7 +9,8 @@ import { CreamPage } from '../pages/cream-page';
 })
 export class PortalLayoutComponent {
   pageTitle = '';
-  pageType = '';
+  componentName = '';
+  resourceType = 'Component';
   isThereSubNav = true;
   sections: Section[] = [];
   currentUrl: string = this.router.url;
@@ -18,10 +19,12 @@ export class PortalLayoutComponent {
 
   onActivate(e: CreamPage) {
     this.pageTitle = e.pageTitle;
-    this.pageType = e.pageType;
+    this.componentName = e.componentName;
+    this.resourceType = e.resourceType;
     this.cdr.detectChanges();
 
     const sections = document.querySelectorAll('section');
+
     sections.forEach(value =>
       this.sections.push({
         id: value.id,

@@ -5,20 +5,20 @@ import {
   Input,
   OnInit,
   TemplateRef,
-  ViewChild,
-  ViewEncapsulation,
+  ViewChild
 } from '@angular/core';
 
 @Component({
   selector: 'c3m-tab-panel',
   templateUrl: './tab-panel.component.html',
-  styleUrls: ['./tab-panel.component.css'],
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./tab-panel.component.css']
 })
 export class TabPanelComponent implements OnInit, AfterViewInit {
   @ViewChild('icon', { static: true }) c3mTabPanelIcon!: TemplateRef<unknown>;
   @Input() tabTitle = '';
   @Input() isActive!: boolean;
+  @Input() svgId!: string;
+  @Input() svgTitle!: string;
   @Input() idTab!: number;
   @Input() isDisabled!: boolean;
   @Input() adaptable!: boolean;

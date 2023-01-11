@@ -18,14 +18,17 @@ ul[role='tablist'] li {
 
 button.tabber {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   width: 100%;
-  line-height: 1.3;
+  line-height: 1;
   font-family: var(--stack-b);
   white-space: nowrap;
   text-align: left;
   color: var(--body-text);
   background-color: var(--n-light);
-  padding: 0.5em 1em 0.4em;
+  padding: 0.65em 1em 0.5em;
   border-color: var(--main-color);
   border-radius: 0;
   border-top-left-radius: var(--radius);
@@ -45,27 +48,18 @@ button.tabber[aria-selected='true'] {
   background-color: var(--main-color);
   border-color: var(--main-color);
 }
-
-div.tabsContainer app-tab-panel > div.content[aria-hidden='true'] {
-  display: none;
-}
-div.tabsContainer app-tab-panel > div.content[aria-hidden='false'] {
-  background-color: var(--body-bg);
-  padding: 1rem;
-  margin-top: 2px;
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+button.tabber[aria-selected='true'] svg {
+  fill: var(--text-inv);
 }
 
 /* Deletable tabs - delete button */
 
 button.delete {
-  /*display: none;*/
   position: absolute;
   width: 1em;
   height: 1em;
   top: 0.6em;
-  right: 0.6em;
+  right: 0.8em;
   text-align: center;
   background-color: rgba(255, 255, 255, 0);
   padding: 0;
@@ -85,12 +79,12 @@ button.tabber[aria-selected='true'] + button.delete {
 
 /* Discrete */
 
-c3m-tabs.discrete > div.tabsContainer ul[role='tablist'] {
+:host.discrete > div.tabsContainer > ul[role='tablist'] {
   position: relative;
   border: none;
 }
 
-c3m-tabs.discrete > div.tabsContainer ul[role='tablist']::before {
+:host.discrete > div.tabsContainer > ul[role='tablist']::before {
   content: '';
   display: block;
   position: absolute;
@@ -101,7 +95,7 @@ c3m-tabs.discrete > div.tabsContainer ul[role='tablist']::before {
   z-index: 3;
 }
 
-c3m-tabs.discrete > div.tabsContainer ul[role='tablist'] li button.tabber {
+:host.discrete > div.tabsContainer > ul[role='tablist'] li button.tabber {
   color: var(--body-text);
   background-color: var(--body-bg);
   padding: 0.5em 0.8em;
@@ -110,39 +104,29 @@ c3m-tabs.discrete > div.tabsContainer ul[role='tablist'] li button.tabber {
   border-bottom-right-radius: 0;
   border-bottom: 4px solid var(--body-bg);
 }
-c3m-tabs.discrete > div.tabsContainer ul[role='tablist'] li button.tabber:hover,
-c3m-tabs.discrete
-  > div.tabsContainer
-  ul[role='tablist']
-  button.tabber[aria-selected='true'] {
+:host.discrete > div.tabsContainer > ul[role='tablist'] li button.tabber:hover,
+  :host.discrete > div.tabsContainer > ul[role='tablist'] li button.tabber[aria-selected='true'] {
   background-color: var(--body-bg);
   border-color: var(--main-color);
 }
 
-c3m-tabs.discrete
-  > div.tabsContainer
-  ul[role='tablist']
-  li
-  button.tabber:focus-visible {
+:host.discrete > div.tabsContainer > ul[role='tablist'] li button.tabber:focus-visible {
   outline-offset: -3px;
 }
 
-c3m-tabs.discrete
-  > div.tabsContainer
-  app-tab-panel
-  > div.content[aria-hidden='false'] {
+:host.discrete > div.tabsContainer c3m-tab-panel > div.content[aria-hidden='false'] {
   background-color: var(--body-bg);
   padding: 1rem 0 0;
 }
 
 /* Block style */
 
-c3m-tabs.block-style > div.tabsContainer > ul[role='tablist'] {
+:host.block-style > div.tabsContainer > ul[role='tablist'] {
   position: relative;
   border: none;
 }
 
-c3m-tabs.block-style > div.tabsContainer > ul[role='tablist'] li button.tabber {
+:host.block-style > div.tabsContainer > ul[role='tablist'] li button.tabber {
   color: var(--body-text);
   background-color: var(--body-bg);
   padding: 0.5em 0.8em;
@@ -151,34 +135,17 @@ c3m-tabs.block-style > div.tabsContainer > ul[role='tablist'] li button.tabber {
   border-bottom-right-radius: 0;
   border-bottom: 4px solid var(--body-bg);
 }
-c3m-tabs.block-style
-  > div.tabsContainer
-  > ul[role='tablist']
-  li
-  button.tabber:hover,
-c3m-tabs.block-style
-  > div.tabsContainer
-  > ul[role='tablist']
-  button.tabber[aria-selected='true'] {
+:host.block-style > div.tabsContainer >
+  ul[role='tablist'] li button.tabber:hover,
+  :host.block-style > div.tabsContainer >
+  ul[role='tablist'] li button.tabber[aria-selected='true'] {
   background-color: var(--n-light);
   border-color: var(--n-light);
 }
 
-c3m-tabs.block-style
-  > div.tabsContainer
-  > ul[role='tablist']
-  li
-  button.tabber:focus-visible {
+:host.block-style > div.tabsContainer >
+  ul[role='tablist'] li button.tabber:focus-visible {
   outline-offset: -3px;
-}
-
-c3m-tabs.block-style
-  > div.tabsContainer
-  > app-tab-panel
-  > div.content[aria-hidden='false'] {
-  background-color: var(--n-light);
-  padding: 1rem;
-  margin-top: 0;
 }
 
 /* Tab icons */
@@ -203,7 +170,8 @@ button.with-icon:hover svg {
   list-style-type: none;
   border-radius: 4px;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
   opacity: 0.5;
 }
 
@@ -228,6 +196,7 @@ ul[role='tablist'].hasScroll {
   margin-right: 80px;
   -ms-overflow-style: thin; /* Internet Explorer 10+ */
   scrollbar-width: thin; /* Firefox */
+  scroll-behavior: smooth;
 }
 
 /* Safari and Chrome */
@@ -241,7 +210,14 @@ div.tabsContainer.handle-scroll > ul[role='tablist'] {
   scrollbar-width: thin; /* Firefox */
 }
 div.tabsContainer.handle-scroll > ul[role='tablist']::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  height: 5px;
+}
+div.tabsContainer.handle-scroll > ul[role='tablist']::-webkit-scrollbar-track {
+  background-color: #EEE;
+}
+
+div.tabsContainer.handle-scroll > ul[role='tablist']::-webkit-scrollbar-thumb {
+  background-color: #CCC;
 }
 
 div.tabsContainer.handle-scroll > p.scroll-bts {

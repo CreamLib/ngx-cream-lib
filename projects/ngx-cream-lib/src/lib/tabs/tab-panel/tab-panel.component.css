@@ -3,26 +3,19 @@ div.content:focus-visible {
   outline-offset: -2px;
 }
 
-ul[role='tablist'] li button.alert {
-  overflow: hidden;
+div.content[aria-hidden='true'] {
+  display: none;
 }
-ul[role='tablist'] li button.alert::before {
-  position: relative;
-  left: -2px;
-  content: 'alerte';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  text-indent: -50em;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Crect width='20' height='20' style='fill:%23fff;opacity:0'/%3E%3Cpath d='M1,19.44H19a.41.41,0,0,0,.36-.6l-9-18a.42.42,0,0,0-.74,0l-9,18.05A.41.41,0,0,0,1,19.44Z' style='fill:%23c00;stroke:%23fff;stroke-miterlimit:10;stroke-width:0.9437956333673014px'/%3E%3Crect x='9.03' y='8.19' width='1.95' height='4.74' style='fill:%23fff'/%3E%3Crect x='9.03' y='14.66' width='1.95' height='1.95' style='fill:%23fff'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
+div.content[aria-hidden='false'] {
+  background-color: var(--body-bg);
+  padding: 1rem;
+  margin-top: 2px;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
 }
 
-div.content > c3m-radios fieldset,
-div.content > c3m-checkbox-group fieldset {
-  margin-bottom: 1rem;
-}
-
-div.tabsContainer c3m-tab-panel > div.content[aria-hidden='false'].adaptable {
-  padding-right: 0.5rem;
+:host.block-style > div.content[aria-hidden='false'] {
+  background-color: var(--n-light);
+  padding: 1rem;
+  margin-top: 0;
 }

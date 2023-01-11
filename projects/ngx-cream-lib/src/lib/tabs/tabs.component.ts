@@ -16,8 +16,7 @@ import {
   Input,
   Output,
   QueryList,
-  ViewChildren,
-  ViewEncapsulation,
+  ViewChildren
 } from '@angular/core';
 import { TabPanelComponent } from './tab-panel/tab-panel.component';
 
@@ -25,8 +24,7 @@ import { TabPanelComponent } from './tab-panel/tab-panel.component';
   selector: 'c3m-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabsComponent implements AfterViewInit, AfterContentInit {
   /* List of Tabs Element */

@@ -1,4 +1,5 @@
 export interface CreamPage {
   pageTitle: string;
-  pageType: string;
+  componentName: string;
+  resourceType: string;
 }

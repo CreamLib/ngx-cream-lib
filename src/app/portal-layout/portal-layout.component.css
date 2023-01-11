@@ -10,6 +10,14 @@ div.hgroup h2 {
   margin-bottom: 1em;
 }
 
+div.hgroup h2 code {
+  display: block;
+  font-size: initial;
+  color: currentColor;
+  background-color: var(--main-color);
+  margin-top: 0.25em;
+}
+
 div.hgroup ul {
   display: flex;
   flex-direction: column;
@@ -44,5 +52,13 @@ div.hgroup li a::first-letter {
 @media screen and (min-width: 1000px) {
   div.hgroup h2 {
     font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  div.hgroup h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

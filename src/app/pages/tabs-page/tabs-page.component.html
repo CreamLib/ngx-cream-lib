@@ -1,0 +1,380 @@
+<section id="general-tabs">
+  <h3>General Tabs</h3>
+
+  <div class="introduction editorial">
+    <c3m-message-block>
+      <p>Tabs order can be modified through drag and drop.</p>
+      <p>You can use the <code>changeTab</code> built-in event to get the updated data.</p>
+    </c3m-message-block>
+  </div>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <c3m-tabs label="Tabs for demo">
+        <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
+          <p>This is the content of first tab</p>
+        </c3m-tab-panel>
+        <c3m-tab-panel tabTitle="Second Tab">
+          <p>This is the content of second tab</p>
+        </c3m-tab-panel>
+        <c3m-tab-panel tabTitle="Third Tab">
+          <p>This is the content of third tab</p>
+        </c3m-tab-panel>
+      </c3m-tabs>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;c3m-tabs label=&#34;Tabs for demo&#34;&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;First Tab&#34; [isActive]=&#34;true&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Second Tab&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Third Tab&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+&lt;/c3m-tabs&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+
+</section>
+
+<section id="deletable-tabs">
+  <h3>Deletable Tabs</h3>
+
+  <div class="introduction editorial">
+    <c3m-message-block>
+      <p>The <code>closeTab</code> built-in event can be used to retrieve data about
+        the deleted tab.</p>
+    </c3m-message-block>
+  </div>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <c3m-tabs label="Demo for deletable tabs" [deletable]="true">
+        <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
+          <p>This is the content of first tab</p>
+        </c3m-tab-panel>
+        <c3m-tab-panel tabTitle="Second Tab">
+          <p>This is the content of second tab</p>
+        </c3m-tab-panel>
+        <c3m-tab-panel tabTitle="Third Tab">
+          <p>This is the content of third tab</p>
+        </c3m-tab-panel>
+      </c3m-tabs>
+
+
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;c3m-tabs label=&#34;Tabs for demo&#34;  [deletable]=&#34;true&#34; &gt;
+  &lt;c3m-tab-panel tabTitle=&#34;First Tab&#34; [isActive]=&#34;true&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Second Tab&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Third Tab&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+&lt;/c3m-tabs&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+
+</section>
+
+<section id="discrete-tabs">
+  <h3>Discrete Tabs</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <div style="background-color: #FFF; padding: 1rem;">
+        <c3m-tabs class="discrete" label="Demo for deletable tabs">
+          <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
+            <p>This is the content of first tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Second Tab">
+            <p>This is the content of second tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Third Tab">
+            <p>This is the content of third tab</p>
+          </c3m-tab-panel>
+        </c3m-tabs>
+      </div>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;c3m-tabs class=&#34;discrete&#34; label=&#34;Tabs for demo&#34;  [deletable]=&#34;true&#34; &gt;
+  &lt;c3m-tab-panel tabTitle=&#34;First Tab&#34; [isActive]=&#34;true&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Second Tab&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Third Tab&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-tab-panel&gt;
+&lt;/c3m-tabs&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="icon-tabs">
+  <h3>Tabs with Icons</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <c3m-tabs label="Demo for deletable tabs">
+        <c3m-tab-panel tabTitle="First Tab" svgId="nav-forms" svgTitle="Forms" [isActive]="true">
+          <p>This is the content of first tab</p>
+        </c3m-tab-panel>
+        <c3m-tab-panel tabTitle="Second Tab" svgId="nav-blocks" svgTitle="Blocks" >
+          <p>This is the content of second tab</p>
+        </c3m-tab-panel>
+        <c3m-tab-panel tabTitle="Third Tab" svgId="nav-feedbacks" svgTitle="Feedbacks" >
+          <p>This is the content of third tab</p>
+        </c3m-tab-panel>
+      </c3m-tabs>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;c3m-tabs label=&#34;Demo for deletable tabs&#34;&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;First Tab&#34; svgId=&#34;nav-forms&#34; svgTitle=&#34;Forms&#34; [isActive]=&#34;true&#34;&gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Second Tab&#34; svgId=&#34;nav-blocks&#34; svgTitle=&#34;Blocks&#34; &gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Third Tab&#34; svgId=&#34;nav-feedbacks&#34; svgTitle=&#34;Feedbacks&#34; &gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+&lt;/c3m-tabs&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+
+</section>
+
+<section id="responsive-tabs">
+  <h3>Responsiveness</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <div style="width: 50%; margin-bottom: 2rem;">
+        <c3m-tabs label="Demo for deletable tabs">
+          <c3m-tab-panel tabTitle="First Tab" svgId="nav-forms" svgTitle="Forms" [isActive]="true">
+            <p>This is the content of first tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Second Tab" svgId="nav-blocks" svgTitle="Blocks" >
+            <p>This is the content of second tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Third Tab" svgId="nav-feedbacks" svgTitle="Feedbacks" >
+            <p>This is the content of third tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Forth Tab" svgId="nav-forms" svgTitle="Forms">
+            <p>This is the content of forth tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Fifth Tab" svgId="nav-blocks" svgTitle="Blocks" >
+            <p>This is the content of fifth tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Sixth Tab" svgId="nav-feedbacks" svgTitle="Feedbacks" >
+            <p>This is the content of sixth tab</p>
+          </c3m-tab-panel>
+        </c3m-tabs>
+      </div>
+      <div style="width: 50%;">
+        <c3m-tabs label="Demo for deletable tabs" [handleScroll]="true">
+          <c3m-tab-panel tabTitle="First Tab" svgId="nav-forms" svgTitle="Forms" [isActive]="true">
+            <p>This is the content of first tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Second Tab" svgId="nav-blocks" svgTitle="Blocks" >
+            <p>This is the content of second tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Third Tab" svgId="nav-feedbacks" svgTitle="Feedbacks" >
+            <p>This is the content of third tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Forth Tab" svgId="nav-forms" svgTitle="Forms">
+            <p>This is the content of forth tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Fifth Tab" svgId="nav-blocks" svgTitle="Blocks" >
+            <p>This is the content of fifth tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Sixth Tab" svgId="nav-feedbacks" svgTitle="Feedbacks" >
+            <p>This is the content of sixth tab</p>
+          </c3m-tab-panel>
+        </c3m-tabs>
+      </div>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;c3m-tabs label=&#34;Demo for deletable tabs&#34;&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;First Tab&#34; svgId=&#34;nav-forms&#34; svgTitle=&#34;Forms&#34; [isActive]=&#34;true&#34;&gt;
+    &lt;p&gt;This is the content of first tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Second Tab&#34; svgId=&#34;nav-blocks&#34; svgTitle=&#34;Blocks&#34; &gt;
+    &lt;p&gt;This is the content of second tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Third Tab&#34; svgId=&#34;nav-feedbacks&#34; svgTitle=&#34;Feedbacks&#34; &gt;
+    &lt;p&gt;This is the content of third tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Forth Tab&#34; svgId=&#34;nav-forms&#34; svgTitle=&#34;Forms&#34;&gt;
+    &lt;p&gt;This is the content of forth tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Fifth Tab&#34; svgId=&#34;nav-blocks&#34; svgTitle=&#34;Blocks&#34; &gt;
+    &lt;p&gt;This is the content of fifth tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Sixth Tab&#34; svgId=&#34;nav-feedbacks&#34; svgTitle=&#34;Feedbacks&#34; &gt;
+    &lt;p&gt;This is the content of sixth tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+&lt;/c3m-tabs&gt;
+
+&lt;c3m-tabs label=&#34;Demo for deletable tabs&#34; [handleScroll]=&#34;true&#34;&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;First Tab&#34; svgId=&#34;nav-forms&#34; svgTitle=&#34;Forms&#34; [isActive]=&#34;true&#34;&gt;
+    &lt;p&gt;This is the content of first tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Second Tab&#34; svgId=&#34;nav-blocks&#34; svgTitle=&#34;Blocks&#34; &gt;
+    &lt;p&gt;This is the content of second tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Third Tab&#34; svgId=&#34;nav-feedbacks&#34; svgTitle=&#34;Feedbacks&#34; &gt;
+    &lt;p&gt;This is the content of third tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Forth Tab&#34; svgId=&#34;nav-forms&#34; svgTitle=&#34;Forms&#34;&gt;
+    &lt;p&gt;This is the content of forth tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Fifth Tab&#34; svgId=&#34;nav-blocks&#34; svgTitle=&#34;Blocks&#34; &gt;
+    &lt;p&gt;This is the content of fifth tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+  &lt;c3m-tab-panel tabTitle=&#34;Sixth Tab&#34; svgId=&#34;nav-feedbacks&#34; svgTitle=&#34;Feedbacks&#34; &gt;
+    &lt;p&gt;This is the content of sixth tab&lt;/p&gt;
+  &lt;/c3m-tab-panel&gt;
+&lt;/c3m-tabs&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>c3m-tabs</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">label *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Describes the nature of the group of tabs</td>
+    </tr>
+    <tr>
+      <td data-head="Name">[deletable]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>Adds delete button to tabs</td>
+    </tr>
+    <tr>
+      <td data-head="Name">[handleScroll]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>Allows to add buttons to handle the scroll of tabs</td>
+    </tr>
+    <tr>
+      <td data-head="Name">startIndexActiv</td>
+      <td data-head="Type">number</td>
+      <td data-head="Default">0</td>
+      <td>Outputs index of deleted tab</td>
+    </tr>
+    <tr>
+      <td data-head="Name">discrete</td>
+      <td data-head="Type">(class)</td>
+      <td data-head="Default">--</td>
+      <td>Simplifies tabs design style</td>
+    </tr>
+  </table>
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>c3m-tab-panel</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">[isActive] *</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">--</td>
+      <td>Sets default selected tab</td>
+    </tr>
+    <tr>
+      <td data-head="Name">tabTitle *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Label for the tab</td>
+    </tr>
+    <tr>
+      <td data-head="Name">[adaptable]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>Allows tab container to have fixed height and vertical scroll</td>
+    </tr>
+    <tr>
+      <td data-head="Name">svgId</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>SVG image ID (from index svg sprite)</td>
+    </tr>
+    <tr>
+      <td data-head="Name">svgTitle</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>SVG image alternative text (* mandatory if svgId is set)</td>
+    </tr>
+  </table>
+
+  <table class="adaptable">
+    <caption>Events for <code>c3m-tabs</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Parameters</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">changeTab</td>
+      <td data-head="Parameters">
+        event.originalEvent: Click event
+        <br />
+        event.index: Index of the current selected tab or dragged tab
+      </td>
+      <td>Callback to invoke on tab change</td>
+    </tr>
+    <tr>
+      <td data-head="Name">closeTab</td>
+      <td data-head="Parameters">
+        event.originalEvent: Click event
+        <br />
+        event.index: Index of the current deleted tab
+      </td>
+      <td>Callback to invoke on tab close</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>
+

@@ -9,6 +9,8 @@ import { PortalLayoutComponent } from './portal-layout/portal-layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
+import { TabsPageComponent } from './pages/tabs-page/tabs-page.component';
+import { MessagePageComponent } from './pages/message-page/message-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { MainNavigationComponent } from './components/main-navigation/main-navig
     HeaderComponent,
     FooterComponent,
     MainNavigationComponent,
+    TabsPageComponent,
+    MessagePageComponent
   ],
   imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
   providers: [],

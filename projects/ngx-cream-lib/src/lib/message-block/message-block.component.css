@@ -1,0 +1,25 @@
+div {
+  position: relative;
+  max-width: 88em;
+  background-color: var(--sec-u-light);
+  padding: 1rem;
+  z-index: 1;
+}
+div.error {background-color: var(--hot-sec-light);}
+
+:host ::ng-deep p {
+  max-width: 45em;
+  line-height: 1.45;
+  margin-left: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+div.info svg {fill: var(--sec-color);}
+div.error svg {fill: var(--alert-color);}

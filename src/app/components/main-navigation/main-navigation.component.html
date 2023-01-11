@@ -7,7 +7,7 @@
       <button
         class="level1"
         #levelOne
-        (click)="openAccordion($event)"
+        (click)="openSection($event)"
         aria-expanded="false"
         [attr.aria-controls]="navSectionID">
         <svg role="img" width="24" height="24" aria-hidden="true">
@@ -27,8 +27,7 @@
             [attr.aria-current]="ariaRouterLink.isActive ? 'page' : null"
             (click)="closeNavCondition()"
             (blur)="isLast($event)">
-            {{ subSection.label }}</a
-          >
+            {{ subSection.label }}</a>
         </li>
       </ul>
     </li>

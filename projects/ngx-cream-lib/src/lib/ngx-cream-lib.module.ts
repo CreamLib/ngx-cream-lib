@@ -8,16 +8,21 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { HComponent } from './h/h.component';
 import { TabPanelComponent } from './tabs/tab-panel/tab-panel.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { MessageBlockComponent } from './message-block/message-block.component';
+import { FocusOnPageChangeDirective } from './directives/focus-on-page-change.directive';
 
 const components = [
   AccordionComponent,
   AccordionItemComponent,
+  HComponent,
   TabsComponent,
   TabPanelComponent,
+  MessageBlockComponent,
+  FocusOnPageChangeDirective
 ];
 
 @NgModule({
-  declarations: [...components, HComponent],
+  declarations: [...components],
   imports: [
     CommonModule,
     DragDropModule,

@@ -8,5 +8,6 @@ import { CreamPage } from '../cream-page';
 })
 export class AccordionPageComponent implements CreamPage {
   pageTitle = 'Accordion';
-  pageType = 'Component';
+  componentName = 'c3m-accordion/ c3m-accordion-item';
+  resourceType = 'Component';
 }
