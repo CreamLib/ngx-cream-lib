@@ -1,0 +1,19 @@
+<p [attr.role]="role"
+  [ngClass]="{ active: active, inactive: !active }"
+  class="{{ styleClass }}">
+
+  <!-- Your Content -->
+  <span class="content">
+    {{ toastText }}
+  </span>
+
+  <span class="close" aria-hidden="true">
+    <button type="button" class="single" [disabled]="disabled" (click)="closeToast($event)">
+      <svg class="icon-bts" role="img" width="25" height="25" [attr.aria-describedby]="toastId">
+        <title [id]="toastId">{{ closeBtnTitle }}</title>
+        <use href="./assets/img/sprite.svg#bt-close"></use>
+      </svg>
+    </button>
+  </span>
+</p>
+

@@ -30,15 +30,11 @@ div.hgroup ul {
 div.hgroup li {
   min-width: 30%;
   flex-basis: 20%;
-  text-transform: lowercase;
 }
 
 div.hgroup li a {
   display: block;
   text-decoration: none;
-}
-div.hgroup li a::first-letter {
-  text-transform: uppercase;
 }
 
 /* ------------------ MEDIA QUERIES ------------------ */

@@ -1,0 +1,157 @@
+<section id="add-css" class="editorial">
+  <h3>Adding your own style-sheet</h3>
+
+  <p>Besides the <strong>CreamNg</strong> style-sheet, you may add your own and define
+    your css custom properties.</p>
+
+  <p><em>angular.json</em></p>
+
+  <pre class="command">
+  &#34;assets&#34;: [
+      &#34;src/favicon.ico&#34;,
+      &#34;src/assets&#34;,
+      &#123;
+        &#34;glob&#34;: &#34;**/*&#34;,
+        &#34;input&#34;: &#34;/node_modules/ngx-cream-lib/assets&#34;,
+        &#34;output&#34;: &#34;/assets/&#34;
+      &#125;
+    ],
+    &#34;styles&#34;: [
+      &#34;/node_modules/ngx-cream-lib/assets/css/main.css&#34;,
+      &#34;src/assets/css/local.css&#34;
+    ],
+    &#34;scripts&#34;: []
+  &#125;,
+  </pre>
+
+  <p>You may group your local css custom properties in a separate file and
+    import it from your css.</p>
+
+  <p>Your local CSS and variables will be loaded last, so you may overwrite
+    any style you need to.
+  </p>
+</section>
+
+<section id="with-icons" class="editorial">
+  <h3>Using Icons</h3>
+
+  <p>This library uses exclusively <strong>svg images</strong> for their high level of
+  quality, easy manipulation and their light weight.</p>
+
+  <p>For maximum flexibility and performance, we use svg images in three
+  different ways:</p>
+
+  <ul>
+    <li><strong>Svg image files:</strong> some complex images are
+      stored as svg files in the <em>./assets/img</em> folder.
+      This folder holds mostly the application logo in different styles;
+    </li>
+    <li><strong>Svg “sprite”:</strong>
+        most of the simple icons are listed in what we call a svg
+    “sprite”, which is a list of inline svgs. This list gives us a total
+    flexibility in terms of accessibility and style. The svg sprite sits in
+    the <strong><em>./assets/img/sprite.svg</em></strong> file, so svg
+    icons can be referred to from anywhere in
+    the application. Notice that, besides the icons of the first level of the
+    main navigation (with Ids “sec-XXXX”) and some exceptions,
+    all other icons are 24 x 24 pixels;
+    </li>
+    <li><strong>Svg backgrounds:</strong> some inline svgs are converted
+      to data URI to be used
+      as background images. This technique allows us to change svg images
+    through HTML classes.</li>
+  </ul>
+
+  <p>The choice of the way we will insert the svg will depend on the role it
+  will have in the application and the kind of style flexibility they
+  will need.</p>
+
+  <h4>Decorative Images</h4>
+
+  <p>Pure decorative images &mdash; images that don't carry information
+    &mdash; may be referred in the svg sprite or encoded in data URI to
+    be used as
+  background. If the icon should be transformed based on the component
+  state, it is easier to do that if the icon is called as background.</p>
+
+  <p>For example, in the case of radio or check boxes, the svg images that
+  replace the native elements are stored as background images so they can
+  be easily changed if the radio/check box is selected of not (refer to
+  the <code>radio-item</code> or <code>checkbox</code> components as examples).
+  </p>
+
+  <p>If this is not the case &mdash; the image will not be transformed by a
+  specific state &mdash;, you may use an icon listed on the svg sprite.
+  To do so, you have to reference the svg by its ID, with the <code>use</code>
+  element:</p>
+
+    <pre class="command">
+&lt;svg role=&#34;img&#34; width=&#34;24&#34; height=&#34;24&#34; aria-hidden=&#34;true&#34;&gt;
+  &lt;use href=&#34;./assets/img/sprite.svg#pic-arrow&#34;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+    </pre>
+
+  <p>Notice that, as the image carries no information,
+    we may hide it from screen readers by setting the <code>aria-hidden</code>
+    attribute as "true".</p>
+
+  <h4>Non-decorative images</h4>
+
+  <p>Images that carry information, i.e. they are not purely decorative,
+    must appear as:</p>
+
+  <ul>
+    <li>image files properly referenced by the <code>img</code>
+      element and with a <strong>mandatory <code>alt</code>
+      attribute</strong>  to describe its purpose or meaning;
+    </li>
+    <li>svg sprite image called with the <code>use</code> element,
+      with a <strong>mandatory <code>title</code> element</strong>
+      describing its meaning or purpose:
+    </li>
+  </ul>
+
+
+  <pre class="command">
+&lt;svg role=&#34;img&#34; width=&#34;24&#34; height=&#34;24&#34;&gt;
+  &lt;title&gt;Favorites&lt;/title&gt;
+  &lt;use href=&#34;./assets/img/sprite.svg#ic-favorites&#34;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+  </pre>
+
+  <h4>Changing styles</h4>
+
+  <p>Icons listed in the svg sprite don't have a predefined color, so it
+    may be modified by CSS.
+  You can do that by modifiying the styles directly on the svg sprite
+  &mdash; changing globally &mdash; or you can modify the color on the
+  component's stylesheet; check the <code>main-nav</code>
+  component's stylesheet for an example.</p>
+
+  <p>Size can also be modified by CSS using the transform property or
+  width and height properties.</p>
+
+  <h4>Adding icons to svg sprite or background</h4>
+
+  <p>Svg images are great because they are purely HTML, what makes its
+  manipulation very easy and flexible.</p>
+  <p>If you need to add a new icon to the svg sprite, simply get the svg
+    code (without the opening and closing <code>svg</code> tags),
+    group it in a <code>g</code> and give it a unique ID.
+    That's all you have to do to refrence to this icon later in the application.
+  </p>
+
+  <p>If you want to add the image as background, you have to encode the
+    svg source into a data URI first.</p>
+  <p>You may use Yuri Yoksel's
+    <a href="https://yoksel.github.io/url-encoder/" target="_blank">
+      URL Encoder for SVG</a>
+    to do that.</p>
+</section>
+
+
+
+<svg role="img" width="24" height="24" aria-describedby="controlLabel">
+  <title id="controlLabel">Open/Close navigation</title>
+  <use href="./assets/img/local-sprite.svg#nav-blocks"></use>
+</svg>

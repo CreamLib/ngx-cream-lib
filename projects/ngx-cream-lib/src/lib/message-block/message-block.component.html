@@ -1,4 +1,4 @@
-<div class="editorial" [ngClass]="{ info: !isError, error: isError }">
+<div class="message editorial" [ngClass]="{ info: !isError, error: isError }">
   <svg *ngIf="!isError" role="img" width="24" height="24" aria-describedby="infoLabel">
     <title id="infoLabel">Information</title>
     <use href="./assets/img/sprite.svg#info"></use>
@@ -7,5 +7,7 @@
     <title id="infoLabel">Error</title>
     <use href="./assets/img/sprite.svg#error"></use>
   </svg>
-  <ng-content></ng-content>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
 </div>

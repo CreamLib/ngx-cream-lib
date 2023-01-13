@@ -54,8 +54,8 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
         {
           label: 'Tabs',
           url: 'portal/tabs',
-        },
-      ],
+        }
+      ]
     },
     {
       label: 'Feedback',
@@ -71,8 +71,8 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
         {
           label: 'Toast',
           url: 'portal/toast',
-        },
-      ],
+        }
+      ]
     },
     {
       label: 'Utilities',
@@ -96,8 +96,8 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
         {
           label: 'Text Ellipsis',
           url: 'portal/text-ellipsis',
-        },
-      ],
+        }
+      ]
     },
     {
       label: 'Directives',
@@ -105,12 +105,22 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
         {
           label: 'Tooltip',
           url: 'portal/tooltip',
-        },
-      ],
+        }
+      ]
     },
     {
-      label: 'Config & Help',
-    },
+      label: 'Setup & Help',
+      subs: [
+        {
+          label: 'Getting Started',
+          url: 'portal/getting-started',
+        },
+        {
+          label: 'Custom Design',
+          url: 'portal/custom-design',
+        }
+      ]
+    }
   ];
 
   @ViewChildren('navLink') links!: QueryList<ElementRef>;

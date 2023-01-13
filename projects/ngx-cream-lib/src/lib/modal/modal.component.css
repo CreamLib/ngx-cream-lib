@@ -1,0 +1,81 @@
+div.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header {margin-bottom: 2vw;}
+
+h2 {
+  font: 1.2em var(--stack-b);
+  line-height: 1.2;
+  margin-right: 5em;
+}
+
+div.modal[aria-hidden=false] {display: block;}
+
+  div.modal div.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+div.modal-body {
+  box-sizing: border-box;
+  position: absolute;
+  width: 90%;
+  max-width: 800px;
+  height: 90vh;
+  left: 0;
+  right: 0;
+  top: 5vh;
+  background-color: var(--body-bg);
+  padding: 1rem 1.5rem 1.5rem;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  z-index: 1001;
+}
+
+div.content {
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 85%;
+}
+
+button.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--n-dark);
+  background-color: var(--body-bg);
+  padding: 0;
+}
+
+/* Different modal sizes */
+
+:host.simple-dialog div.modal-body {
+  max-width: 500px;
+  height: auto;
+  top: 20%;
+}
+:host.simple-dialog div.content {
+  overflow-y: visible;
+  height: auto;
+}
+:host.simple-dialog header {
+  margin-bottom: 1rem;
+}
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 1000px) {
+  h2 {font-size: 1.4em;}
+}

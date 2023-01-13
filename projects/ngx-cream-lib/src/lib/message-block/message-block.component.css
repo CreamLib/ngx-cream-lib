@@ -1,22 +1,20 @@
-div {
+div.message {
   position: relative;
-  max-width: 88em;
+  display: flex;
+  gap: 1rem;
   background-color: var(--sec-u-light);
-  padding: 1rem;
+  padding: 1.5rem;
   z-index: 1;
 }
 div.error {background-color: var(--hot-sec-light);}
 
-:host ::ng-deep p {
+div.content {
   max-width: 45em;
   line-height: 1.45;
-  margin-left: 40px;
 }
 
 svg {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  flex: 0 0 24px;
   transform: scale(1.5);
   z-index: 1;
 }

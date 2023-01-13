@@ -40,6 +40,7 @@
       "excludedFiles": ["*inline-template-*.component.html"],
       "extends": ["plugin:prettier/recommended"],
       "rules": {
+        "bracketSameLine": true,
         "prettier/prettier": ["error", { "parser": "angular" }]
       }
     }

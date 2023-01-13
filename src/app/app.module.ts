@@ -11,6 +11,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 import { TabsPageComponent } from './pages/tabs-page/tabs-page.component';
 import { MessagePageComponent } from './pages/message-page/message-page.component';
+import { CustomDesignComponent } from './pages/custom-design/custom-design.component';
+import { GettingStartedComponent } from './pages/getting-started/getting-started.component';
+import { CollapsiblePageComponent } from './pages/collapsible-page/collapsible-page.component';
+import { ModalPageComponent } from './pages/modal-page/modal-page.component';
+import { SnackbarPageComponent } from './pages/snackbar-page/snackbar-page.component';
+import { ToastPageComponent } from './pages/toast-page/toast-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +29,12 @@ import { MessagePageComponent } from './pages/message-page/message-page.componen
     MainNavigationComponent,
     TabsPageComponent,
     MessagePageComponent,
+    CustomDesignComponent,
+    GettingStartedComponent,
+    CollapsiblePageComponent,
+    ModalPageComponent,
+    SnackbarPageComponent,
+    ToastPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
   providers: [],

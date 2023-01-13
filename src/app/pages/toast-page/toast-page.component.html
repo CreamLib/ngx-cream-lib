@@ -1,0 +1,208 @@
+<div class="introduction editorial">
+  <div class="intro-text">
+    <p>Toasts must be used carefully, as they may pose problems to accessibility.</p>
+    <p>We did our best to make it accessible and affordable, but as its message
+      is time-sensitive, it will always violate the WCAG21
+      <a href="https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html" target="_blank">
+        2.2.1: Timing Adjustable</a>
+      criteria.</p>
+  </div>
+
+  <c3m-message-block>
+    <p>A toast must be a single line of text; any other element
+      inside it will be ignored.</p>
+  </c3m-message-block>
+</div>
+
+<section id="generic-toast">
+  <h3>Generic Toast with Slide Option</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <p>
+        <button aria-controls="toast3" (click)="openToast($event, toast3)">
+          General Toast with option
+        </button>
+      </p>
+
+      <c3m-toast id="toast3" #toast3
+        class="normal"
+        styleClass="slide-to-top"
+        toastText="This is a generic message">
+      </c3m-toast>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel tabTitle="Application">
+      <pre>
+&lt;c3m-toast id=&#34;toast3&#34; #toast3
+  class=&#34;normal&#34;
+  styleClass=&#34;slide-to-top&#34;
+  toastText=&#34;This is a generic message&#34;&gt;
+&lt;/c3m-toast&gt;
+
+
+EXAMPLE TO TRIGGER THE TOAST
+
+&lt;button aria-controls=&#34;toast3&#34; (click)=&#34;openToast($event, toast3)&#34;&gt;
+  General Toast with option
+&lt;/button&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="success-toast">
+  <h3>Success Toast</h3>
+
+  <div class="introduction editorial">
+    <div class="intro-text">
+      <p>Optional introductory text.</p>
+    </div>
+  </div>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <p>
+        <button aria-controls="toast" (click)="openToast($event, toast)">
+          Success Toast (default)
+        </button>
+      </p>
+
+      <c3m-toast id="toast" #toast toastText="Positive feedback message">
+      </c3m-toast>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel tabTitle="Application">
+      <pre>
+&lt;c3m-toast id=&#34;toast&#34; #toast toastText=&#34;Positive feedback message&#34;&gt;
+&lt;/c3m-toast&gt;
+
+
+EXAMPLE TO TRIGGER THE TOAST
+
+&lt;button aria-controls=&#34;toast&#34; (click)=&#34;openToast($event, toast)&#34;&gt;
+  Success Toast (default)
+&lt;/button&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="alert-toast">
+  <h3>Alert Toast</h3>
+
+  <div class="introduction editorial">
+    <c3m-message-block >
+      <p>The "alert" role should be used for alert or error messages only.
+        The main difference with the role "status" is that "alert" will stop
+        the current reading of the screen reader in order to read the toast,
+        while "status" will wait for the end of the current reading
+        before announcing its content.</p>
+    </c3m-message-block>
+  </div>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <p>
+        <button aria-controls="toast2" (click)="openToast($event, toast2)">
+          Alert Toast
+        </button>
+      </p>
+
+      <c3m-toast id="toast2" #toast2
+        role="alert"
+        toastText="This is an alert message"
+        closeBtnTitle="Close alert">
+        This is an alert message
+      </c3m-toast>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel tabTitle="Application">
+      <pre>
+&lt;c3m-toast id=&#34;toast2&#34; #toast2
+  role=&#34;alert&#34;
+  toastText=&#34;This is an alert message&#34;
+  closeBtnTitle=&#34;Close alert&#34;&gt;
+  This is an alert message
+&lt;/c3m-toast&gt;
+
+EXAMPLE TO TRIGGER THE TOAST
+
+&lt;button aria-controls=&#34;toast&#34; (click)=&#34;openToast($event, toast2)&#34;&gt;
+  Success Toast (default)
+&lt;/button&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>c3m-toast</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">&lt;identifier&gt; *</td>
+      <td data-head="Type"><em>#xxxxx</em></td>
+      <td data-head="Default">--</td>
+      <td>Unique identifier of a toast</td>
+    </tr>
+    <tr>
+      <td data-head="Name">toastText *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Content of the toast</td>
+    </tr>
+    <tr>
+      <td data-head="Name">role</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">"status"</td>
+      <td>Specifies the type of message ("status" or "alert").
+        "status" should be used to indicate a success message.</td>
+    </tr>
+    <tr>
+      <td data-head="Name">delay</td>
+      <td data-head="Type">number</td>
+      <td data-head="Default">6500</td>
+      <td>Time in milliseconds to display toast. Toast will not close
+        by itself if value is set to 0.
+      </td>
+    </tr>
+    <tr>
+      <td data-head="Name">normal</td>
+      <td data-head="Type">(class)</td>
+      <td data-head="Default">--</td>
+      <td>Changes style of the toast, to indicate a generic message</td>
+    </tr>
+    <tr>
+      <td data-head="Name">closeBtnTitle</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">"Close toast"</td>
+      <td>Text to announce close button</td>
+    </tr>
+    <tr>
+      <td data-head="Name">styleClass</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">"slide-to-bottom"</td>
+      <td>Speficies direction of animation ("slide-to-bottom" or "slide-to-top")</td>
+    </tr>
+    <tr>
+      <td data-head="Name">disabled</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Disables close button if value "disabled"</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>
+
+

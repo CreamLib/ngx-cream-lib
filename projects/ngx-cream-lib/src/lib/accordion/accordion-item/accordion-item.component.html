@@ -6,7 +6,9 @@
     [attr.aria-controls]="accPanelID"
     [id]="accID">
     <span>{{ label }}</span>
-    <span class="total" *ngIf="total !== ''"> ({{ total }}) </span>
+    <span class="total" *ngIf="total !== ''">
+      ({{ total }})
+    </span>
   </button>
 </c3m-h>
 

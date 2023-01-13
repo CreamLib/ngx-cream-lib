@@ -1,0 +1,42 @@
+<section id="first-steps">
+  <h3>Setting Up Your Local Environment</h3>
+
+  <div class="introduction editorial">
+    <c3m-message-block>
+      <p>Remember that, in order to install Angular on your local system, you'll need
+        <code><a href="https://noedjs.org" target="_blank">Node.js</a></code>
+        and to install an npm package manager with the command
+        <code>npm install npm@latest -g</code>
+      </p>
+    </c3m-message-block>
+  </div>
+
+  <p><strong>CreamNg</strong> uses Angular version 15, so be sure to have
+    the latest version of Angular-Cli:</p>
+
+  <p class="command-line">
+    npm install -g angular-cli@latest
+  </p>
+</section>
+
+<section id="import">
+  <h3>Importing CreamNg into Your Project</h3>
+
+  <p>Once your project created, import the library via npm (run the command
+    on the root of your project):</p>
+
+  <p class="command-line">
+    npm install ngx-cream-lib
+  </p>
+
+  <p>Now, include the CreamNg module in your <em>app.module.ts</em> by importing
+    the module and declaring it on the "imports" list:</p>
+
+
+    <pre class="command">
+import &#123; NgxCreamLibModule &#125; from &apos;ngx-cream-lib&apos;;
+
+...
+imports: [NgxCreamLibModule]
+    </pre>
+</section>

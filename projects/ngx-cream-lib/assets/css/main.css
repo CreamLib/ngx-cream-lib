@@ -23,14 +23,12 @@ INDEX:
 
 /* ------------------------- RESET ------------------------- */
 
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, form, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i,dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, form, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -41,8 +39,8 @@ html {
   scroll-behavior: auto;
 }
 
-header, footer, main, nav, aside,
-  article, section, figure, figcaption {
+header, footer, main, nav, aside, article, section,
+figure, figcaption {
   display: block;
   margin: 0;
   padding: 0;
@@ -55,7 +53,6 @@ body {
   font: 100%/1 var(--stack);
   color: var(--body-text);
   background-color: var(--body-bg);
-  background-color: var(--body-bg);
 }
 
 h2, h3, h4, h5, h6 {
@@ -65,7 +62,6 @@ h2, h3, h4, h5, h6 {
 p, li, dt, dd, h5, th, td {
   font-size: 0.95em;
 }
-
 li li, li p, li dt, li dd {
   font-size: 100%;
 }
@@ -357,8 +353,15 @@ caption {
   padding: 0.5em;
 }
 
-th,
-td {
+caption code {
+  font-size: initial;
+  color: currentColor;
+  background-color: var(--main-color);
+  margin-top: 0.25em;
+}
+
+
+th, td {
   text-align: left;
   line-height: 1.25;
   padding: 0.5em;
@@ -397,14 +400,15 @@ th {
 /* -------------------------- BLOCKS ---------------------------- */
 
 div.component-sheet section {
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   border-top: 3px dotted var(--n-dark);
   margin-bottom: calc(1.5rem + 1vw);
 }
 
 div.component-sheet h3 {
   font-family: var(--stack-b);
-  text-transform: uppercase;
+  color: var(--main-dark);
+  background-color: var(--body-bg);
   margin-bottom: 1.5em;
 }
 
@@ -445,26 +449,31 @@ article.editorial {
 .editorial h3 {
   display: block;
   font: 1.3rem var(--stack-b);
-  color: var(--sec-color);
+  color: var(--main-dark);
+  background-color: var(--body-bg);
   margin-bottom: 1em;
 }
 
 .editorial h4 {
-  font: 1rem var(--stack-b);
-  margin-bottom: 1em;
+  font: 1.1em var(--stack-b);
+  margin: 1.5em 0 1em;
 }
 
 .editorial p {
   line-height: 1.58;
+  max-width: 45em;
 }
 .editorial p + p {
   margin-top: 0.8em;
 }
 
 .editorial ul {
+  list-style-type: disc;
+  max-width: 45em;
   margin: 2rem 1rem;
 }
-.editorial li + li {
+.editorial li {
+  line-height: 1.58;
   margin-top: 0.5em;
 }
 
@@ -563,9 +572,8 @@ span.tooltip.to-left::before {
     --nav-width: 300px;
   }
 
-  p, li, dt, dd {
-    font-size: 1.1em;
-  }
+  p, li, dt, dd {font-size: 1em;}
+  .editorial h4 {font-size: 1.35em;}
 
   main#page-body {
     margin: 1.5rem 1.5rem 2rem calc(var(--nav-width) + 2vw);

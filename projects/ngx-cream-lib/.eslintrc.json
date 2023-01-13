@@ -25,7 +25,9 @@
     },
     {
       "files": ["*.html"],
-      "rules": {}
+      "rules": {
+        "bracketSameLine": true
+      }
     }
   ]
 }
