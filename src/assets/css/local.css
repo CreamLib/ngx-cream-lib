@@ -4,7 +4,7 @@ pre {
   overflow: auto;
 }
 
-p.command-line, pre.command {
+p.command-line, .command {
   font: 1em/1.2 "Courier New", monospace;
   color: var(--text-inv);
   background-color: var(--main-dark);
@@ -13,7 +13,11 @@ p.command-line, pre.command {
   border-left: 4px solid var(--hot-light);
 }
 
-pre.command {
+.command {
   color: var(--n-s-dark);
   background-color: var(--n-light);
+}
+
+.highlight {
+  background-color: var(--hot-u-light);
 }

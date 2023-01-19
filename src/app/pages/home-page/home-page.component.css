@@ -1,0 +1,31 @@
+div.home-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+div.home-highlight {
+  max-width: 17em;
+  font-size: calc(1.5em + 1vw);
+  line-height: calc(1em + 1vw);
+  text-align: center;
+  margin: 5vw auto 10vw;
+}
+
+div.home-highlight p:first-child {
+  font-family: var(--stack-b);
+  margin-bottom: calc(1rem + 1vw);
+}
+
+div.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(2rem + 1vw);;
+  margin-bottom: 10vw;
+}
+
+.card {flex: 1 1 200px;}
+
+p.home-note {
+  font-size: 0.7em;
+  text-align: center;
+}

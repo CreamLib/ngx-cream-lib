@@ -22,11 +22,6 @@ export class SnackbarComponent implements OnInit {
     const allFocusables = this.el.nativeElement.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
     const theLast = allFocusables[allFocusables.length - 1];
     const theFirst = allFocusables[0];
-    // if (e.key === 'Escape') {
-    //   this.ToggleOpen(e);
-    //   e.stopPropagation();
-    //   return;
-    // }
     if (e.key === 'Tab' || e.keyCode === 9) {
       if ( e.shiftKey ) /* shift + tab */ {
         if (document.activeElement === theFirst) {

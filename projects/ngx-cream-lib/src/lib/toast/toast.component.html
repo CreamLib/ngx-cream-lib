@@ -9,10 +9,10 @@
 
   <span class="close" aria-hidden="true">
     <button type="button" class="single" [disabled]="disabled" (click)="closeToast($event)">
-      <svg class="icon-bts" role="img" width="25" height="25" [attr.aria-describedby]="toastId">
-        <title [id]="toastId">{{ closeBtnTitle }}</title>
+      <svg class="icon-bts" role="img" width="25" height="25" aria-hidden="true">
         <use href="./assets/img/sprite.svg#bt-close"></use>
       </svg>
+      <ng-container i18n>Close toast</ng-container>
     </button>
   </span>
 </p>

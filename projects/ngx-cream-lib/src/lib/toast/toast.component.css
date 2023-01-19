@@ -95,6 +95,7 @@ p.active span.close {
 }
 
 button.single {
+  overflow: hidden;
   width: 25px;
   height: 25px;
   background-color: rgba(155, 101, 101, 0);

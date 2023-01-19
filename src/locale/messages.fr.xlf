@@ -1,30 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="1.2"
-  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="7022070615528435141" datatype="html">
+        <source>Delete</source>
+        <target>Supprimer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/chip/chip.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5037437391296624618" datatype="html">
+        <source>Information</source>
+        <target>Information</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/message-block/message-block.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5726454104363206493" datatype="html">
+        <source>Alert</source>
+        <target>Alerte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/message-block/message-block.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9061282158263468923" datatype="html">
+        <source>Close modal</source>
+        <target>Fermer modale</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/modal/modal.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="6651544066815575981" datatype="html">
         <source>Scroll tabs to right</source>
-        <target>Faites défiler les onglets vers la droite</target>
+        <target>Défiler vers la droite</target>
         <context-group purpose="location">
           <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="621090498466002487" datatype="html">
         <source>Scroll tabs to left</source>
-        <target>Faites défiler les onglets vers la gauche</target>
+        <target>Défiler vers la gauche</target>
         <context-group purpose="location">
           <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2073591965529909488" datatype="html">
         <source>Close tab</source>
-        <target>Fermer l'onglet</target>
+        <target>Supprimer onglet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3759120046249286326" datatype="html">
+        <source>Close toast</source>
+        <target>Fermer toast</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/toast/toast.component.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
     </body>

@@ -1,0 +1,116 @@
+div.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+div.dropdown li {font-size: 0.95rem;}
+
+div.dropdown button.control.image-dd {
+  padding: 0.5em 0.75em 0.5em 0.5em;
+}
+
+div.dropdown button.control svg {
+  fill: currentColor;
+  margin-left: 0.5em;
+}
+
+div.dropdown button.control.image-dd {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+div.dropdown button.control.image-dd img {
+  width: 37px;
+  height: 36px;
+  border-radius: var(--radius);
+}
+
+:host.top-level div.dropdown button.control {
+  color: var(--body-text);
+  background-color: var(--body-bg);
+  border-color: var(--body-bg);
+}
+
+div.dropdown ul {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  max-width: 15em;
+  min-width: 10em;
+  height: 1px;
+  list-style-type: none;
+  color: var(--n-dark);
+  background-color: var(--body-bg);
+  padding: 0.5em;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 1010;
+}
+
+
+div.dropdown button.control[aria-expanded=true] + ul {
+  display: block;
+  height: auto;
+  opacity: 1;
+  transition: all 0.3s;
+}
+button.control[aria-expanded=true] svg.control {
+  transform: rotate(180deg) scale(75%);
+}
+
+svg.arrow {
+  display: inline-block;
+  transform: scale(75%);
+  vertical-align: baseline;
+}
+svg.kebab {display: none;}
+
+:host.others button.control {
+  padding: 0.625em;
+}
+:host.others div.dropdown svg.arrow {display: none;}
+:host.others div.dropdown svg.kebab {
+  display: inline-block;
+  margin: 0;
+}
+
+div.dropdown ::ng-deep li button, div.dropdown ::ng-deep li a {
+  font-family: var(--stack);
+  color: var(--body-text);
+  background-color: var(--body-bg);
+  padding: 0.5em;
+  border-radius: var(--radius);
+}
+div.dropdown ::ng-deep li button:hover, div.dropdown ::ng-deep li a:hover {
+  background-color: var(--hot-u-light);
+}
+div.dropdown ::ng-deep li button:focus, div.dropdown ::ng-deep li a:focus {
+  background-color: var(--hot-u-light);
+}
+
+div.dropdown ::ng-deep li button {
+  width: 100%;
+  text-align: left;
+}
+div.dropdown ::ng-deep li a {
+  display: block;
+}
+
+/* OPTIONS */
+/* .to-left displays dropdown to left */
+
+:host.to-left div.dropdown ul {
+  right: 0;
+  left: auto;
+}
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 1000px) {
+  h2 {font-size: 1.4em;}
+}

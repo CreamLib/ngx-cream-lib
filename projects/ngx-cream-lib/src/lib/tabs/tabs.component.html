@@ -36,10 +36,7 @@
         [attr.tabindex]="setTabindex(tab)"
         role="tab"
         class="tabber {{ tab.tabIcon }}"
-        [ngClass]="{
-          deletable: deletable,
-          'with-icon': tab.c3mTabPanelIcon
-        }"
+        [ngClass]="{ deletable: deletable,'with-icon': tab.c3mTabPanelIcon }"
         (click)="selectTab(tab)"
         (keydown)="selectNextTab($event, i)"
         [attr.aria-controls]="tab.panelID"

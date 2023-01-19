@@ -11,8 +11,13 @@ header h1 {
   background-color: var(--n-dark);
   margin-left: 45px;
 }
+
 h1 img {
   max-width: 175px;
+}
+h1 a {
+  position: relative;
+  top: -5px;
 }
 
 button.nav-control {
@@ -27,6 +32,7 @@ button.nav-control {
 button.nav-control svg {
   fill: var(--text-inv);
 }
+
 
 /* Rotate Burger Button */
 

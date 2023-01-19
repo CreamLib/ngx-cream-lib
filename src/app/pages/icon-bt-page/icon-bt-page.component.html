@@ -1,0 +1,82 @@
+<section id="general">
+  <h3>General Icon Buttons</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <p class="buttons-bar out-form">
+        <c3m-icon-button aName="Open Menu" svgId="bt-menu">
+        </c3m-icon-button>
+        <c3m-icon-button rLink="/" aName="Add a comment" svgId="nav-feedbacks" class="discrete">
+        </c3m-icon-button>
+        <c3m-icon-button aName="Delete" svgId="bt-delete" class="minimal">
+        </c3m-icon-button>
+      </p>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+  &lt;c3m-icon-button aName=&#34;Open Menu&#34; svgId=&#34;bt-menu&#34;&gt;
+  &lt;/c3m-icon-button&gt;
+
+  &lt;c3m-icon-button rLink=&#34;/&#34; aName=&#34;Add a comment&#34; svgId=&#34;nav-feedbacks&#34; class=&#34;discrete&#34;&gt;
+  &lt;/c3m-icon-button&gt;
+
+  &lt;c3m-icon-button aName=&#34;Delete&#34; svgId=&#34;bt-delete&#34; class=&#34;minimal&#34;&gt;
+  &lt;/c3m-icon-button&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>c3m-icon-button</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">aName *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">"Action"</td>
+      <td>Accessible name for the button (gives text alternative to icon)</td>
+    </tr>
+    <tr>
+      <td data-head="Name">svgId *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Id of the svg (should be listed in "/assets/img/sprite.svg")</td>
+    </tr>
+    <tr>
+      <td data-head="Name">rLink</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>If a value is given, replaces button by a link and adds value as an absolute URL</td>
+    </tr>
+    <tr>
+      <td data-head="Name">disabled</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Disables button if value is "disabled</td>
+    </tr>
+    <tr>
+      <td data-head="Name">discrete</td>
+      <td data-head="Type">(class)</td>
+      <td data-head="Default">--</td>
+      <td>Icon only style</td>
+    </tr>
+    <tr>
+      <td data-head="Name">minimal</td>
+      <td data-head="Type">(class)</td>
+      <td data-head="Default">--</td>
+      <td>Icon only, smaller; suitable for actions in tables</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>
+

@@ -1,0 +1,73 @@
+button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  width: 37px;
+  height: 36px;
+  white-space: nowrap;
+  background-color: var(--main-dark);
+  padding: 0;
+  z-index: 5;
+}
+
+svg {
+  flex: 0 0 37px;
+  fill: currentColor;
+}
+
+:host.alert button {
+  background-color: var(--hot-color);
+}
+
+svg title {display: none;}
+
+button[disabled]:hover {
+  background-color: var(--main-dark);
+}
+
+a, a:visited {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  width: 37px;
+  height: 36.5px;
+  font: 100%/1.35 var(--stack);
+  white-space: nowrap;
+	color: var(--text-inv);
+	background-color: var(--main-color);
+	border-radius: var(--radius);position: relative;
+  z-index: 5;
+}
+
+a:hover {background-color: var(--hot-color);}
+  a:hover svg {fill: var(--n-dark);}
+
+/* Highlight button background */
+:host.highlight button {
+	background-color: var(--hot-color);
+}
+
+/* No button background */
+:host.discrete button, :host.discrete a {
+	background-color: rgba(255,255,255,0);
+}
+	:host.discrete svg {fill: var(--body-text);}
+
+/* No background, no padding */
+:host.minimal button, :host.minimal a {
+  width: 24px;
+  height: 24px;
+  gap: 3rem;
+	background-color: rgba(255,255,255,0);
+  padding: 0;
+  vertical-align: middle;
+}
+	:host.minimal svg {
+    flex: 0 0 24px;
+    fill: var(--main-dark);
+    transform: scale(.8);
+  }
+:host.minimal button:hover, :host.minimal a:hover {
+  background-color: var(--n-light);
+}

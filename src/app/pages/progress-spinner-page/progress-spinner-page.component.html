@@ -1,0 +1,56 @@
+<section id="general">
+  <h3>General Component</h3>
+
+  <div class="introduction editorial">
+    <c3m-message-block>
+      <p>Giving a <a href="https://angular.io/guide/template-reference-variables" target="_blank">
+        template variable</a> when calling the component allows you to trigger or stop
+      the spinner.</p>
+    </c3m-message-block>
+  </div>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <button (click)="stopProgress(process1); process1.ToggleOpen($event)">Open spinner</button>
+      <c3m-progress-spinner #process1>
+        <p>Please, wait...</p>
+      </c3m-progress-spinner>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-progress-spinner #process1&gt;
+  &lt;p&gt;Please, wait...&lt;/p&gt;
+&lt;/c3m-progress-spinner&gt;
+
+EXAMPLE TO TRIGGER THE SPINNER
+
+&lt;button (click)=&#34;process1.ToggleOpen($event); stopProgress(process1)&#34;&gt;Open spinner&lt;/button&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>c3m-progress-spinner</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">progressText</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">"Please, wait..."</td>
+      <td>Allows to customize alternative text for screen readers</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>
+
+

@@ -4,30 +4,23 @@
   <p>Besides the <strong>CreamNg</strong> style-sheet, you may add your own and define
     your css custom properties.</p>
 
-  <p><em>angular.json</em></p>
+  <p>In your <em>angular.json</em> file, add the following lines:</p>
 
-  <pre class="command">
-  &#34;assets&#34;: [
-      &#34;src/favicon.ico&#34;,
-      &#34;src/assets&#34;,
-      &#123;
-        &#34;glob&#34;: &#34;**/*&#34;,
-        &#34;input&#34;: &#34;/node_modules/ngx-cream-lib/assets&#34;,
-        &#34;output&#34;: &#34;/assets/&#34;
-      &#125;
-    ],
-    &#34;styles&#34;: [
-      &#34;/node_modules/ngx-cream-lib/assets/css/main.css&#34;,
-      &#34;src/assets/css/local.css&#34;
-    ],
-    &#34;scripts&#34;: []
-  &#125;,
-  </pre>
+  <div class="command">
+    <pre>
 
-  <p>You may group your local css custom properties in a separate file and
+  &#34;styles&#34;: [
+    &#34;/node_modules/ngx-cream-lib/assets/css/main.css&#34;,</pre>
+    <pre class="highlight">
+    &#34;src/assets/css/local.css&#34;
+    </pre>
+  <pre>],</pre>
+  </div>
+
+  <p>You may also group your local CSS custom properties in a separate file and
     import it from your css.</p>
 
-  <p>Your local CSS and variables will be loaded last, so you may overwrite
+  <p>Your local CSS styles and variables will be loaded last, so you may overwrite
     any style you need to.
   </p>
 </section>
@@ -149,9 +142,3 @@
     to do that.</p>
 </section>
 
-
-
-<svg role="img" width="24" height="24" aria-describedby="controlLabel">
-  <title id="controlLabel">Open/Close navigation</title>
-  <use href="./assets/img/local-sprite.svg#nav-blocks"></use>
-</svg>

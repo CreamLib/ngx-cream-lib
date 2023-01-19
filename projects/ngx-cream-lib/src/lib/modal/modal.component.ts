@@ -10,7 +10,7 @@ export class ModalComponent {
   constructor(private el: ElementRef) { }
 
   @Input() isOpen: boolean = false;
-  @Input() modalTitle: string = "Modal Title";
+  @Input() modalTitle: string = "";
 
   theId = this.randomID();
   dialogTitle = 'modalTitle' + this.theId;

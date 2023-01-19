@@ -20,7 +20,6 @@ export class ToastComponent implements OnInit {
   @Input() role: string = 'status';
   @Input() disabled!: string;
   @Input() styleClass: string = 'slide-to-bottom';
-  @Input() closeBtnTitle: string = 'Close toast';
 
   ngOnInit(): void {
     this.toastId = 'toast' + this.idToastNum;

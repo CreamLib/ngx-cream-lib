@@ -19,5 +19,9 @@
       <path fill="none" d="M0 0h24v24H0z"/>
       <path d="M3 3h8v8H3V3zm0 10h8v8H3v-8zM13 3h8v8h-8V3zm0 10h8v8h-8v-8z"/>
     </g>
+    <g id="ic-download">
+      <path fill="none" d="M0 0h24v24H0z"/>
+      <path d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"/>
+    </g>
   </defs>
 </svg>

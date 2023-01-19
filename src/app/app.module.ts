@@ -17,6 +17,13 @@ import { CollapsiblePageComponent } from './pages/collapsible-page/collapsible-p
 import { ModalPageComponent } from './pages/modal-page/modal-page.component';
 import { SnackbarPageComponent } from './pages/snackbar-page/snackbar-page.component';
 import { ToastPageComponent } from './pages/toast-page/toast-page.component';
+import { ChipPageComponent } from './pages/chip-page/chip-page.component';
+import { DropdownPageComponent } from './pages/dropdown-page/dropdown-page.component';
+import { IconBtPageComponent } from './pages/icon-bt-page/icon-bt-page.component';
+import { ProgressSpinnerPageComponent } from './pages/progress-spinner-page/progress-spinner-page.component';
+import { TextEllipsisPageComponent } from './pages/text-ellipsis-page/text-ellipsis-page.component';
+import { TooltipPageComponent } from './pages/tooltip-page/tooltip-page.component';
+import { ConfigPageComponent } from './pages/config-page/config-page.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +42,13 @@ import { ToastPageComponent } from './pages/toast-page/toast-page.component';
     ModalPageComponent,
     SnackbarPageComponent,
     ToastPageComponent,
+    ChipPageComponent,
+    DropdownPageComponent,
+    IconBtPageComponent,
+    ProgressSpinnerPageComponent,
+    TextEllipsisPageComponent,
+    TooltipPageComponent,
+    ConfigPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
   providers: [],

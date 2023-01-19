@@ -1,0 +1,14 @@
+button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5rem;
+  overflow: hidden;
+  width: 37px;
+  height: 36px;
+  padding: 0;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+svg {flex: 0 0 24px; margin-left: 7px;}

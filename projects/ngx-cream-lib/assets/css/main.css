@@ -101,7 +101,7 @@ button {
   font: 100%/1 var(--stack);
   color: var(--text-inv);
   background-color: var(--main-color);
-  padding: 0.5em 0.75em;
+  padding: 0.5em 0.75em 0.75em;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
@@ -441,11 +441,6 @@ div.explain p {
 
 /* -------------------------- EDITORIAL -------------------------- */
 
-article.editorial {
-  background-color: var(--n-lighter);
-  padding: 5vh 5%;
-}
-
 .editorial h3 {
   display: block;
   font: 1.3rem var(--stack-b);
@@ -467,11 +462,13 @@ article.editorial {
   margin-top: 0.8em;
 }
 
-.editorial ul {
-  list-style-type: disc;
+.editorial ul, .editorial ol {
   max-width: 45em;
   margin: 2rem 1rem;
 }
+.editorial ul {list-style-type: disc;}
+.editorial ol {list-style-type: decimal;}
+
 .editorial li {
   line-height: 1.58;
   margin-top: 0.5em;

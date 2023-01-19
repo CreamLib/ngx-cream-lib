@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+span {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 25em;
+}
+span.expanded {
+  text-overflow: unset;
+  white-space: normal;
+  line-height: 1.45;
+}

@@ -116,6 +116,10 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
           url: 'portal/getting-started',
         },
         {
+          label: 'Configuring CreamNg',
+          url: 'portal/config',
+        },
+        {
           label: 'Custom Design',
           url: 'portal/custom-design',
         }
