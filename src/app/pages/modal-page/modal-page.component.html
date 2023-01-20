@@ -1,0 +1,129 @@
+<section id="full-modal">
+  <h3>Full Modal</h3>
+
+  <div class="introduction editorial">
+    <c3m-message-block>
+      <p>
+        If actions inside the modal should close it, you can call the
+        <code>ToggleOpen</code> function using the modal's identifier.
+      </p>
+      <p>Of course, you may add aditional functions to the same event.</p>
+    </c3m-message-block>
+  </div>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <p class="buttons-bar out-form">
+        <c3m-modal-trigger [modal]="exempleModal"> Label of the button </c3m-modal-trigger>
+      </p>
+
+      <c3m-modal #exempleModal modalTitle="This is the title of the modal">
+        <p>Content of the modal</p>
+      </c3m-modal>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-modal-trigger [modal]=&#34;exempleModal&#34;&gt;
+  Label of the button
+&lt;/c3m-modal-trigger&gt;
+
+&lt;c3m-modal #exempleModal modalTitle=&#34;This is the title of the modal&#34;&gt;
+  &lt;p&gt;Content of the modal&lt;/p&gt;
+&lt;/c3m-modal&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="dialog-modal">
+  <h3>Dialog Modal</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <p class="buttons-bar out-form">
+        <c3m-modal-trigger [modal]="exempleModal2"> Opens small modal </c3m-modal-trigger>
+      </p>
+
+      <c3m-modal class="simple-dialog" #exempleModal2 modalTitle="Cancel contract">
+        <p>Content of the modal</p>
+        <!-- Style attribute is only for demo! DOn't use it in produciton -->
+        <p class="buttons-bar" style="margin-top: 2rem">
+          <button (click)="test(); exempleModal2.ToggleOpen()">Ok</button>
+        </p>
+      </c3m-modal>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-modal-button [modal]=&#34;exempleModal2&#34;&gt;
+  Opens small modal
+&lt;/c3m-modal-trigger&gt;
+&lt;c3m-modal class=&#34;simple-dialog&#34; #exempleModal2 modalTitle=&#34;Cancel contract&#34;&gt;
+  &lt;p&gt;Content of the modal&lt;/p&gt;
+  &lt;p class=&#34;buttons-bar&#34;&gt;
+    &lt;button (click)=&#34;test();exempleModal2.ToggleOpen()&#34;&gt;Ok&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/c3m-modal&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table>
+    <caption>
+      Properties applicable to the component
+      <code lang="en">c3m-modal</code>
+    </caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">modalTitle *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Title of the modal</td>
+    </tr>
+    <tr>
+      <td data-head="Name">&lt;identifier&gt; *</td>
+      <td data-head="Type"><em>#xxxxx</em></td>
+      <td data-head="Default">--</td>
+      <td>Unique identifier of the modal</td>
+    </tr>
+    <tr>
+      <td data-head="Name">simple-dialog</td>
+      <td data-head="Type">(class)</td>
+      <td data-head="Default">--</td>
+      <td>Displays modal in small format, for quick feedback message</td>
+    </tr>
+  </table>
+  <table>
+    <caption>
+      Properties applicable to the component
+      <code lang="en">c3m-modal-button</code>
+    </caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">[modal] *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Value of the target modal unique identifier</td>
+    </tr>
+    <tr>
+      <td data-head="Name">disabled</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Disables button</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>

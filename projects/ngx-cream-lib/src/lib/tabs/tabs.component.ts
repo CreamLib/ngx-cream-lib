@@ -1,8 +1,4 @@
-import {
-  CdkDragDrop,
-  moveItemInArray,
-  transferArrayItem,
-} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import {
   AfterContentInit,
   AfterViewInit,
@@ -16,7 +12,7 @@ import {
   Input,
   Output,
   QueryList,
-  ViewChildren
+  ViewChildren,
 } from '@angular/core';
 import { TabPanelComponent } from './tab-panel/tab-panel.component';
 
@@ -24,7 +20,7 @@ import { TabPanelComponent } from './tab-panel/tab-panel.component';
   selector: 'c3m-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TabsComponent implements AfterViewInit, AfterContentInit {
   /* List of Tabs Element */
@@ -81,10 +77,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
       this.isScrollRight = true;
       this.isScrollLeft = true;
       // If is end right
-      if (
-        scrollBox.offsetWidth + scrollBox.scrollLeft >=
-        scrollBox.scrollWidth
-      ) {
+      if (scrollBox.offsetWidth + scrollBox.scrollLeft >= scrollBox.scrollWidth) {
         this.isScrollLeft = false;
         // If is end left
       } else {
@@ -153,10 +146,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     }
     if (toTabId >= 0) {
       this.selectTab(this.tabs[toTabId]);
-      this.tabsElement
-        .toArray()
-        [toTabId].nativeElement.querySelector('button')
-        .focus();
+      this.tabsElement.toArray()[toTabId].nativeElement.querySelector('button').focus();
     }
     this.changeTab.emit(i);
   }
@@ -167,9 +157,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     const currentLi = this.tabsElement.toArray()[i].nativeElement;
     const theTabs = currentLi.parentNode.querySelectorAll('li');
 
-    const panelId = currentLi
-      .querySelector('button.tabber')
-      .getAttribute('aria-controls');
+    const panelId = currentLi.querySelector('button.tabber').getAttribute('aria-controls');
     const panel = document.getElementById(panelId);
 
     const currIndex = Array.from(theTabs).indexOf(currentLi);
@@ -199,11 +187,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
   // On Drop event / Drag'n drop
   onDrop(event: CdkDragDrop<TabPanelComponent[]>) {
     if (event.previousContainer === event.container) {
-      moveItemInArray(
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       transferArrayItem(
         event.previousContainer.data,

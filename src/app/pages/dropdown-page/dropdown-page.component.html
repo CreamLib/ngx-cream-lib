@@ -1,0 +1,137 @@
+<section id="drop">
+  <h3>Dropdown with label</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <c3m-dropdown label="Label of dropdown">
+        <c3m-dropdown-item>
+          <button>Action 1</button>
+        </c3m-dropdown-item>
+        <c3m-dropdown-item>
+          <button>Action 2</button>
+        </c3m-dropdown-item>
+      </c3m-dropdown>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-dropdown label=&#34;Label of dropdown&#34;&gt;
+  &lt;c3m-dropdown-item&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-dropdown-item&gt;
+&lt;/c3m-dropdown&gt;
+      </pre>
+
+      <div class="explain">
+        <p><code>ng-content</code> must be a link or a button only</p>
+      </div>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="drop-icon">
+  <h3>Dropdown with icon</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <c3m-dropdown imgSrc="nav-feedbacks" imgAlt="Describe the nature of the actions">
+        <c3m-dropdown-item>
+          <button>Action 1</button>
+        </c3m-dropdown-item>
+        <c3m-dropdown-item>
+          <button>Action 2</button>
+        </c3m-dropdown-item>
+      </c3m-dropdown>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-dropdown imgSrc=&#34;nav-feedbacks&#34; imgAlt=&#34;Describe the nature of the actions&#34;&gt;
+  &lt;c3m-dropdown-item&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-dropdown-item&gt;
+&lt;/c3m-dropdown&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="drop-icon">
+  <h3>Dropdown "Other Actions"</h3>
+
+  <div class="introduction editorial">
+    <c3m-message-block [isError]="true">
+      <p>
+        In this case, it is mandatory to add a <code>altLabel</code> value to inform the nature of
+        the actions in the dropdown.
+      </p>
+    </c3m-message-block>
+  </div>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <c3m-dropdown class="others" ariaLabel="Describe the nature of the actions">
+        <c3m-dropdown-item>
+          <button>Action 1</button>
+        </c3m-dropdown-item>
+        <c3m-dropdown-item>
+          <button>Action 2</button>
+        </c3m-dropdown-item>
+      </c3m-dropdown>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-dropdown class=&#34;others&#34; ariaLabel=&#34;Describe the nature of the actions&#34;&gt;
+  &lt;c3m-dropdown-item&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/c3m-dropdown-item&gt;
+&lt;/c3m-dropdown&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>
+      Properties applicable to the component
+      <code>c3m-dropdown</code>
+    </caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">label</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Defines label for dropdown trigger button</td>
+    </tr>
+    <tr>
+      <td data-head="Name">imgSrc</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>
+        Replaces label by the image indicated by its Id (should be listed in
+        "/assets/img/sprite.svg").
+      </td>
+    </tr>
+    <tr>
+      <td data-head="Name">imgAlt</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>
+        Textual alternative to image. <strong>Mandatory</strong> if <code>imgSrc</code> is set.
+      </td>
+    </tr>
+    <tr>
+      <td data-head="Name">others</td>
+      <td data-head="Type">(class)</td>
+      <td data-head="Default">--</td>
+      <td>Replaces label and arrow by a "kebab" icon</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>

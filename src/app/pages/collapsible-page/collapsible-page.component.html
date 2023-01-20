@@ -1,0 +1,54 @@
+<section id="simple">
+  <h3>General Component</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <c3m-collapsible summary="Title of collapsible panel" total="5">
+        <p>Content of collapsible</p>
+      </c3m-collapsible>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-collapsible summary=&#34;Title of collapsible panel&#34; total=&#34;5&#34;&gt;
+  &lt;NG-CONTENT&gt;
+&lt;/c3m-collapsible&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>
+      Properties applicable to the component
+      <code>c3m-collapsible</code>
+    </caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">summary *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Defines the title of the panel</td>
+    </tr>
+    <tr>
+      <td data-head="Name">total</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Optional total for the content of the panel</td>
+    </tr>
+    <tr>
+      <td data-head="Name">[isOpen]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>If true, panel is open on page load</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>

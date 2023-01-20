@@ -1,0 +1,112 @@
+<section id="del-chip">
+  <h3>Deletable Chip</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <c3m-chip label="Chip example label"></c3m-chip>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-chip label=&#34;Chip example label&#34;&gt;&lt;/c3m-chip&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="nondel-chip">
+  <h3>Non-deletable Chip</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <c3m-chip label="Keyword" [deletable]="false"></c3m-chip>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-chip label=&#34;Keyword&#34; [deletable]=&#34;false&#34;&gt;&lt;/c3m-chip&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="link-chip">
+  <h3>Chip with Link</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <c3m-chip label="Refers to Home Page" linkUrl="/"></c3m-chip>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-chip label=&#34;Refers to Home Page&#34; linkUrl=&#34;/&#34;&gt;&lt;/c3m-chip&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<!-- <section id="list-chip">
+  <h3>List of Chips Block</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <ul class="chips-list">
+        <li><chip label="Criteria A" linkUrl="/"></chip></li>
+        <li><chip label="Criteria B" linkUrl="/"></chip></li>
+        <li><chip label="Criteria C" linkUrl="/"></chip></li>
+        <li><chip label="Criteria D" linkUrl="/"></chip></li>
+        <li><chip label="Criteria E" linkUrl="/"></chip></li>
+        <li><chip label="Criteria F" linkUrl="/"></chip></li>
+        <li><chip label="Criteria G" linkUrl="/"></chip></li>
+        <li><chip label="Criteria H" linkUrl="/"></chip></li>
+      </ul>
+
+    </c3m-tab-panel>
+    <c3m-tab-panel tabTitle="Application">
+      <pre>
+        &lt;chip label=&#34;Refers to Home Page&#34; linkUrl=&#34;/&#34;&gt;&lt;/chip&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section> -->
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>
+      Properties applicable to the component
+      <code>c3m-chip</code>
+    </caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">label *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Label of chip</td>
+    </tr>
+    <tr>
+      <td data-head="Name">linkUrl</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Adds link with given absolute URL to chip's label</td>
+    </tr>
+    <tr>
+      <td data-head="Name">[deletable]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">true</td>
+      <td>Adds delete button if true</td>
+    </tr>
+    <tr>
+      <td data-head="Name">disabled</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Disables close button if value "disabled"</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>

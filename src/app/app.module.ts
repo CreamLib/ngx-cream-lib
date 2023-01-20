@@ -11,6 +11,19 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 import { TabsPageComponent } from './pages/tabs-page/tabs-page.component';
 import { MessagePageComponent } from './pages/message-page/message-page.component';
+import { CustomDesignComponent } from './pages/custom-design/custom-design.component';
+import { GettingStartedComponent } from './pages/getting-started/getting-started.component';
+import { CollapsiblePageComponent } from './pages/collapsible-page/collapsible-page.component';
+import { ModalPageComponent } from './pages/modal-page/modal-page.component';
+import { SnackbarPageComponent } from './pages/snackbar-page/snackbar-page.component';
+import { ToastPageComponent } from './pages/toast-page/toast-page.component';
+import { ChipPageComponent } from './pages/chip-page/chip-page.component';
+import { DropdownPageComponent } from './pages/dropdown-page/dropdown-page.component';
+import { IconBtPageComponent } from './pages/icon-bt-page/icon-bt-page.component';
+import { ProgressSpinnerPageComponent } from './pages/progress-spinner-page/progress-spinner-page.component';
+import { TextEllipsisPageComponent } from './pages/text-ellipsis-page/text-ellipsis-page.component';
+import { TooltipPageComponent } from './pages/tooltip-page/tooltip-page.component';
+import { ConfigPageComponent } from './pages/config-page/config-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +35,20 @@ import { MessagePageComponent } from './pages/message-page/message-page.componen
     FooterComponent,
     MainNavigationComponent,
     TabsPageComponent,
-    MessagePageComponent
+    MessagePageComponent,
+    CustomDesignComponent,
+    GettingStartedComponent,
+    CollapsiblePageComponent,
+    ModalPageComponent,
+    SnackbarPageComponent,
+    ToastPageComponent,
+    ChipPageComponent,
+    DropdownPageComponent,
+    IconBtPageComponent,
+    ProgressSpinnerPageComponent,
+    TextEllipsisPageComponent,
+    TooltipPageComponent,
+    ConfigPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
   providers: [],

@@ -1,0 +1,35 @@
+.chip {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  white-space: nowrap;
+  line-height: 1.75;
+  font-size: 0.8rem;
+  color: var(--main-dark);
+  background-color: var(--n-light);
+  padding: 0.25em 0.5em 0.15em;
+  margin: 0.25rem;
+  border: 1px solid var(--n-medium);
+  border-radius: calc(var(--radius) / 1.5);
+}
+
+:host.whole .chip {
+  display: flex;
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+  top: -1px;
+  left: 4px;
+  width: 25px;
+  height: 23px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+}
+
+a, span span {
+  position: relative;
+  top: -0.2em;
+}

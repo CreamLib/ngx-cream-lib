@@ -1,0 +1,20 @@
+<span class="chip">
+  <a *ngIf="linkUrl !== ''" [routerLink]="linkUrl">
+    {{ label }}
+  </a>
+  <span *ngIf="linkUrl === ''">
+    {{ label }}
+  </span>
+
+  <button
+    *ngIf="deletable"
+    type="button"
+    [disabled]="disabled"
+    (click)="deleteChip()"
+    [attr.aria-label]="'Delete chip ' + label">
+    <svg role="img" width="25" height="25" aria-hidden="true">
+      <use href="/assets/img/sprite.svg#bt-close"></use>
+    </svg>
+    <ng-container i18n>Delete</ng-container> {{ label }}
+  </button>
+</span>

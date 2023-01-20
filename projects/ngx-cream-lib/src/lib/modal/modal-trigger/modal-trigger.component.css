@@ -1,0 +1,7 @@
+/* Icon only trigger */
+
+:host.icon-bt button.modal-trigger {
+  width: 37px;
+  height: 37px;
+  padding: 0;
+}

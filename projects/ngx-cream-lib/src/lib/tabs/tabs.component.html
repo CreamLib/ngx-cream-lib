@@ -1,19 +1,13 @@
 <div class="tabsContainer" [ngClass]="{ 'handle-scroll': handleScroll }">
   <p class="scroll-bts" *ngIf="hasScroll && handleScroll">
-    <button
-      [disabled]="!isScrollRight"
-      class="scroll toRight"
-      (click)="scroll2Right()">
+    <button [disabled]="!isScrollRight" class="scroll toRight" (click)="scroll2Right()">
       <svg role="img" width="24" height="24" viewBox="0 0 24 24">
         <title>Scroll tabs to left</title>
         <use href="./assets/img/sprite.svg#bt-scrollRight"></use>
       </svg>
       <ng-container i18n>Scroll tabs to right</ng-container>
     </button>
-    <button
-      [disabled]="!isScrollLeft"
-      class="scroll toLeft"
-      (click)="scroll2Left()">
+    <button [disabled]="!isScrollLeft" class="scroll toLeft" (click)="scroll2Left()">
       <svg role="img" width="24" height="24" viewBox="0 0 24 24">
         <title>Scroll tabs to left</title>
         <use href="./assets/img/sprite.svg#bt-scrollLeft"></use>
@@ -42,16 +36,18 @@
         [attr.tabindex]="setTabindex(tab)"
         role="tab"
         class="tabber {{ tab.tabIcon }}"
-        [ngClass]="{
-          deletable: deletable,
-          'with-icon': tab.c3mTabPanelIcon
-        }"
+        [ngClass]="{ deletable: deletable, 'with-icon': tab.c3mTabPanelIcon }"
         (click)="selectTab(tab)"
         (keydown)="selectNextTab($event, i)"
         [attr.aria-controls]="tab.panelID"
         [attr.aria-selected]="tab.isActive">
         <ng-container *ngIf="tab.svgId != null">
-          <svg role="img" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+          <svg
+            role="img"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            preserveAspectRatio="xMidYMid meet">
             <title>{{ tab.svgTitle }}</title>
             <use [attr.href]="'./assets/img/sprite.svg#' + tab.svgId"></use>
           </svg>

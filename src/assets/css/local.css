@@ -1,0 +1,24 @@
+@import 'local-vars.css';
+
+pre {
+  overflow: auto;
+}
+
+p.command-line,
+.command {
+  font: 1em/1.2 'Courier New', monospace;
+  color: var(--text-inv);
+  background-color: var(--main-dark);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--hot-light);
+}
+
+.command {
+  color: var(--n-s-dark);
+  background-color: var(--n-light);
+}
+
+.highlight {
+  background-color: var(--hot-u-light);
+}

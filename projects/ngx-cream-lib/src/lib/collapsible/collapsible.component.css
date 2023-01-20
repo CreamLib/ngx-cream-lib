@@ -1,0 +1,38 @@
+details {
+  position: relative;
+  background-color: var(--n-light);
+  margin-bottom: 1rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+details[open] {
+  background-color: var(--body-bg);
+}
+
+summary {
+  font: 0.9em/1 var(--stack-b);
+  color: var(--text-inv);
+  background-color: var(--main-dark);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+summary:focus {
+  outline: none;
+}
+
+summary span {
+  font-family: var(--stack);
+}
+
+div.content {
+  font-size: 0.9rem; /* adjust font size inside panel */
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 1000px) {
+  summary {
+    font-size: 0.95em;
+  }
+}

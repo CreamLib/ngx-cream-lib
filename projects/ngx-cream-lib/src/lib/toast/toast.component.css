@@ -1,0 +1,120 @@
+@keyframes slideToTop {
+  0% {
+    bottom: -50em;
+    opacity: 0;
+  }
+
+  80% {
+    bottom: 2rem;
+    transition: bottom 0.5s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+    opacity: 0.5;
+  }
+
+  100% {
+    bottom: 2rem;
+    transition: bottom 0.5s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+    opacity: 1;
+  }
+}
+
+@keyframes slideToBottom {
+  0% {
+    top: -50em;
+    opacity: 0;
+  }
+
+  80% {
+    top: 2rem;
+    transition: top 0.5s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+    opacity: 0.5;
+  }
+
+  100% {
+    top: 2rem;
+    transition: top 0.5s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+    opacity: 1;
+  }
+}
+
+.slide-to-top {
+  bottom: -50em;
+}
+
+.slide-to-top.active {
+  animation: slideToTop 1s forwards;
+}
+
+.slide-to-bottom,
+.status-ok {
+  top: -50em;
+}
+
+.slide-to-bottom.active,
+.status-ok.active {
+  animation: slideToBottom 1s forwards;
+}
+
+svg ::ng-deep * {
+  fill: #fff;
+}
+
+p {
+  position: fixed;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 31em;
+  right: 5%;
+  color: var(--body-text);
+  background-color: var(--sec-light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+}
+
+p .content {
+  display: none;
+}
+
+p.active .content {
+  display: block;
+}
+
+span.close {
+  display: none;
+  width: 25px;
+  height: 25px;
+  margin-left: 2rem;
+}
+
+p.active span.close {
+  display: block;
+}
+
+button.single {
+  overflow: hidden;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(155, 101, 101, 0);
+  padding: 0;
+}
+
+/* If alert message */
+
+p[role='alert'] {
+  color: var(--text-inv);
+  background-color: var(--alert-color);
+}
+
+/* If it is a general message - no status */
+:host.normal [role='status'] {
+  color: var(--body-text);
+  background-color: var(--main-light);
+}
+
+:host [role='status'] svg ::ng-deep * {
+  fill: var(--body-text);
+}

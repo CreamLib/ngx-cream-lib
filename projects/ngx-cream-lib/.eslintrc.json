@@ -1,6 +1,7 @@
 {
   "extends": "../../.eslintrc.json",
   "ignorePatterns": ["!**/*"],
+  /* eslint eqeqeq: "off" */
   "overrides": [
     {
       "files": ["*.ts"],
@@ -20,12 +21,18 @@
             "prefix": "c3m",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {
       "files": ["*.html"],
-      "rules": {}
+      "rules": {
+        /* eslint-disable-next-line
+          bracketSameLine
+        */
+      }
     }
   ]
 }

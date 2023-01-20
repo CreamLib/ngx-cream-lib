@@ -2,10 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxCreamLibModule } from '../../ngx-cream-lib.module';
 import { AccordionItemComponent } from './accordion-item.component';
 
-class MockUserService {
-  isLoggedIn = true;
-  user = { name: 'Test User' };
-}
+// class MockUserService {
+//   isLoggedIn = true;
+//   user = { name: 'Test User' };
+// }
 
 describe('AccordionItemComponent', () => {
   let component: AccordionItemComponent;
