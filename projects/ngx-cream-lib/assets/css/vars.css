@@ -49,40 +49,24 @@
   font-family: system-ui;
   font-style: normal;
   font-weight: 300;
-  src: local(".SFNSText"),
-    local(".HelveticaNeueDeskInterface"),
-    local(".LucidaGrandeUI"),
-    local("Ubuntu"),
-    local("Segoe UI"),
-    local("Roboto"),
-    local("DroidSans"),
-    local("Tahoma");
+  src: local('.SFNSText'), local('.HelveticaNeueDeskInterface'), local('.LucidaGrandeUI'),
+    local('Ubuntu'), local('Segoe UI'), local('Roboto'), local('DroidSans'), local('Tahoma');
 }
 @font-face {
   font-family: system-ui-bold;
   font-style: normal;
   font-weight: 300;
-  src: local(".SFNSText-Bold"),
-    local(".HelveticaNeueDeskInterface-Bold"),
-    local(".LucidaGrandeUI-Bold"),
-    local("Ubuntu Bold"),
-    local("Segoe UI Bold"),
-    local("Roboto-Bold"),
-    local("DroidSans-Bold"),
-    local("Tahoma-Bold");
+  src: local('.SFNSText-Bold'), local('.HelveticaNeueDeskInterface-Bold'),
+    local('.LucidaGrandeUI-Bold'), local('Ubuntu Bold'), local('Segoe UI Bold'),
+    local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma-Bold');
 }
 @font-face {
   font-family: system-ui-italic;
   font-style: normal;
   font-weight: 300;
-  src: local(".SFNSText-Italic"),
-    local(".HelveticaNeueDeskInterface-Italic"),
-    local(".LucidaGrandeUI-Italic"),
-    local("Ubuntu Italic"),
-    local("Segoe UI Italic"),
-    local("Roboto-Italic"),
-    local("DroidSans-Italic"),
-    local("Tahoma-Italic");
+  src: local('.SFNSText-Italic'), local('.HelveticaNeueDeskInterface-Italic'),
+    local('.LucidaGrandeUI-Italic'), local('Ubuntu Italic'), local('Segoe UI Italic'),
+    local('Roboto-Italic'), local('DroidSans-Italic'), local('Tahoma-Italic');
 }
 
 :root {

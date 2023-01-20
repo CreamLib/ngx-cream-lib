@@ -6,7 +6,9 @@ div.message {
   padding: 1.5rem;
   z-index: 1;
 }
-div.error {background-color: var(--hot-sec-light);}
+div.error {
+  background-color: var(--hot-sec-light);
+}
 
 div.content {
   max-width: 45em;
@@ -19,5 +21,9 @@ svg {
   z-index: 1;
 }
 
-div.info svg {fill: var(--sec-color);}
-div.error svg {fill: var(--alert-color);}
+div.info svg {
+  fill: var(--sec-color);
+}
+div.error svg {
+  fill: var(--alert-color);
+}

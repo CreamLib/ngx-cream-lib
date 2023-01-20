@@ -107,7 +107,7 @@ const routes: Routes = [
       },
     ],
   },
-  { path: 'home', component: HomePageComponent, data: { title: 'Cream Lib' } },
+  { path: 'home', component: HomePageComponent, data: { title: 'CreamNg' } },
   // otherwise redirect to home
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];

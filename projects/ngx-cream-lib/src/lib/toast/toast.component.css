@@ -55,7 +55,7 @@
 }
 
 svg ::ng-deep * {
-  fill: #FFF;
+  fill: #fff;
 }
 
 p {
@@ -104,17 +104,17 @@ button.single {
 
 /* If alert message */
 
-p[role=alert] {
+p[role='alert'] {
   color: var(--text-inv);
   background-color: var(--alert-color);
 }
 
 /* If it is a general message - no status */
-:host.normal [role=status] {
+:host.normal [role='status'] {
   color: var(--body-text);
   background-color: var(--main-light);
 }
 
-:host [role=status] svg ::ng-deep * {
+:host [role='status'] svg ::ng-deep * {
   fill: var(--body-text);
 }

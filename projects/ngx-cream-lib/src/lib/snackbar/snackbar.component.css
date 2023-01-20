@@ -1,6 +1,10 @@
 @keyframes slideSb {
-  0% {bottom: -15vh;}
-  100% {bottom: 0;}
+  0% {
+    bottom: -15vh;
+  }
+  100% {
+    bottom: 0;
+  }
 }
 
 div.snackbar {
@@ -13,7 +17,9 @@ div.snackbar {
   z-index: 1000;
 }
 
-header {margin-bottom: 2vw;}
+header {
+  margin-bottom: 2vw;
+}
 
 h2 {
   font-size: 1.2em;
@@ -21,17 +27,19 @@ h2 {
   margin-bottom: 1rem;
 }
 
-div.snackbar[aria-hidden=false] {display: block;}
+div.snackbar[aria-hidden='false'] {
+  display: block;
+}
 
-  div.snackbar div.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.7);
-    z-index: 1000;
-  }
+div.snackbar div.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
 
 div.sb-body {
   overflow: hidden;
@@ -46,7 +54,7 @@ div.sb-body {
   margin: 0 auto;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
-  box-shadow: 0 -4px 5px rgba(0,0,0,0.25);
+  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.25);
   z-index: 1001;
   animation: slideSb forwards 0.2s;
   z-index: 1010;

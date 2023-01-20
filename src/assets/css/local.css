@@ -1,11 +1,12 @@
-@import "local-vars.css";
+@import 'local-vars.css';
 
 pre {
   overflow: auto;
 }
 
-p.command-line, .command {
-  font: 1em/1.2 "Courier New", monospace;
+p.command-line,
+.command {
+  font: 1em/1.2 'Courier New', monospace;
   color: var(--text-inv);
   background-color: var(--main-dark);
   padding: 1rem;

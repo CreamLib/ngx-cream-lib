@@ -1,7 +1,7 @@
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionItemComponent } from './accordion/accordion-item/accordion-item.component';
@@ -49,8 +49,9 @@ const components = [
 ];
 
 @NgModule({
-  declarations: [...components, AutofocusDirective, IconButtonComponent],
+  declarations: [...components],
   imports: [CommonModule, RouterModule, DragDropModule, BrowserModule, BrowserAnimationsModule],
   exports: [...components],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class NgxCreamLibModule {}

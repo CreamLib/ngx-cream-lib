@@ -44,10 +44,10 @@ nav > ul::-webkit-scrollbar {
   width: 5px;
 }
 nav > ul::-webkit-scrollbar-track {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 nav > ul::-webkit-scrollbar-thumb {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 nav ul li + li {
@@ -69,13 +69,15 @@ nav ul.level2 li + li {
   border-top: none;
 }
 
-a, a:visited {
+a,
+a:visited {
   display: block;
   color: var(--text-inv);
   background-color: var(--main-dark);
   padding: 0.5em 0;
 }
-a:hover, a[aria-current] {
+a:hover,
+a[aria-current] {
   color: var(--sec-light);
 }
 
@@ -122,7 +124,8 @@ nav.closed {
   animation-name: slide-in;
 }
 
-nav.opened ul, nav.opened p.skip-link {
+nav.opened ul,
+nav.opened p.skip-link {
   display: block;
 }
 
@@ -143,7 +146,8 @@ nav.opened + div.overlay {
 /* ------------------ MEDIA QUERIES ------------------ */
 
 @media screen and (min-width: 1000px) {
-  nav, nav.opened {
+  nav,
+  nav.opened {
     position: relative;
     width: 100%;
     top: 2rem;

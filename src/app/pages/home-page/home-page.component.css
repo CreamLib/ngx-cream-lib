@@ -19,11 +19,13 @@ div.home-highlight p:first-child {
 div.cards-list {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(2rem + 1vw);;
+  gap: calc(2rem + 1vw);
   margin-bottom: 10vw;
 }
 
-.card {flex: 1 1 200px;}
+.card {
+  flex: 1 1 200px;
+}
 
 p.home-note {
   font-size: 0.7em;

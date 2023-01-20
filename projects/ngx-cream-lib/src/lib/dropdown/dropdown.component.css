@@ -3,7 +3,9 @@ div.dropdown {
   position: relative;
 }
 
-div.dropdown li {font-size: 0.95rem;}
+div.dropdown li {
+  font-size: 0.95rem;
+}
 
 div.dropdown button.control.image-dd {
   padding: 0.5em 0.75em 0.5em 0.5em;
@@ -45,20 +47,19 @@ div.dropdown ul {
   background-color: var(--body-bg);
   padding: 0.5em;
   border-radius: var(--radius);
-  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transition: all 0.3s;
   z-index: 1010;
 }
 
-
-div.dropdown button.control[aria-expanded=true] + ul {
+div.dropdown button.control[aria-expanded='true'] + ul {
   display: block;
   height: auto;
   opacity: 1;
   transition: all 0.3s;
 }
-button.control[aria-expanded=true] svg.control {
+button.control[aria-expanded='true'] svg.control {
   transform: rotate(180deg) scale(75%);
 }
 
@@ -67,12 +68,16 @@ svg.arrow {
   transform: scale(75%);
   vertical-align: baseline;
 }
-svg.kebab {display: none;}
+svg.kebab {
+  display: none;
+}
 
 :host.others button.control {
   padding: 0.625em;
 }
-:host.others div.dropdown svg.arrow {display: none;}
+:host.others div.dropdown svg.arrow {
+  display: none;
+}
 :host.others div.dropdown svg.kebab {
   display: inline-block;
   margin: 0;
@@ -108,9 +113,10 @@ div.dropdown ::ng-deep li a {
   left: auto;
 }
 
-
 /* ------------------ MEDIA QUERIES ------------------ */
 
 @media screen and (min-width: 1000px) {
-  h2 {font-size: 1.4em;}
+  h2 {
+    font-size: 1.4em;
+  }
 }

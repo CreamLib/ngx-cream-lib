@@ -41,7 +41,7 @@
         (keydown)="selectNextTab($event, i)"
         [attr.aria-controls]="tab.panelID"
         [attr.aria-selected]="tab.isActive">
-        <ng-container *ngIf="tab.svgId !== null">
+        <ng-container *ngIf="tab.svgId != null">
           <svg
             role="img"
             width="24"
