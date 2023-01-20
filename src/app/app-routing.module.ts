@@ -104,8 +104,8 @@ const routes: Routes = [
         path: 'config',
         component: ConfigPageComponent,
         data: { title: 'Configuring CreamNg' },
-      }
-    ]
+      },
+    ],
   },
   { path: 'home', component: HomePageComponent, data: { title: 'Cream Lib' } },
   // otherwise redirect to home

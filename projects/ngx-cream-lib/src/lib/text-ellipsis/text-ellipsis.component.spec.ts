@@ -8,9 +8,8 @@ describe('TextEllipsisComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TextEllipsisComponent ]
-    })
-    .compileComponents();
+      declarations: [TextEllipsisComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TextEllipsisComponent);
     component = fixture.componentInstance;

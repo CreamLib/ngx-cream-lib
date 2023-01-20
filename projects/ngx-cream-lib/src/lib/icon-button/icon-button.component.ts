@@ -3,13 +3,12 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'c3m-icon-button',
   templateUrl: './icon-button.component.html',
-  styleUrls: ['./icon-button.component.css']
+  styleUrls: ['./icon-button.component.css'],
 })
 export class IconButtonComponent implements OnInit {
-
-  @Input() aName: string = "Action";
-  @Input() svgId: string = "";
-  @Input() rLink: string = "";
+  @Input() aName: string = 'Action';
+  @Input() svgId: string = '';
+  @Input() rLink: string = '';
   @Input() disabled!: string;
 
   randomIdValue!: number;
@@ -27,5 +26,4 @@ export class IconButtonComponent implements OnInit {
     const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
     return idRandom;
   }
-
 }

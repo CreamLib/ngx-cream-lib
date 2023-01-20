@@ -1,18 +1,18 @@
 <div class="dropdown" (focusout)="close()" (keydown)="escClose($event)">
   <!-- Dropdown Button -->
-  <button class="control"
-    [ngClass]="{'image-dd' : imgSrc != ''}"
+  <button
+    class="control"
+    [ngClass]="{ 'image-dd': imgSrc !== '' }"
     type="button"
-    [attr.aria-label]="imgSrc == '' ? ariaLabel : imgAlt"
-    [disabled] ="disabled"
+    [attr.aria-label]="imgSrc === '' ? ariaLabel : imgAlt"
+    [disabled]="disabled"
     [attr.aria-expanded]="isOpen"
     (click)="toggleOpen()"
     (focusout)="close()">
-
-    <ng-container *ngIf="imgSrc == ''">
+    <ng-container *ngIf="imgSrc === ''">
       {{ label }}
     </ng-container>
-    <ng-container *ngIf="imgSrc != ''">
+    <ng-container *ngIf="imgSrc !== ''">
       <svg role="img" width="24" height="24">
         <use [attr.href]="'./assets/img/sprite.svg#' + imgSrc"></use>
       </svg>
@@ -31,6 +31,3 @@
     <ng-content></ng-content>
   </ul>
 </div>
-
-
-

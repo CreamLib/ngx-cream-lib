@@ -6,8 +6,7 @@
   [attr.aria-hidden]="!isOpen"
   [attr.aria-labelledby]="dialogTitle"
   (keydown)="handleKeyEvents($event)">
-  <div class="overlay" (click)="ToggleOpen()">
-  </div>
+  <div class="overlay" (click)="ToggleOpen()"></div>
 
   <div class="modal-body">
     <header>
@@ -15,7 +14,8 @@
         {{ modalTitle }}
       </h2>
       <p>
-        <button class="modal-close"
+        <button
+          class="modal-close"
           type="button"
           [c3mAutofocus]="isOpen"
           aria-label="Close modal"

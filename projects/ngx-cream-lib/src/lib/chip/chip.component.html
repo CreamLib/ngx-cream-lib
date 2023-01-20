@@ -1,9 +1,8 @@
 <span class="chip">
-
-  <a *ngIf="linkUrl != ''" [routerLink]="linkUrl">
+  <a *ngIf="linkUrl !== ''" [routerLink]="linkUrl">
     {{ label }}
   </a>
-  <span *ngIf="linkUrl == ''">
+  <span *ngIf="linkUrl === ''">
     {{ label }}
   </span>
 

@@ -27,7 +27,9 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {
@@ -40,7 +42,6 @@
       "excludedFiles": ["*inline-template-*.component.html"],
       "extends": ["plugin:prettier/recommended"],
       "rules": {
-        "bracketSameLine": true,
         "prettier/prettier": ["error", { "parser": "angular" }]
       }
     }

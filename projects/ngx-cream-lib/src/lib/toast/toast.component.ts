@@ -3,10 +3,9 @@ import { Component, OnInit, Input, HostListener } from '@angular/core';
 @Component({
   selector: 'c3m-toast',
   templateUrl: './toast.component.html',
-  styleUrls: ['./toast.component.css']
+  styleUrls: ['./toast.component.css'],
 })
 export class ToastComponent implements OnInit {
-
   idToastNum!: number;
   toastId!: string;
   active: boolean = false;
@@ -15,7 +14,7 @@ export class ToastComponent implements OnInit {
     this.idToastNum = this.randomID();
   }
 
-  @Input() toastText: string = "";
+  @Input() toastText: string = '';
   @Input() delay: number = 6500;
   @Input() role: string = 'status';
   @Input() disabled!: string;
@@ -57,6 +56,4 @@ export class ToastComponent implements OnInit {
     const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
     return idRandom;
   }
-
 }
-

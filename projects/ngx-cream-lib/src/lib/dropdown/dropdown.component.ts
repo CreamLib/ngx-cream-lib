@@ -1,23 +1,20 @@
-import { Component, OnInit, Input, ElementRef } from '@angular/core';
+import { Component, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'c3m-dropdown',
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.css']
+  styleUrls: ['./dropdown.component.css'],
 })
-export class DropdownComponent implements OnInit {
-
+export class DropdownComponent {
   constructor(private elementRef: ElementRef) {}
 
   /* INPUTS */
   @Input() isOpen = false;
-  @Input() label: string = "";
-  @Input() ariaLabel: string = "";
+  @Input() label: string = '';
+  @Input() ariaLabel: string = '';
   @Input() disabled!: string;
-  @Input() imgSrc: string = "";
-  @Input() imgAlt: string = "";
-
-  ngOnInit() {}
+  @Input() imgSrc: string = '';
+  @Input() imgAlt: string = '';
 
   /* Open / Close the Dropdown */
   toggleOpen(): void {
@@ -34,7 +31,7 @@ export class DropdownComponent implements OnInit {
   }
 
   escClose(event: KeyboardEvent): void {
-    if(event.code === "Escape") {
+    if (event.code === 'Escape') {
       this.isOpen = false;
       this.elementRef.nativeElement.querySelector('button.control').focus();
       event.stopPropagation();

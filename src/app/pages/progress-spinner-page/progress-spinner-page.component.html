@@ -3,20 +3,22 @@
 
   <div class="introduction editorial">
     <c3m-message-block>
-      <p>Giving a <a href="https://angular.io/guide/template-reference-variables" target="_blank">
-        template variable</a> when calling the component allows you to trigger or stop
-      the spinner.</p>
+      <p>
+        Giving a
+        <a href="https://angular.io/guide/template-reference-variables" target="_blank">
+          template variable</a
+        >
+        when calling the component allows you to trigger or stop the spinner.
+      </p>
     </c3m-message-block>
   </div>
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
       <button (click)="stopProgress(process1); process1.ToggleOpen($event)">Open spinner</button>
       <c3m-progress-spinner #process1>
         <p>Please, wait...</p>
       </c3m-progress-spinner>
-
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -36,7 +38,10 @@ EXAMPLE TO TRIGGER THE SPINNER
   <h3>Properties and Events</h3>
 
   <table class="adaptable">
-    <caption>Properties applicable to the component <code>c3m-progress-spinner</code></caption>
+    <caption>
+      Properties applicable to the component
+      <code>c3m-progress-spinner</code>
+    </caption>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Type</th>
@@ -52,5 +57,3 @@ EXAMPLE TO TRIGGER THE SPINNER
   </table>
   <p><em>* mandatory properties</em></p>
 </section>
-
-

@@ -1,30 +1,31 @@
 <div class="introduction editorial">
   <div class="intro-text">
-    <p>The <code>c3mTooltip</code> directive can be used to display the textual
-      alternative of a visual element when it meets one of these conditions:</p>
-      <ul>
-        <li>the <code>title</code> element of a svg, or</li>
-        <li>the inner text of the element the directive selector is applied to</li>
-      </ul>
+    <p>
+      The <code>c3mTooltip</code> directive can be used to display the textual alternative of a
+      visual element when it meets one of these conditions:
+    </p>
+    <ul>
+      <li>the <code>title</code> element of a svg, or</li>
+      <li>the inner text of the element the directive selector is applied to</li>
+    </ul>
 
-    <p>To apply it, just add the <code>c3mTooltip</code> directive selector to
-      the direct parent of the <code>svg</code> element or to the <code>svg</code>
-      element itself.</p>
+    <p>
+      To apply it, just add the <code>c3mTooltip</code> directive selector to the direct parent of
+      the <code>svg</code> element or to the <code>svg</code> element itself.
+    </p>
   </div>
 </div>
 
 <c3m-tabs class="block-style" label="Demo and Code">
   <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
     <p>
       <button c3mTooltip>
-        <svg role="img" width="24" height="24" viewbox="0 0 24 24" style="fill: #FFF">
+        <svg role="img" width="24" height="24" viewbox="0 0 24 24" style="fill: #fff">
           <use href="./assets/img/sprite.svg#bt-delete"></use>
         </svg>
         This is the content of the button
       </button>
     </p>
-
   </c3m-tab-panel>
   <c3m-tab-panel class="block-style" tabTitle="Application">
     <pre>
@@ -37,4 +38,3 @@
     </pre>
   </c3m-tab-panel>
 </c3m-tabs>
-

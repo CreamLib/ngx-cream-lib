@@ -1,16 +1,18 @@
 <div class="introduction editorial">
   <div class="intro-text">
     <p>Toasts must be used carefully, as they may pose problems to accessibility.</p>
-    <p>We did our best to make it accessible and affordable, but as its message
-      is time-sensitive, it will always violate the WCAG21
+    <p>
+      We did our best to make it accessible and affordable, but as its message is time-sensitive, it
+      will always violate the WCAG21
       <a href="https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html" target="_blank">
-        2.2.1: Timing Adjustable</a>
-      criteria.</p>
+        2.2.1: Timing Adjustable</a
+      >
+      criteria.
+    </p>
   </div>
 
   <c3m-message-block>
-    <p>A toast must be a single line of text; any other element
-      inside it will be ignored.</p>
+    <p>A toast must be a single line of text; any other element inside it will be ignored.</p>
   </c3m-message-block>
 </div>
 
@@ -19,19 +21,19 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
       <p>
         <button aria-controls="toast3" (click)="openToast($event, toast3)">
           General Toast with option
         </button>
       </p>
 
-      <c3m-toast id="toast3" #toast3
+      <c3m-toast
+        id="toast3"
+        #toast3
         class="normal"
         styleClass="slide-to-top"
         toastText="This is a generic message">
       </c3m-toast>
-
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -63,16 +65,13 @@ EXAMPLE TO TRIGGER THE TOAST
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
       <p>
         <button aria-controls="toast" (click)="openToast($event, toast)">
           Success Toast (default)
         </button>
       </p>
 
-      <c3m-toast id="toast" #toast toastText="Positive feedback message">
-      </c3m-toast>
-
+      <c3m-toast id="toast" #toast toastText="Positive feedback message"> </c3m-toast>
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -94,31 +93,30 @@ EXAMPLE TO TRIGGER THE TOAST
   <h3>Alert Toast</h3>
 
   <div class="introduction editorial">
-    <c3m-message-block >
-      <p>The "alert" role should be used for alert or error messages only.
-        The main difference with the role "status" is that "alert" will stop
-        the current reading of the screen reader in order to read the toast,
-        while "status" will wait for the end of the current reading
-        before announcing its content.</p>
+    <c3m-message-block>
+      <p>
+        The "alert" role should be used for alert or error messages only. The main difference with
+        the role "status" is that "alert" will stop the current reading of the screen reader in
+        order to read the toast, while "status" will wait for the end of the current reading before
+        announcing its content.
+      </p>
     </c3m-message-block>
   </div>
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
       <p>
-        <button aria-controls="toast2" (click)="openToast($event, toast2)">
-          Alert Toast
-        </button>
+        <button aria-controls="toast2" (click)="openToast($event, toast2)">Alert Toast</button>
       </p>
 
-      <c3m-toast id="toast2" #toast2
+      <c3m-toast
+        id="toast2"
+        #toast2
         role="alert"
         toastText="This is an alert message"
         closeBtnTitle="Close alert">
         This is an alert message
       </c3m-toast>
-
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -143,7 +141,10 @@ EXAMPLE TO TRIGGER THE TOAST
   <h3>Properties and Events</h3>
 
   <table class="adaptable">
-    <caption>Properties applicable to the component <code>c3m-toast</code></caption>
+    <caption>
+      Properties applicable to the component
+      <code>c3m-toast</code>
+    </caption>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Type</th>
@@ -166,15 +167,17 @@ EXAMPLE TO TRIGGER THE TOAST
       <td data-head="Name">role</td>
       <td data-head="Type">string</td>
       <td data-head="Default">"status"</td>
-      <td>Specifies the type of message ("status" or "alert").
-        "status" should be used to indicate a success message.</td>
+      <td>
+        Specifies the type of message ("status" or "alert"). "status" should be used to indicate a
+        success message.
+      </td>
     </tr>
     <tr>
       <td data-head="Name">delay</td>
       <td data-head="Type">number</td>
       <td data-head="Default">6500</td>
-      <td>Time in milliseconds to display toast. Toast will not close
-        by itself if value is set to 0.
+      <td>
+        Time in milliseconds to display toast. Toast will not close by itself if value is set to 0.
       </td>
     </tr>
     <tr>
@@ -198,5 +201,3 @@ EXAMPLE TO TRIGGER THE TOAST
   </table>
   <p><em>* mandatory properties</em></p>
 </section>
-
-

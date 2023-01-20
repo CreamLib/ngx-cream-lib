@@ -1,5 +1,5 @@
 <!-- If there's no redirection -->
-<ng-container *ngIf="rLink == ''">
+<ng-container *ngIf="rLink === ''">
   <button c3mTooltip type="button" [disabled]="disabled">
     <svg role="img" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
       <use [attr.href]="'/assets/img/sprite.svg#' + svgId"></use>
@@ -9,7 +9,7 @@
 </ng-container>
 
 <!-- If there's redirection (href value) -->
-<ng-container *ngIf="rLink != ''">
+<ng-container *ngIf="rLink !== ''">
   <a c3mTooltip [routerLink]="rLink">
     <svg role="img" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
       <use [attr.href]="'/assets/img/sprite.svg#' + svgId"></use>

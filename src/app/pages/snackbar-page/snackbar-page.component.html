@@ -3,40 +3,34 @@
 
   <div class="introduction editorial">
     <div class="intro-text">
-      <p>Snackbars work exactly like a modal &mdash; in isolated mode &mdash;, but
-        contrary to modals, they can only be closed by interacting with them.
-        As snackbars impose a question that must be answered, it can only be closed
-          by interacting with it.</p>
+      <p>
+        Snackbars work exactly like a modal &mdash; in isolated mode &mdash;, but contrary to
+        modals, they can only be closed by interacting with them. As snackbars impose a question
+        that must be answered, it can only be closed by interacting with it.
+      </p>
       <p>Use this component to get mandatory feedback from the user.</p>
     </div>
 
-      <c3m-message-block>
-        <p>You should use the component's unique identifier (template reference)
-          to call the <code>ToggleOpen</code> function to trigger
-          or close the snackbar.</p>
-        <p>You may add aditional functions to the same event.</p>
-      </c3m-message-block>
+    <c3m-message-block>
+      <p>
+        You should use the component's unique identifier (template reference) to call the
+        <code>ToggleOpen</code> function to trigger or close the snackbar.
+      </p>
+      <p>You may add aditional functions to the same event.</p>
+    </c3m-message-block>
   </div>
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
-      <p><button (click)="snackbarDemo.ToggleOpen($event)">
-        Open snackbar
-      </button></p>
+      <p><button (click)="snackbarDemo.ToggleOpen($event)">Open snackbar</button></p>
 
       <c3m-snackbar #snackbarDemo>
         <p>Are you sure you want to delete all the files?</p>
         <p class="buttons-bar">
-          <button class="as-reset" (click)="snackbarDemo.ToggleOpen($event)">
-            No
-          </button>
-          <button class="as-submit" (click)="snackbarDemo.ToggleOpen($event)">
-            Yes
-          </button>
+          <button class="as-reset" (click)="snackbarDemo.ToggleOpen($event)">No</button>
+          <button class="as-submit" (click)="snackbarDemo.ToggleOpen($event)">Yes</button>
         </p>
       </c3m-snackbar>
-
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -67,7 +61,10 @@ EXAMPLE OF BUTTON ACTION:
   <h3>Properties and Events</h3>
 
   <table class="adaptable">
-    <caption>Properties applicable to the component <code>c3m-snackbar</code></caption>
+    <caption>
+      Properties applicable to the component
+      <code>c3m-snackbar</code>
+    </caption>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Type</th>
@@ -89,5 +86,3 @@ EXAMPLE OF BUTTON ACTION:
   </table>
   <p><em>* mandatory properties</em></p>
 </section>
-
-

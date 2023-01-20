@@ -20,13 +20,17 @@
             "prefix": "c3m",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {
       "files": ["*.html"],
       "rules": {
-        "bracketSameLine": true
+        /* eslint-disable-next-line
+          bracketSameLine
+        */
       }
     }
   ]

@@ -8,9 +8,8 @@ describe('ModalTriggerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalTriggerComponent ]
-    })
-    .compileComponents();
+      declarations: [ModalTriggerComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ModalTriggerComponent);
     component = fixture.componentInstance;

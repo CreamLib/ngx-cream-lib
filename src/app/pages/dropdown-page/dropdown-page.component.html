@@ -3,7 +3,6 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
       <c3m-dropdown label="Label of dropdown">
         <c3m-dropdown-item>
           <button>Action 1</button>
@@ -12,7 +11,6 @@
           <button>Action 2</button>
         </c3m-dropdown-item>
       </c3m-dropdown>
-
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -35,7 +33,6 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
       <c3m-dropdown imgSrc="nav-feedbacks" imgAlt="Describe the nature of the actions">
         <c3m-dropdown-item>
           <button>Action 1</button>
@@ -44,7 +41,6 @@
           <button>Action 2</button>
         </c3m-dropdown-item>
       </c3m-dropdown>
-
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -63,14 +59,15 @@
 
   <div class="introduction editorial">
     <c3m-message-block [isError]="true">
-      <p>In this case, it is mandatory to add a <code>altLabel</code> value to inform the
-        nature of the actions in the dropdown.</p>
+      <p>
+        In this case, it is mandatory to add a <code>altLabel</code> value to inform the nature of
+        the actions in the dropdown.
+      </p>
     </c3m-message-block>
   </div>
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-
       <c3m-dropdown class="others" ariaLabel="Describe the nature of the actions">
         <c3m-dropdown-item>
           <button>Action 1</button>
@@ -79,7 +76,6 @@
           <button>Action 2</button>
         </c3m-dropdown-item>
       </c3m-dropdown>
-
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -97,7 +93,10 @@
   <h3>Properties and Events</h3>
 
   <table class="adaptable">
-    <caption>Properties applicable to the component <code>c3m-dropdown</code></caption>
+    <caption>
+      Properties applicable to the component
+      <code>c3m-dropdown</code>
+    </caption>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Type</th>
@@ -114,14 +113,18 @@
       <td data-head="Name">imgSrc</td>
       <td data-head="Type">string</td>
       <td data-head="Default">""</td>
-      <td>Replaces label by the image indicated by its Id (should be listed in "/assets/img/sprite.svg"). </td>
+      <td>
+        Replaces label by the image indicated by its Id (should be listed in
+        "/assets/img/sprite.svg").
+      </td>
     </tr>
     <tr>
       <td data-head="Name">imgAlt</td>
       <td data-head="Type">string</td>
       <td data-head="Default">""</td>
-      <td>Textual alternative to image.
-        <strong>Mandatory</strong> if <code>imgSrc</code> is set.</td>
+      <td>
+        Textual alternative to image. <strong>Mandatory</strong> if <code>imgSrc</code> is set.
+      </td>
     </tr>
     <tr>
       <td data-head="Name">others</td>
@@ -132,4 +135,3 @@
   </table>
   <p><em>* mandatory properties</em></p>
 </section>
-

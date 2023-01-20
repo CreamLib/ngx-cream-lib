@@ -1,10 +1,9 @@
-import {Directive, ElementRef, Input} from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[c3mAutofocus]'
+  selector: '[c3mAutofocus]',
 })
 export class AutofocusDirective {
-
   constructor(private element: ElementRef) {}
 
   @Input() set c3mAutofocus(value: boolean) {
@@ -13,6 +12,4 @@ export class AutofocusDirective {
       element.focus();
     }, 0);
   }
-
 }
-

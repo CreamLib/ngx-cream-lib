@@ -45,18 +45,12 @@ const components = [
   ProgressSpinnerComponent,
   TextEllipsisComponent,
   IconButtonComponent,
-  TooltipDirective
+  TooltipDirective,
 ];
 
 @NgModule({
   declarations: [...components],
-  imports: [
-    CommonModule,
-    RouterModule,
-    DragDropModule,
-    BrowserModule,
-    BrowserAnimationsModule
-  ],
+  imports: [CommonModule, RouterModule, DragDropModule, BrowserModule, BrowserAnimationsModule],
   exports: [...components],
 })
 export class NgxCreamLibModule {}

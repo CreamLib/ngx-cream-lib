@@ -1,17 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'c3m-progress-spinner',
   templateUrl: './progress-spinner.component.html',
-  styleUrls: ['./progress-spinner.component.css']
+  styleUrls: ['./progress-spinner.component.css'],
 })
-export class ProgressSpinnerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void { }
-
-  @Input() progressText: string = "Please wait...";
+export class ProgressSpinnerComponent {
+  @Input() progressText: string = 'Please wait...';
 
   isOpen: boolean = false;
   theId = this.randomID();
@@ -30,5 +25,4 @@ export class ProgressSpinnerComponent implements OnInit {
     const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
     return idRandom;
   }
-
 }
