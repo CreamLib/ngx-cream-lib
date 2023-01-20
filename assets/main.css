@@ -114,6 +114,7 @@ body {
   font: 100%/1 var(--stack);
   color: var(--body-text);
   background-color: var(--body-bg);
+  background-color: var(--body-bg);
 }
 
 h2,
@@ -133,6 +134,7 @@ th,
 td {
   font-size: 0.95em;
 }
+
 li li,
 li p,
 li dt,
