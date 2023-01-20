@@ -13,8 +13,8 @@ import { MessageBlockComponent } from './message-block/message-block.component';
 import { FocusOnPageChangeDirective } from './directives/focus-on-page-change.directive';
 import { CollapsibleComponent } from './collapsible/collapsible.component';
 import { ModalComponent } from './modal/modal.component';
-import { AutofocusDirective } from './directives/autofocus.directive';
 import { ModalTriggerComponent } from './modal/modal-trigger/modal-trigger.component';
+import { AutofocusDirective } from './directives/autofocus.directive';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { ToastComponent } from './toast/toast.component';
 import { ChipComponent } from './chip/chip.component';
@@ -49,7 +49,7 @@ const components = [
 ];
 
 @NgModule({
-  declarations: [...components],
+  declarations: [...components, AutofocusDirective, IconButtonComponent],
   imports: [CommonModule, RouterModule, DragDropModule, BrowserModule, BrowserAnimationsModule],
   exports: [...components],
 })

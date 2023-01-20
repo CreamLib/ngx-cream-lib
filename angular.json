@@ -35,10 +35,7 @@
                 "output": "/assets/"
               }
             ],
-            "styles": [
-              "./projects/ngx-cream-lib/assets/css/main.css",
-              "src/assets/css/local.css"
-            ],
+            "styles": ["./projects/ngx-cream-lib/assets/css/main.css", "src/assets/css/local.css"],
             "scripts": []
           },
           "configurations": {

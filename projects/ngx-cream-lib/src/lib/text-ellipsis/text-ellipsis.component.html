@@ -4,6 +4,7 @@
 <c3m-icon-button
   *ngIf="isExpandable"
   class="minimal"
+  i18n-aName
   aName="Display/hide all text"
   [svgId]="!isExpanded ? 'bt-plus' : 'bt-less'"
   (click)="toggleEllipse()">

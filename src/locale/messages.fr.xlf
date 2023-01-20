@@ -6,7 +6,7 @@
         <source>Delete</source>
         <target>Supprimer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/chip/chip.component.html</context>
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/chip/chip.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
@@ -14,7 +14,7 @@
         <source>Information</source>
         <target>Information</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/message-block/message-block.component.html</context>
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/message-block/message-block.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
@@ -22,7 +22,7 @@
         <source>Alert</source>
         <target>Alerte</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/message-block/message-block.component.html</context>
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/message-block/message-block.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -30,7 +30,7 @@
         <source>Close modal</source>
         <target>Fermer modale</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/modal/modal.component.html</context>
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/modal/modal.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
@@ -38,7 +38,7 @@
         <source>Scroll tabs to right</source>
         <target>Défiler vers la droite</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/tabs/tabs.component.html</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -46,7 +46,7 @@
         <source>Scroll tabs to left</source>
         <target>Défiler vers la gauche</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/tabs/tabs.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
@@ -54,15 +54,23 @@
         <source>Close tab</source>
         <target>Supprimer onglet</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/tabs/tabs.component.html</context>
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/tabs/tabs.component.html</context>
           <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3626204362355495273" datatype="html">
+        <source>Display/hide all text</source>
+        <target>Afficher/cacher le texte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/text-ellipsis/text-ellipsis.component.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3759120046249286326" datatype="html">
         <source>Close toast</source>
         <target>Fermer toast</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/toast/toast.component.html</context>
+          <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/toast/toast.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
