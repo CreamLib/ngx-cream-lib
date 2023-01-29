@@ -21,6 +21,8 @@ export class PortalLayoutComponent {
     this.pageTitle = e.pageTitle;
     this.componentName = e.componentName;
     this.resourceType = e.resourceType;
+
+    console.log(this.currentUrl);
     this.cdr.detectChanges();
 
     const sectionDOM = document.querySelectorAll('section');
