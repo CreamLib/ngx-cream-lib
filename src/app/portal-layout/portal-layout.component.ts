@@ -14,6 +14,7 @@ export class PortalLayoutComponent {
   isThereSubNav = true;
   sections: Section[] = [];
   currentUrl: string = this.router.url;
+  parsedUrl = new URL(window.location.href);
 
   constructor(private router: Router, private cdr: ChangeDetectorRef) {}
 
@@ -22,8 +23,9 @@ export class PortalLayoutComponent {
     this.componentName = e.componentName;
     this.resourceType = e.resourceType;
 
-    console.log(this.currentUrl);
     this.cdr.detectChanges();
+
+    this.currentUrl = this.parsedUrl.origin + this.currentUrl;
 
     const sectionDOM = document.querySelectorAll('section');
 
