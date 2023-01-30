@@ -3,47 +3,6 @@
           				Le Studio, 2023
 /*-------------------------------------------------------------------- */
 
-/*
-@font-face {
-  font-family: 'quicksandbold';
-  src: url('/assets/fonts/quicksand-bold-webfont.woff2') format('woff2'),
-    url('/assets/fonts/quicksand-bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'quicksandlight';
-  src: url('/assets/fonts/quicksand-light-webfont.woff2') format('woff2'),
-    url('/assets/fonts/quicksand-light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'quicksandmedium';
-  src: url('/assets/fonts/quicksand-medium-webfont.woff2') format('woff2'),
-    url('/assets/fonts/quicksand-medium-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'quicksandregular';
-  src: url('/assets/fonts/quicksand-regular-webfont.woff2') format('woff2'),
-    url('/assets/fonts/quicksand-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'quicksanditalic';
-  src: url('/assets/fonts/quicksand-italic-webfont.woff2') format('woff2'),
-    url('/assets/fonts/quicksand-italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-} */
-
 /* Define the "system" font family */
 @font-face {
   font-family: system-ui;
@@ -102,4 +61,5 @@
   --radius: 0.3em;
 
   --nav-width: 250px;
+  --select-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0,0H24V24H0Z' style='fill:none'/%3E%3Cpath d='M12,13.06l4.95-5,1.41,1.41L12,15.89,5.64,9.52,7.05,8.11Z'/%3E%3C/svg%3E");
 }
