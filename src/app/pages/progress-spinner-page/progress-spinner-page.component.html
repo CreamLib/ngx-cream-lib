@@ -23,27 +23,7 @@
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
-&lt;c3m-progress-spinner #process1&gt;
-&lt;/c3m-progress-spinner&gt;
-
-EXAMPLE TO TRIGGER THE SPINNER
-
-&lt;button (click)=&#34;insertContent(process1); process1.ToggleOpen($event); stopProgress(process1)&#34;&gt;
-  Open spinner
-&lt;/button&gt;
-
-insertContent(spinner: ProgressSpinnerComponent) &#123;
-  spinner.progressText = &#34;Loading...&#34;;
-&#125;
-
-// Demo for progress spinner
-// Sends signal to stop progress and close spinner
-stopProgress(el: any) &#123;
-  setTimeout(function () &#123;
-    el.isOpen = false;
-    el.progressText = &#34;&#34;;
-  &#125;, 3000);
-&#125;
+        <code [highlight]="code"></code>
       </pre>
 
       <c3m-message-block [isWarning]="true">

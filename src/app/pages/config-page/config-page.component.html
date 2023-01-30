@@ -13,13 +13,7 @@
     file of your project, change the value of the "style" keyword as shown hereafter:
   </p>
 
-  <pre class="command">
-
-&#34;styles&#34;: [
-  &#34;/node_modules/ngx-cream-lib/assets/css/main.css&#34;
-],
-
-  </pre>
+  <pre class="command"><code [highlight]="codeCommand"></code></pre>
 
   <p>
     You must also add the following lines to the "assets" keyword, in order to import the icons:
@@ -27,20 +21,11 @@
 
   <div class="command">
     <pre>
-  &#34;assets&#34;: [
-    &#34;src/favicon.ico&#34;,
-    &#34;src/assets&#34;,
-  </pre
-    >
+      <code [highlight]="codeAsset"></code>
+  </pre>
     <pre class="highlight">
-    &#123;
-      &#34;glob&#34;: &#34;**/*&#34;,
-      &#34;input&#34;: &#34;./projects/ngx-cream-lib/assets&#34;,
-      &#34;output&#34;: &#34;/assets/&#34;
-    &#125;
-  </pre
-    >
-    <pre>],</pre>
+      <code [highlight]="codeAssetHighlight"></code>
+    </pre>
   </div>
 
   <p>This will allow you to use your own assets as much as the library's.</p>
@@ -83,26 +68,11 @@
     </li>
     <li>
       Edit this new file with the wanted translation using the &lt;target&gt; element:
-      <div class="command">
-        <pre>
-        ...
-&lt;trans-unit id=&#34;7022070615528435141&#34; datatype=&#34;html&#34;&gt;
-  &lt;source&gt;Delete&lt;/source&gt;</pre
-        >
-        <pre class="highlight">
-  &lt;target&gt;Supprimer&lt;/target&gt;
-  </pre
-        >
-        <pre>
-  &lt;context-group purpose=&#34;location&#34;&gt;
-    &lt;context context-type=&#34;sourcefile&#34;&gt;projects/ngx-cream-lib/src/lib/chip/chip.component.html&lt;/context&gt;
-    &lt;context context-type=&#34;linenumber&#34;&gt;19&lt;/context&gt;
-  &lt;/context-group&gt;
-&lt;/trans-unit&gt;
-        ...
-  </pre
-        >
-      </div>
+      <!--div class="command"-->
+      <pre class="command">
+          <code [highlight]="codeInternationalisation"></code>
+  </pre>
+      <!--/div-->
     </li>
   </ol>
 

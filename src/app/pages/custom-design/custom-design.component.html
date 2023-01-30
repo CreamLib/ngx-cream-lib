@@ -14,15 +14,7 @@
   </p>
 
   <div class="command">
-    <pre>
-
-  &#34;styles&#34;: [
-    &#34;/node_modules/ngx-cream-lib/assets/css/main.css&#34;,</pre
-    >
-    <pre class="highlight">
-    &#34;src/assets/css/local.css&#34;
-    </pre>
-    <pre>],</pre>
+    <pre><code [highlight]="codeStyle"></code></pre>
   </div>
 
   <p>
@@ -69,28 +61,45 @@
     for more information), you can create your own svg sprite, as the example here after:
   </p>
 
-  <div class="command">
-    <pre>
-&lt;!-- SVG DEFINITIONS --&gt;
-&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
-  &lt;defs&gt;
-    &lt;style type=&#34;text/css&#34; &gt;
-        /* add your own style here */
-    &lt;/style&gt;
+  <pre class="command"><code [highlight]="codeDecorative"></code></pre>
 
-    &lt;g id=&#34;nav-blocks&#34;&gt;
-      &lt;path fill=&#34;none&#34; d=&#34;M0 0h24v24H0z&#34;/&gt;
-      &lt;path d=&#34;M3 3h8v8H3V3zm0 10h8v8H3v-8zM13 3h8v8h-8V3zm0 10h8v8h-8v-8z&#34;/&gt;
-    &lt;/g&gt;
-    &lt;g id=&#34;ic-download&#34;&gt;
-      &lt;path fill=&#34;none&#34; d=&#34;M0 0h24v24H0z&#34;/&gt;
-      &lt;path d=&#34;M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z&#34;/&gt;
-    &lt;/g&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;
-  </pre
-    >
-  </div>
+  <p>
+    Notice that, as the image carries no information, we may hide it from screen readers by setting
+    the
+    <code>aria-hidden</code>
+    attribute as "true".
+  </p>
+
+  <h4>Non-decorative images</h4>
+
+  <p>Images that carry information, i.e. they are not purely decorative, must appear as:</p>
+
+  <ul>
+    <li>
+      image files properly referenced by the
+      <code>img</code>
+      element and with a
+      <strong>
+        mandatory
+        <code>alt</code>
+        attribute
+      </strong>
+      to describe its purpose or meaning;
+    </li>
+    <li>
+      svg sprite image called with the
+      <code>use</code>
+      element, with a
+      <strong>
+        mandatory
+        <code>title</code>
+        element
+      </strong>
+      describing its meaning or purpose:
+    </li>
+  </ul>
+
+  <pre class="command"><code [highlight]="codeNonDecorative"></code></pre>
 
   <p>
     If you need to add a new icon to your svg sprite, simply get the svg code (without the opening

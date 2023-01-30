@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class GettingStartedComponent {
   pageTitle = 'Getting Started';
+
+  commandAngular = `npm install -g angular-cli@latest`;
+  commandNgxCreamLib = `npm install ngx-cream-lib`;
+  commandInclude = `
+import { NgxCreamLibModule } from 'ngx-cream-lib';
+
+
+imports: [NgxCreamLibModule]
+`;
 }

@@ -30,6 +30,7 @@ import { FormDesignPageComponent } from './pages/form-design-page/form-design-pa
 import { AutofocusPageComponent } from './pages/autofocus-page/autofocus-page.component';
 import { FocusOnChangePageComponent } from './pages/focus-on-change-page/focus-on-change-page.component';
 import { CheckAllPageComponent } from './pages/check-all-page/check-all-page.component';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [
@@ -62,8 +63,20 @@ import { CheckAllPageComponent } from './pages/check-all-page/check-all-page.com
     FocusOnChangePageComponent,
     CheckAllPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule, HighlightModule],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          xml: () => import('highlight.js/lib/languages/xml'),
+          json: () => import('highlight.js/lib/languages/json'),
+        },
+      },
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
