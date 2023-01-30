@@ -24,6 +24,7 @@ import { ProgressSpinnerPageComponent } from './pages/progress-spinner-page/prog
 import { TextEllipsisPageComponent } from './pages/text-ellipsis-page/text-ellipsis-page.component';
 import { TooltipPageComponent } from './pages/tooltip-page/tooltip-page.component';
 import { ConfigPageComponent } from './pages/config-page/config-page.component';
+import { DesignBasicsPageComponent } from './pages/design-basics-page/design-basics-page.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ConfigPageComponent } from './pages/config-page/config-page.component';
     TextEllipsisPageComponent,
     TooltipPageComponent,
     ConfigPageComponent,
+    DesignBasicsPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
   providers: [],
