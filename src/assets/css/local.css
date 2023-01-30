@@ -1,3 +1,10 @@
+/* ------------------------------------------------------------
+
+CREAMNg Portal, 2023
+Main stylesheet
+
+------------------------------------------------------------ */
+
 @import 'local-vars.css';
 
 pre {
@@ -21,4 +28,66 @@ p.command-line,
 
 .highlight {
   background-color: var(--hot-u-light);
+}
+
+
+/* -------------------------- BLOCKS ---------------------------- */
+
+div.component-sheet section {
+  padding-top: 1rem;
+  border-top: 3px dotted var(--n-dark);
+  margin-bottom: calc(1.5rem + 1vw);
+}
+
+div.component-sheet h3 {
+  font-family: var(--stack-b);
+  margin-bottom: 1.5em;
+}
+
+div.demo {
+  background-color: var(--body-bg);
+  padding: 1rem;
+  border: 1px solid var(--n-medium);
+}
+
+div.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem 5rem;
+  margin-bottom: calc(1.5rem + 1vw);
+}
+
+div.intro-text {
+  max-width: 45em;
+}
+
+div.explain {
+  background-color: var(--sec-u-light);
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+div.explain p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 1000px) {
+
+  div.component-sheet h3 {
+    font-size: 1.6em;
+  }
+
+  div.demo {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  div.introduction {
+    flex-direction: row;
+  }
 }
