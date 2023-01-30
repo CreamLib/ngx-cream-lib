@@ -1,0 +1,222 @@
+<section class="editorial">
+  <h3>Introduction</h3>
+  <p>
+    This library uses exclusively
+    <strong>svg images</strong>
+    for their high level of quality, easy manipulation and their light weight.
+  </p>
+
+  <p>For maximum flexibility and performance, we use svg images in three different ways:</p>
+
+  <ul>
+    <li>
+      <strong>Svg image files:</strong>
+      some complex images are stored as svg files in the library
+      <em>./assets/img</em>
+      folder. This folder holds mostly the application logo in different styles;
+    </li>
+    <li>
+      <strong>Svg “sprite”:</strong>
+      most of the simple icons are listed in what we call a svg “sprite”, which is a list of inline
+      svgs. This list gives us a total flexibility in terms of accessibility and style, allowing svg
+      icons to be referred to from anywhere in the application.
+    </li>
+    <li>
+      <strong>Svg backgrounds:</strong>
+      some inline svgs are converted to data URI to be used as background images. This technique
+      allows us to change svg images through HTML classes.
+    </li>
+  </ul>
+
+  <p>
+    The choice of the way we insert the svg will depend on the role it will have in the application
+    and the kind of style flexibility they will need.
+  </p>
+</section>
+
+<c3m-message-block>
+  <p>
+    Refer to the "
+    <a href="../portal/custom-design">Custom Design</a>
+    " page to know how to modify CreamNg icons or how to add your own svg sprite.
+  </p>
+</c3m-message-block>
+<section class="editorial">
+  <h3>Decorative Images</h3>
+
+  <p>
+    Pure decorative images &mdash; images that don't carry information &mdash; may be referred in
+    the svg sprite or encoded in data URI to be used as background. If the icon should be
+    transformed based on the component state, it is easier to do that if the icon is called as
+    background.
+  </p>
+
+  <p>
+    For example, in the case of radio or check boxes, the svg images that replace the native
+    elements are stored as background images so they can be easily changed if the radio/check box is
+    selected or not. If this is not the case &mdash; the image will not be transformed by a specific
+    state &mdash;, you may use an icon listed on the svg sprite. To do so, you have to reference the
+    svg by its ID, with the
+    <code>use</code>
+    element:
+  </p>
+
+  <pre class="command">
+&lt;svg role=&#34;img&#34; width=&#34;24&#34; height=&#34;24&#34; aria-hidden=&#34;true&#34;&gt;
+  &lt;use href=&#34;./assets/img/sprite.svg#pic-arrow&#34;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+    </pre
+  >
+
+  <c3m-message-block>
+    <p>
+      Notice that, as the image carries no information, we may hide it from screen readers by
+      setting the
+      <code>aria-hidden</code>
+      attribute as "true".
+    </p>
+  </c3m-message-block>
+</section>
+
+<section class="editorial">
+  <h3>Non-decorative images</h3>
+
+  <p>Images that carry information, i.e. they are not purely decorative, must appear as:</p>
+
+  <ul>
+    <li>
+      image files properly referenced by the
+      <code>img</code>
+      element and with a
+      <strong>
+        mandatory
+        <code>alt</code>
+        attribute
+      </strong>
+      to describe its purpose or meaning;
+    </li>
+    <li>
+      svg sprite image called with the
+      <code>use</code>
+      element, with a
+      <strong>
+        mandatory
+        <code>title</code>
+        element
+      </strong>
+      describing its meaning or purpose:
+    </li>
+  </ul>
+
+  <pre class="command">
+&lt;svg role=&#34;img&#34; width=&#34;24&#34; height=&#34;24&#34; aria-labelledby=&#34;the-title&#34;&gt;
+  &lt;title id=&#34;the-title&#34;&gt;Favorites&lt;/title&gt;
+  &lt;use href=&#34;./assets/img/sprite.svg#ic-favorites&#34;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+  </pre>
+
+  <c3m-message-block>
+    <p>
+      The
+      <code>aria-labelledby</code>
+      attribute is needed to ensure that the accessible name of the image will be announced properly
+      by screen readers.
+    </p>
+    <p>
+      Adding
+      <code>role=img</code>
+      helps identifying the svg as a graphic (and some bug with Safari).
+    </p>
+  </c3m-message-block>
+</section>
+
+<section class="editorial">
+  <h3>Sprite SVG</h3>
+
+  <p>
+    Here after is a list of the current icons listed in the
+    <em>sprite.svg</em>
+    file (notice that all icons are 24px x 24px):
+  </p>
+
+  <ul class="icons foreground">
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#pic-arrow"></use>
+      </svg>
+      <em>pic-arrow</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#pic-kebab"></use>
+      </svg>
+      <em>pic-kebab</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#bt-menu"></use>
+      </svg>
+      <em>bt-menu</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#bt-delete"></use>
+      </svg>
+      <em>bt-delete</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#accordion-down"></use>
+      </svg>
+      <em>accordion-down</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#info"></use>
+      </svg>
+      <em>info</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#error"></use>
+      </svg>
+      <em>error</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#bt-delete-tab"></use>
+      </svg>
+      <em>bt-delete-tab</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#bt-scrollLeft"></use>
+      </svg>
+      <em>bt-scrollLeft</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#bt-scrollRight"></use>
+      </svg>
+      <em>bt-scrollRight</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#bt-close"></use>
+      </svg>
+      <em>bt-close</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#bt-plus"></use>
+      </svg>
+      <em>bt-plus</em>
+    </li>
+    <li>
+      <svg width="24" height="24">
+        <use href="/assets/img/sprite.svg#bt-less"></use>
+      </svg>
+      <em>bt-less</em>
+    </li>
+  </ul>
+</section>

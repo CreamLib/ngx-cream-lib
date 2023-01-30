@@ -4,6 +4,7 @@ div.message {
   gap: 1rem;
   background-color: var(--sec-u-light);
   padding: 1.5rem;
+  margin-bottom: 1rem;
   z-index: 1;
 }
 div.error {

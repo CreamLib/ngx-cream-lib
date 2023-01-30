@@ -18,6 +18,9 @@ import { ProgressSpinnerPageComponent } from './pages/progress-spinner-page/prog
 import { TextEllipsisPageComponent } from './pages/text-ellipsis-page/text-ellipsis-page.component';
 import { TooltipPageComponent } from './pages/tooltip-page/tooltip-page.component';
 import { ConfigPageComponent } from './pages/config-page/config-page.component';
+import { DesignBasicsPageComponent } from './pages/design-basics-page/design-basics-page.component';
+import { FormDesignPageComponent } from './pages/form-design-page/form-design-page.component';
+import { IconographyPageComponent } from './pages/iconography-page/iconography-page.component';
 
 const routes: Routes = [
   //Portal (doc) routes goes here
@@ -104,6 +107,21 @@ const routes: Routes = [
         path: 'config',
         component: ConfigPageComponent,
         data: { title: 'Configuring CreamNg' },
+      },
+      {
+        path: 'design-basics',
+        component: DesignBasicsPageComponent,
+        data: { title: 'CreamNg Design Basics' },
+      },
+      {
+        path: 'iconography',
+        component: IconographyPageComponent,
+        data: { title: 'Iconography' },
+      },
+      {
+        path: 'form-design',
+        component: FormDesignPageComponent,
+        data: { title: 'Form Design' },
       },
     ],
   },

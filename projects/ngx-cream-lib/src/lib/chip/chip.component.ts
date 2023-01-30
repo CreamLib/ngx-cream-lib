@@ -12,7 +12,7 @@ export class ChipComponent implements OnInit {
 
   @Input() label: string = '';
   @Input() deletable: boolean = true;
-  @Input() disabled!: boolean;
+  @Input() disabled: boolean = false;
   @Input() linkUrl: string = '';
 
   chipIdNum!: number;

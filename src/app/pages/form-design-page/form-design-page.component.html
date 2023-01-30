@@ -1,0 +1,259 @@
+<section id="buttons">
+  <h3>Form Buttons</h3>
+
+  <c3m-tabs class="block-style" label="Demo and information about the component">
+    <c3m-tab-panel class="block-style editorial" tabTitle="Demo" [isActive]="true">
+      <div class="demo">
+        <h4 class="separate">Native Inputs</h4>
+        <p class="buttons-bar">
+          <input type="submit" value="Confirm" />
+          <input type="submit" class="optional" value="Optional action" />
+          <input type="reset" value="Cancel" />
+        </p>
+
+        <h4 class="separate">
+          Element
+          <code lang="en">&lt;button&gt;</code>
+          with
+          <code lang="en">type</code>
+          attribute
+        </h4>
+        <p class="buttons-bar">
+          <button type="submit">Confirm</button>
+          <button type="submit" class="optional">Optional Action</button>
+          <button type="reset">Cancel</button>
+        </p>
+
+        <h4 class="separate">
+          Element
+          <code lang="en">&lt;button&gt;</code>
+          with classes
+        </h4>
+        <p class="buttons-bar">
+          <button class="as-submit">Confirm</button>
+          <button class="as-submit optional">Optional Action</button>
+          <button class="as-reset">Cancel</button>
+        </p>
+
+        <h4 class="separate">Disabled Actions</h4>
+        <p class="buttons-bar">
+          <input type="submit" value="Confirm" disabled="disabled" />
+          <input type="submit" class="optional" value="Optional Action" disabled="disabled" />
+          <input type="reset" value="Cancel" disabled="disabled" />
+        </p>
+      </div>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;p class=&#34;buttons-bar&#34;&gt;
+  &lt;input type=&#34;submit&#34; value=&#34;Confirm&#34; /&gt;
+  &lt;input type=&#34;submit&#34; class=&#34;optional&#34; value=&#34;Other action&#34; /&gt;
+  &lt;input type=&#34;reset&#34; value=&#34;Cancel&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p class=&#34;buttons-bar&#34;&gt;
+  &lt;button type=&#34;submit&#34;&gt;Confirm&lt;/button&gt;
+  &lt;button type=&#34;submit&#34; class=&#34;optional&#34;&gt;Other action&lt;/button&gt;
+  &lt;button type=&#34;reset&#34;&gt;Cancel&lt;/button&gt;
+&lt;/p&gt;
+
+&lt;p class=&#34;buttons-bar&#34;&gt;
+  &lt;button class=&#34;as-submit&#34;&gt;Confirm&lt;/button&gt;
+  &lt;button class=&#34;as-submit optional&#34;&gt;Other action&lt;/button&gt;
+  &lt;button class=&#34;as-reset&#34;&gt;Cancel&lt;/button&gt;
+&lt;/p&gt;
+
+&lt;p class=&#34;buttons-bar&#34;&gt;
+  &lt;input type=&#34;submit&#34; value=&#34;Confirm&#34; disabled=&#34;disabled&#34; /&gt;
+  &lt;input type=&#34;submit&#34; class=&#34;optional&#34; value=&#34;Other action&#34; disabled=&#34;disabled&#34; /&gt;
+  &lt;input type=&#34;reset&#34; value=&#34;Cancel&#34; disabled=&#34;disabled&#34; /&gt;
+&lt;/p&gt;
+      </pre>
+      <div class="explain">
+        <p>
+          For better layout, group the different actions with a
+          <code>&lt;p&gt;</code>
+          element with the class
+          <em>"buttons-bar"</em>
+        </p>
+      </div>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section class="demo-block">
+  <h3 id="sec-inputs">Inputs</h3>
+
+  <div class="introduction editorial">
+    <c3m-message-block>
+      <p>
+        For a complete list of input types, consult
+        <a href="https://www.html5accessibility.com/html5elements/">Html5 Elements</a>
+      </p>
+    </c3m-message-block>
+  </div>
+
+  <c3m-tabs class="block-style" label="Demo and component information">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <div class="demo editorial">
+        <div class="input-group">
+          <p>
+            <label for="s-sadd">Address</label>
+            <input type="text" id="s-sadd" name="s-sadd" size="25" />
+          </p>
+        </div>
+
+        <h4 class="separate">Read-only</h4>
+        <div class="input-group">
+          <p>
+            <label for="s-fnamer1">Name</label>
+            <input type="text" id="s-fnamer1" name="s-fnamer1" size="15" value="DUPONT" readonly />
+          </p>
+        </div>
+
+        <h4 class="separate">Required</h4>
+        <div class="input-group">
+          <p>
+            <label for="s-fnamer2" class="required">Name</label>
+            <input type="text" id="s-fnamer2" name="s-fnamer2" required="required" />
+          </p>
+        </div>
+
+        <h4 class="separate">Select</h4>
+        <div class="input-group">
+          <p>
+            <label for="s-country">Country</label>
+            <select id="s-country" name="s-country">
+              <option>Brazil</option>
+              <option>France</option>
+              <option>Germany</option>
+            </select>
+          </p>
+        </div>
+
+        <!-- <h4 class="separate">Input Error</h4>
+          <div class="input-group">
+            <app-input-error inputId="ex-code2">
+              Code should comprise 5 digits only
+            </app-input-error>
+            <p>
+              <label for="ex-code2" class="required">
+                Code
+              </label>
+              <input type="text"
+                id="ex-code2"
+                name="ex-code2"
+                size="10"
+                value="ajdjhd"
+                required="required"
+                aria-invalid="true"
+                aria-describedby="error1234" />
+            </p>
+          </div> -->
+
+        <!-- <h4 class="separate">Input Help</h4>
+          <div class="input-group">
+            <p>
+              <label for="ex-code3" class="required">
+                Code
+              </label>
+              <input type="text"
+                id="ex-code3"
+                name="ex-code3"
+                size="10" />
+              <app-help-tooltip>
+                Code comprises 5 digits
+              </app-help-tooltip>
+            </p>
+          </div> -->
+      </div>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;div class=&#34;input-group&#34;&gt;
+&lt;p&gt;
+&lt;label for=&#34;s-sadd&#34;&gt;
+  Adress
+&lt;/label&gt;
+&lt;input type=&#34;text&#34; id=&#34;s-sadd&#34; name=&#34;s-sadd&#34; size=&#34;25&#34; /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class=&#34;separate&#34;&gt;Read-only&lt;/p&gt;
+&lt;div class=&#34;input-group&#34;&gt;
+&lt;p&gt;
+&lt;label for=&#34;s-fnamer1&#34;&gt;
+  Name
+&lt;/label&gt;
+&lt;input type=&#34;text&#34;
+  id=&#34;s-fnamer1&#34;
+  name=&#34;s-fnamer1&#34;
+  size=&#34;15&#34;
+  value=&#34;DUPONT&#34;
+  readonly /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class=&#34;separate&#34;&gt;Required&lt;/p&gt;
+&lt;div class=&#34;input-group&#34;&gt;
+&lt;p&gt;
+&lt;label for=&#34;s-fnamer2&#34; class=&#34;required&#34;&gt;
+  Name
+&lt;/label&gt;
+&lt;input type=&#34;text&#34;
+  id=&#34;s-fnamer2&#34;
+  name=&#34;s-fnamer2&#34;
+  required=&#34;required&#34; /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class=&#34;separate&#34;&gt;Input Error&lt;/p&gt;
+&lt;div class=&#34;input-group&#34;&gt;
+&lt;p&gt;
+&lt;label for=&#34;ex-code2&#34; class=&#34;required&#34;&gt;
+  Code
+&lt;/label&gt;
+&lt;input type=&#34;text&#34;
+  id=&#34;ex-code2&#34;
+  name=&#34;ex-code2&#34;
+  size=&#34;10&#34;
+  value=&#34;ajdjhd&#34;
+  required=&#34;required&#34;
+  aria-invalid=&#34;true&#34;
+  aria-describedby=&#34;error1234&#34; /&gt;
+
+&lt;app-input-error id=&#34;error1234&#34;&gt;
+  Code should comprise 5 digits only
+&lt;/app-input-error&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class=&#34;separate&#34;&gt;Input Help&lt;/p&gt;
+&lt;div class=&#34;input-group&#34;&gt;
+&lt;p&gt;
+&lt;label for=&#34;ex-code3&#34; class=&#34;required&#34;&gt;
+  Code
+&lt;/label&gt;
+&lt;input type=&#34;text&#34;
+  id=&#34;ex-code3&#34;
+  name=&#34;ex-code3&#34;
+  size=&#34;10&#34; /&gt;
+&lt;app-help-tooltip&gt;
+  Code comprises 5 digits
+&lt;/app-help-tooltip&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+        </pre
+      >
+      <div class="explain">
+        <p>
+          <strong>
+            Always group form elements with a
+            <code>div</code>
+            of class "input-group".
+          </strong>
+        </p>
+      </div>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>

@@ -65,33 +65,38 @@ export class TooltipDirective {
   }
 
   // Mouse and keyboard events
-  @HostListener('mouseenter') onMouseover(e: any) {
+  @HostListener('mouseenter', ['$event'])
+  handleMouseEnter(event: MouseEvent) {
     this.openTooltip();
-    e.stopPropagation();
+    event.stopPropagation();
   }
 
-  @HostListener('focus') onFocus(e: any) {
+  @HostListener('focus', ['$event'])
+  handleFocus(event: MouseEvent) {
     this.openTooltip();
-    e.stopPropagation();
+    event.stopPropagation();
   }
 
-  @HostListener('mouseleave') onMouseleave(e: any) {
+  @HostListener('mouseleave', ['$event'])
+  handleMouseLeave(event: MouseEvent) {
     this.closeAllTooltips();
-    e.stopPropagation();
+    event.stopPropagation();
   }
 
-  @HostListener('mousedown') onMousedown(e: any) {
+  @HostListener('mousedown', ['$event'])
+  handleMouseDown(event: MouseEvent) {
     this.closeAllTooltips();
-    e.stopPropagation();
+    event.stopPropagation();
   }
 
-  @HostListener('focusout') onFocusOut(e: any) {
+  @HostListener('focusout', ['$event'])
+  handleFocusOut(event: MouseEvent) {
     this.closeAllTooltips();
-    e.stopPropagation();
+    event.stopPropagation();
   }
 
-  @HostListener('click') onClick(e: any) {
+  @HostListener('click', ['$event'])
+  handleClick(event: any) {
     this.closeAllTooltips();
-    e.stopPropagation();
   }
 }
