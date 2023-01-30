@@ -9,7 +9,7 @@ export class TextEllipsisComponent implements AfterViewInit {
   @Input() textCount: number = 55;
 
   isExpanded: boolean = false;
-  isExpandable: boolean = true;
+  isExpandable!: boolean;
 
   toggleEllipse(): void {
     this.isExpanded = !this.isExpanded;
