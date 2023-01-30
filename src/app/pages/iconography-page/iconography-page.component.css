@@ -1,0 +1,35 @@
+ul.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 100%;
+  list-style-type: none;
+  padding: 1rem;
+  margin: 2rem 0 0;
+  border-radius: var(--radius);
+}
+.foreground {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+}
+
+.icon-bt {fill: var(--text-inv);}
+
+ul.icons li + li {margin-top: 0;}
+ul.icons li {
+  flex-basis: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid var(--text-inv);
+  border-radius: calc(var(--radius) / 2);
+}
+ul.icons em {
+  font-size: 0.7em;
+  margin-top: auto;
+}
+
+div.editorial {margin-bottom: 2rem;}

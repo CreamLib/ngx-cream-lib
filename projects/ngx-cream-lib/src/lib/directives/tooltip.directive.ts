@@ -99,5 +99,4 @@ export class TooltipDirective {
   handleClick(event: any) {
     this.closeAllTooltips();
   }
-
 }

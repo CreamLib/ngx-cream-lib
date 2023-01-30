@@ -109,6 +109,23 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
       ],
     },
     {
+      label: 'CreamNg UX/ UI',
+      subs: [
+        {
+          label: 'Design Basics',
+          url: 'portal/design-basics',
+        },
+        {
+          label: 'Iconography',
+          url: 'portal/iconography',
+        },
+        {
+          label: 'Form Design',
+          url: 'portal/form-design',
+        },
+      ],
+    },
+    {
       label: 'Setup & Help',
       subs: [
         {

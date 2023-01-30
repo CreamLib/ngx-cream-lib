@@ -1,9 +1,9 @@
 <div class="message editorial" [ngClass]="{ info: !isError, error: isError }">
-  <svg *ngIf="!isError" role="img" width="24" height="24" aria-describedby="infoLabel">
+  <svg *ngIf="!isError" role="img" width="24" height="24" aria-labelledby="infoLabel">
     <title id="infoLabel" i18n>Information</title>
     <use href="./assets/img/sprite.svg#info"></use>
   </svg>
-  <svg *ngIf="isError" role="img" width="24" height="24" aria-describedby="infoLabel">
+  <svg *ngIf="isError" role="img" width="24" height="24" aria-labelledby="infoLabel">
     <title id="infoLabel" i18n>Alert</title>
     <use href="./assets/img/sprite.svg#error"></use>
   </svg>
