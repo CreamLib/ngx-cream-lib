@@ -6,7 +6,7 @@
     "start": "ng serve",
     "start:fr": "ng serve --configuration fr",
     "build": "ng build",
-    "build:GitHubPages": "ng build --base-href /ngx-cream-lib/",
+    "build:GitHubPages": "ng build --base-href /ngx-cream-lib/ && cp dist/ngx-cream-portal/index.html dist/ngx-cream-portal/404.html",
     "build:lib": "ng build ngx-cream-lib",
     "publish:lib": "cd dist/ngx-cream-lib && npm publish",
     "watch": "ng build --watch --configuration development",
