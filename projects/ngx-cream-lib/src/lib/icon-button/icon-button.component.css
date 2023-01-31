@@ -60,7 +60,7 @@ a:hover svg {
   background-color: rgba(255, 255, 255, 0);
 }
 :host.discrete svg {
-  fill: var(--body-text);
+  fill: var(--main-dark);
 }
 
 /* No background, no padding */

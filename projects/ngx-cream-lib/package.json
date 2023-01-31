@@ -1,6 +1,6 @@
 {
   "name": "ngx-cream-lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ngx cream lib",
   "homepage": "https://github.com/CreamLib/ngx-cream-lib",
   "repository": {
@@ -14,7 +14,7 @@
     "@angular/animations": "^15.0.0",
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0",
-    "@angular/cdk/drag-drop": "^15.0.0",
+    "@angular/cdk": "^15.0.0",
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0"
   },
