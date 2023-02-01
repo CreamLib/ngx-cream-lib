@@ -27,6 +27,9 @@ import { ConfigPageComponent } from './pages/config-page/config-page.component';
 import { DesignBasicsPageComponent } from './pages/design-basics-page/design-basics-page.component';
 import { IconographyPageComponent } from './pages/iconography-page/iconography-page.component';
 import { FormDesignPageComponent } from './pages/form-design-page/form-design-page.component';
+import { AutofocusPageComponent } from './pages/autofocus-page/autofocus-page.component';
+import { FocusOnChangePageComponent } from './pages/focus-on-change-page/focus-on-change-page.component';
+import { CheckAllPageComponent } from './pages/check-all-page/check-all-page.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import { FormDesignPageComponent } from './pages/form-design-page/form-design-pa
     DesignBasicsPageComponent,
     IconographyPageComponent,
     FormDesignPageComponent,
+    AutofocusPageComponent,
+    FocusOnChangePageComponent,
+    CheckAllPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
   providers: [],

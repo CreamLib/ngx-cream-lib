@@ -1,11 +1,15 @@
-<div class="message editorial" [ngClass]="{ info: !isError, error: isError }">
-  <svg *ngIf="!isError" role="img" width="24" height="24" aria-labelledby="infoLabel">
+<div class="message editorial" [ngClass]="{ info: !isError, error: isError, warning: isWarning }">
+  <svg *ngIf="!isError && !isWarning" role="img" width="24" height="24" aria-labelledby="infoLabel">
     <title id="infoLabel" i18n>Information</title>
     <use href="./assets/img/sprite.svg#info"></use>
   </svg>
   <svg *ngIf="isError" role="img" width="24" height="24" aria-labelledby="infoLabel">
-    <title id="infoLabel" i18n>Alert</title>
+    <title id="infoLabel" i18n>Error</title>
     <use href="./assets/img/sprite.svg#error"></use>
+  </svg>
+  <svg *ngIf="isWarning" role="img" width="24" height="24" aria-labelledby="infoLabel">
+    <title id="infoLabel" i18n>Alert</title>
+    <use href="./assets/img/sprite.svg#warning"></use>
   </svg>
   <div class="content">
     <ng-content></ng-content>

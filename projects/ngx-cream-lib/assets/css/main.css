@@ -263,7 +263,7 @@ input, select, textarea {
   background-color: var(--body-bg);
   padding: 0.5em;
   border: 1px solid var(--n-medium);
-  border-radius: 0.3em;
+  border-radius: var(--radius);
   transition: all;
 }
 
@@ -330,7 +330,7 @@ button.as-reset {
   padding: 0.7em 1.5em 0.85em;
   margin-bottom: 0.5rem;
   border: 2px solid var(--hot-color);
-  border-radius: 0.3em;
+  border-radius: var(--radius);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }

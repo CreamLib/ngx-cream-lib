@@ -14,17 +14,19 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-      <c3m-tabs label="Tabs for demo">
-        <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
-          <p>This is the content of first tab</p>
-        </c3m-tab-panel>
-        <c3m-tab-panel tabTitle="Second Tab">
-          <p>This is the content of second tab</p>
-        </c3m-tab-panel>
-        <c3m-tab-panel tabTitle="Third Tab">
-          <p>This is the content of third tab</p>
-        </c3m-tab-panel>
-      </c3m-tabs>
+      <div class="demo">
+        <c3m-tabs label="Tabs for demo">
+          <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
+            <p>This is the content of first tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Second Tab">
+            <p>This is the content of second tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Third Tab">
+            <p>This is the content of third tab</p>
+          </c3m-tab-panel>
+        </c3m-tabs>
+      </div>
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -59,17 +61,19 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-      <c3m-tabs label="Demo for deletable tabs" [deletable]="true">
-        <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
-          <p>This is the content of first tab</p>
-        </c3m-tab-panel>
-        <c3m-tab-panel tabTitle="Second Tab">
-          <p>This is the content of second tab</p>
-        </c3m-tab-panel>
-        <c3m-tab-panel tabTitle="Third Tab">
-          <p>This is the content of third tab</p>
-        </c3m-tab-panel>
-      </c3m-tabs>
+      <div class="demo">
+        <c3m-tabs label="Demo for deletable tabs" [deletable]="true">
+          <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
+            <p>This is the content of first tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Second Tab">
+            <p>This is the content of second tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Third Tab">
+            <p>This is the content of third tab</p>
+          </c3m-tab-panel>
+        </c3m-tabs>
+      </div>
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -94,7 +98,7 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-      <div style="background-color: #fff; padding: 1rem">
+      <div class="demo">
         <c3m-tabs class="discrete" label="Demo for deletable tabs">
           <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
             <p>This is the content of first tab</p>
@@ -131,21 +135,23 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-      <c3m-tabs label="Demo for deletable tabs">
-        <c3m-tab-panel
-          tabTitle="First Tab"
-          svgId="bt-scrollLeft"
-          svgTitle="Forms"
-          [isActive]="true">
-          <p>This is the content of first tab</p>
-        </c3m-tab-panel>
-        <c3m-tab-panel tabTitle="Second Tab" svgId="bt-scrollLeft" svgTitle="Blocks">
-          <p>This is the content of second tab</p>
-        </c3m-tab-panel>
-        <c3m-tab-panel tabTitle="Third Tab" svgId="bt-scrollLeft" svgTitle="Feedbacks">
-          <p>This is the content of third tab</p>
-        </c3m-tab-panel>
-      </c3m-tabs>
+      <div class="demo">
+        <c3m-tabs label="Demo for deletable tabs">
+          <c3m-tab-panel
+            tabTitle="First Tab"
+            svgId="bt-scrollLeft"
+            svgTitle="Forms"
+            [isActive]="true">
+            <p>This is the content of first tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Second Tab" svgId="bt-scrollLeft" svgTitle="Blocks">
+            <p>This is the content of second tab</p>
+          </c3m-tab-panel>
+          <c3m-tab-panel tabTitle="Third Tab" svgId="bt-scrollLeft" svgTitle="Feedbacks">
+            <p>This is the content of third tab</p>
+          </c3m-tab-panel>
+        </c3m-tabs>
+      </div>
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -170,54 +176,46 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-      <div style="width: 50%; margin-bottom: 2rem">
+      <div class="demo" style="min-width: 300px; width: 50%">
         <c3m-tabs label="Demo for deletable tabs">
-          <c3m-tab-panel
-            tabTitle="First Tab"
-            svgId="bt-scrollLeft"
-            svgTitle="Forms"
-            [isActive]="true">
+          <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
             <p>This is the content of first tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Second Tab" svgId="bt-scrollLeft" svgTitle="Blocks">
+          <c3m-tab-panel tabTitle="Second Tab">
             <p>This is the content of second tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Third Tab" svgId="bt-scrollLeft" svgTitle="Feedbacks">
+          <c3m-tab-panel tabTitle="Third Tab">
             <p>This is the content of third tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Forth Tab" svgId="bt-scrollLeft" svgTitle="Forms">
+          <c3m-tab-panel tabTitle="Forth Tab">
             <p>This is the content of forth tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Fifth Tab" svgId="bt-scrollLeft" svgTitle="Blocks">
+          <c3m-tab-panel tabTitle="Fifth Tab">
             <p>This is the content of fifth tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Sixth Tab" svgId="bt-scrollLeft" svgTitle="Feedbacks">
+          <c3m-tab-panel tabTitle="Sixth Tab">
             <p>This is the content of sixth tab</p>
           </c3m-tab-panel>
         </c3m-tabs>
       </div>
-      <div style="width: 50%">
+      <div class="demo" style="min-width: 300px; width: 50%">
         <c3m-tabs label="Demo for deletable tabs" [handleScroll]="true">
-          <c3m-tab-panel
-            tabTitle="First Tab"
-            svgId="bt-scrollLeft"
-            svgTitle="Forms"
-            [isActive]="true">
+          <c3m-tab-panel tabTitle="First Tab" [isActive]="true">
             <p>This is the content of first tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Second Tab" svgId="bt-scrollLeft" svgTitle="Blocks">
+          <c3m-tab-panel tabTitle="Second Tab">
             <p>This is the content of second tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Third Tab" svgId="bt-scrollLeft" svgTitle="Feedbacks">
+          <c3m-tab-panel tabTitle="Third Tab">
             <p>This is the content of third tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Forth Tab" svgId="bt-scrollLeft" svgTitle="Forms">
+          <c3m-tab-panel tabTitle="Forth Tab">
             <p>This is the content of forth tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Fifth Tab" svgId="bt-scrollLeft" svgTitle="Blocks">
+          <c3m-tab-panel tabTitle="Fifth Tab">
             <p>This is the content of fifth tab</p>
           </c3m-tab-panel>
-          <c3m-tab-panel tabTitle="Sixth Tab" svgId="bt-scrollLeft" svgTitle="Feedbacks">
+          <c3m-tab-panel tabTitle="Sixth Tab">
             <p>This is the content of sixth tab</p>
           </c3m-tab-panel>
         </c3m-tabs>

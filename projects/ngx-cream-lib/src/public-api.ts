@@ -24,3 +24,4 @@ export * from './lib/toast/toast.component';
 export * from './lib/directives/focus-on-page-change.directive';
 export * from './lib/directives/autofocus.directive';
 export * from './lib/directives/tooltip.directive';
+export * from './lib/directives/check-all.directive';

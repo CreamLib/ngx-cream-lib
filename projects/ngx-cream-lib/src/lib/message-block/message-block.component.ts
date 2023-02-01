@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class MessageBlockComponent {
   @Input() isError: boolean = false;
+  @Input() isWarning: boolean = false;
 }
