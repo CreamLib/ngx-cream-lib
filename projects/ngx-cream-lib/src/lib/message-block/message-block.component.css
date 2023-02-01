@@ -8,6 +8,10 @@ div.message {
   z-index: 1;
 }
 div.error {
+  color: var(--n-s-dark);
+  background-color: var(--hot-u-light);
+}
+div.warning {
   background-color: var(--hot-sec-light);
 }
 
@@ -25,6 +29,6 @@ svg {
 div.info svg {
   fill: var(--sec-color);
 }
-div.error svg {
+div.error svg, div.warning svg {
   fill: var(--alert-color);
 }

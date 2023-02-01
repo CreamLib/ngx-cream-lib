@@ -48,5 +48,7 @@ a.highlight {
   display: inline-block;
   color: var(--text-inv);
   background-color: var(--main-color);
-  padding: 0.5em 1em;
+  padding: 0.35em 1em 0.6em;
 }
+
+a.highlight:hover {background-color: var(--hot-color);}

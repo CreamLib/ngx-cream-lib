@@ -18,12 +18,20 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="1519954996184640001" datatype="html">
+        <source>Error</source>
+        <target>Erreur</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">projects/ngx-cream-lib/src/lib/message-block/message-block.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="5726454104363206493" datatype="html">
         <source>Alert</source>
         <target>Alerte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">./node_modules/ngx-cream-lib/lib/message-block/message-block.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9061282158263468923" datatype="html">

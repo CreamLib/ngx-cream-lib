@@ -1,11 +1,13 @@
 <section id="general">
-  <h3>General Information Message</h3>
+  <h3>General/Positive Message</h3>
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-      <c3m-message-block>
-        <p>This is a generic informative message.</p>
-      </c3m-message-block>
+      <div class="demo">
+        <c3m-message-block>
+          <p>This is a generic informative message.</p>
+        </c3m-message-block>
+      </div>
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -18,13 +20,36 @@
 </section>
 
 <section id="error">
-  <h3>Error or Alert Message</h3>
+  <h3>Warning Message</h3>
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-      <c3m-message-block [isError]="true">
-        <p>This is an important error or alert message!</p>
-      </c3m-message-block>
+      <div class="demo">
+        <c3m-message-block [isWarning]="true">
+          <p>This is a warning message</p>
+        </c3m-message-block>
+      </div>
+    </c3m-tab-panel>
+    <c3m-tab-panel class="block-style" tabTitle="Application">
+      <pre>
+&lt;c3m-message-block [isWarning]=&#34;true&#34;&gt;
+  &lt;NG-CONTENT&gt;
+&lt;/c3m-message-block&gt;
+      </pre>
+    </c3m-tab-panel>
+  </c3m-tabs>
+</section>
+
+<section id="error">
+  <h3>Error Message</h3>
+
+  <c3m-tabs class="block-style" label="Demo and Code">
+    <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+      <div class="demo">
+        <c3m-message-block [isError]="true">
+          <p>This is an error message!</p>
+        </c3m-message-block>
+      </div>
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
@@ -54,7 +79,13 @@
       <td data-head="Name">[isError]</td>
       <td data-head="Type">boolean</td>
       <td data-head="Default">false</td>
-      <td>Specifies if message is an error or alert.</td>
+      <td>Specifies if message is an error</td>
+    </tr>
+    <tr>
+      <td data-head="Name">[isWarning]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>Specifies if message is an alert</td>
     </tr>
   </table>
   <p><em>* mandatory properties</em></p>

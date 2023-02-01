@@ -103,6 +103,10 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
       label: 'Directives',
       subs: [
         {
+          label: 'Focus on Page Change',
+          url: 'portal/focus-on-page-change',
+        },
+        {
           label: 'Tooltip',
           url: 'portal/tooltip',
         },
