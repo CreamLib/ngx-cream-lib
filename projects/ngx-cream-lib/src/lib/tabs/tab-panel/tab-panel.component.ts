@@ -1,12 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  HostListener,
-  Input,
-  OnInit,
-  TemplateRef,
-  ViewChild,
-} from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'c3m-tab-panel',
@@ -14,15 +6,16 @@ import {
   styleUrls: ['./tab-panel.component.css'],
 })
 export class TabPanelComponent implements OnInit, AfterViewInit {
-  @ViewChild('icon', { static: true }) c3mTabPanelIcon!: TemplateRef<unknown>;
   @Input() tabTitle = '';
   @Input() isActive!: boolean;
-  @Input() svgId!: string;
+  @Input() svgName!: string;
   @Input() svgTitle!: string;
   @Input() idTab!: number;
-  @Input() isDisabled!: boolean;
-  @Input() adaptable!: boolean;
-  @Input() tabIcon = '';
+  @Input() isDisabled: boolean = false;
+  @Input() deletable: boolean = false;
+  @Input() adaptable: boolean = false;
+  @Input() tabIcon: string = '';
+  @Input() draggable: boolean = false;
 
   tabID = '';
   panelID = '';

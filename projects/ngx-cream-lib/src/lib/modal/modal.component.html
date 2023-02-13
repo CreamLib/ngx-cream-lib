@@ -14,12 +14,7 @@
         {{ modalTitle }}
       </h2>
       <p>
-        <button
-          class="modal-close"
-          type="button"
-          [c3mAutofocus]="isOpen"
-          aria-label="Close modal"
-          (click)="ToggleOpen()">
+        <button class="modal-close" type="button" [c3mAutofocus]="isOpen" aria-label="Close modal" (click)="ToggleOpen()">
           <svg role="img" width="25" height="25">
             <title i18n>Close modal</title>
             <use href="./assets/img/sprite.svg#bt-close"></use>

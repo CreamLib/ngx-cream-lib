@@ -1,5 +1,12 @@
 # ngx-cream-lib Releases
 
+## Version 1.0.45
+
+- **progress-spinner**: Improved accessibility for screen readers
+- **sprite.svg**: added new icons (bt-copy and star)
+- **tabs** and **tab-panel**: shifted Input options (icons, deletable) to tab-panel.
+  Drag and drop are optional now, and defined on tab-panel
+
 ## Version 1.0.4
 
 - Added **check-all** directive (not yet documented)

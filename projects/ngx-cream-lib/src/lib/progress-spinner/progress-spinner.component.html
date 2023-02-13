@@ -1,5 +1,6 @@
-<div class="progress" role="alert" [attr.aria-hidden]="!isOpen" tabindex="-1">
-  <div class="overlay"></div>
-
-  {{ progressText }}
+<div class="progress" aria-live="assertive">
+  <div class="content" [attr.aria-hidden]="!isOpen">
+    <div class="overlay"></div>
+    {{ progressText }}
+  </div>
 </div>

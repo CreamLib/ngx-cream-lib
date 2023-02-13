@@ -2,7 +2,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'c3m-h',
-  template: `<ng-template #content><ng-content></ng-content></ng-template>
+  template: `
+    <ng-template #content><ng-content></ng-content></ng-template>
     <ng-container [ngSwitch]="titleLevel">
       <h1 *ngSwitchCase="'1'">
         <ng-container *ngTemplateOutlet="content"></ng-container>
@@ -22,7 +23,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
       <h6 *ngSwitchCase="'6'">
         <ng-container *ngTemplateOutlet="content"></ng-container>
       </h6>
-    </ng-container>`,
+    </ng-container>
+  `,
   encapsulation: ViewEncapsulation.None,
 })
 export class HComponent {

@@ -32,7 +32,7 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
 
   @ViewChild('mainNav') nav!: ElementRef;
 
-  currentUrl: string = this.Location.path();
+  currentUrl!: string;
   navSectionID = '';
 
   navData = [
@@ -176,6 +176,10 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
     this.cdr.detectChanges();
   }
 
+  routeSkipLink(element: string) {
+    return `${this.Location.path()}#${element}`;
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize() {
     if (window.innerWidth >= 1000) {
@@ -236,14 +240,15 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
 
   // Nav collapsibles
   openSection(e: Event) {
-    if ((e.target as HTMLElement).getAttribute('aria-expanded') == 'false') {
-      (e.target as HTMLElement).classList.remove('close');
-      (e.target as HTMLElement).classList.add('open');
-      (e.target as HTMLElement).setAttribute('aria-expanded', 'true');
+    const theTrigger = e.target as HTMLElement;
+    if (theTrigger.getAttribute('aria-expanded') == 'false') {
+      theTrigger.classList.remove('close');
+      theTrigger.classList.add('open');
+      theTrigger.setAttribute('aria-expanded', 'true');
     } else {
-      (e.target as HTMLElement).classList.remove('open');
-      (e.target as HTMLElement).classList.add('close');
-      (e.target as HTMLElement).setAttribute('aria-expanded', 'false');
+      theTrigger.classList.remove('open');
+      theTrigger.classList.add('close');
+      theTrigger.setAttribute('aria-expanded', 'false');
     }
   }
 

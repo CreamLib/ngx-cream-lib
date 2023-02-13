@@ -105,6 +105,7 @@ svg {
   flex: 0 0 24px;
   fill: currentColor;
   margin-top: -3px;
+  pointer-events: none;
   transform-origin: 50%;
   transform: rotate(-90deg);
   transition: all 0.2s;

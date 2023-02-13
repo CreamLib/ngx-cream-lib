@@ -1,6 +1,6 @@
 <nav #mainNav [id]="setId" aria-label="Main navigation">
   <p class="skip-link">
-    <a [attr.href]="currentUrl + '#page-body'">Skip navigation</a>
+    <a [href]="routeSkipLink('page-body')">Skip navigation</a>
   </p>
   <ul>
     <li *ngFor="let section of navData">
@@ -11,7 +11,6 @@
         aria-expanded="false"
         [attr.aria-controls]="navSectionID">
         <svg role="img" width="24" height="24" aria-hidden="true">
-          <!--use [attr.href]="'./assets/img/sprite.svg#' + section.svgIcon"></use-->
           <use href="./assets/img/sprite.svg#accordion-down"></use>
         </svg>
         {{ section.label }}
@@ -21,7 +20,7 @@
         <li *ngFor="let subSection of getSubData(section.label)">
           <a
             #navLink
-            routerLink="{{ subSection.url }}"
+            [routerLink]="subSection.url"
             routerLinkActive="active"
             #ariaRouterLink="routerLinkActive"
             [attr.aria-current]="ariaRouterLink.isActive ? 'page' : null"

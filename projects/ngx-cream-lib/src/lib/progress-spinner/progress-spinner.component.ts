@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./progress-spinner.component.css'],
 })
 export class ProgressSpinnerComponent {
-  @Input() progressText: string = 'Please wait...';
+  @Input() progressText!: string;
 
   isOpen: boolean = false;
   theId = this.randomID();

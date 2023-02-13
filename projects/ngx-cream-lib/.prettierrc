@@ -7,5 +7,8 @@
   "arrowParens": "avoid",
   "trailingComma": "es5",
   "bracketSameLine": true,
-  "printWidth": 100
+  "printWidth": 140,
+  "htmlWhitespaceSensitivity": "ignore",
+  "endOfLine": "auto",
+  "quoteProps": "preserve"
 }

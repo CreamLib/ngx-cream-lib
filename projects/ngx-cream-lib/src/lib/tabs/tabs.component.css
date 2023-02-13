@@ -21,6 +21,7 @@ button.tabber {
   align-items: center;
   gap: 0.5rem;
   width: 100%;
+  height: 100%;
   line-height: 1;
   font-family: var(--stack-b);
   white-space: nowrap;
@@ -37,9 +38,6 @@ button.tabber {
 button.tabber:hover {
   color: var(--text-inv);
   background-color: var(--hot-color);
-}
-button.tabber:active {
-  cursor: move;
 }
 
 button.tabber[aria-selected='true'] {
@@ -150,6 +148,7 @@ button.with-icon {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding-left: 0.75em;
 }
 button.with-icon svg {
   fill: var(--body-text);
@@ -173,6 +172,10 @@ button.with-icon:hover svg {
 .cdk-drag-placeholder {
   cursor: move;
   opacity: 0;
+}
+
+li.draggable button:active, .cdk-drop-list-dragging {
+  cursor: move;
 }
 
 .cdk-drag-animating {

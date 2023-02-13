@@ -18,7 +18,7 @@ div.hgroup h2 code {
   margin-top: 0.25em;
 }
 
-div.hgroup nav {display: none;}
+/* div.hgroup nav {display: none;} */
 
 div.hgroup ul {
   display: flex;
