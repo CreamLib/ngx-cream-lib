@@ -14,10 +14,10 @@ export class PortalLayoutComponent {
   isThereSubNav = true;
   sections: Section[] = [];
 
-  constructor(private cdr: ChangeDetectorRef, private Location: Location) {}
+  constructor(private cdr: ChangeDetectorRef, private location: Location) {}
 
   routeSkipLink(element: string) {
-    return `${this.Location.path()}#${element}`;
+    return `${this.location.prepareExternalUrl(this.location.path())}#${element}`;
   }
 
   onActivate(e: CreamPage) {
