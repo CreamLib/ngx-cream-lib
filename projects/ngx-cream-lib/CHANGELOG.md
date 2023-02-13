@@ -4,8 +4,8 @@
 
 - **progress-spinner**: Improved accessibility for screen readers
 - **sprite.svg**: added new icons (bt-copy and star)
-- **tabs** and **tab-panel**: shifted Input options (icons, deletable) to tab-panel; 
-drag and drop are optional now, and defined on tab-panel
+- **tabs** and **tab-panel**: shifted Input options (icons, deletable) to tab-panel.
+  Drag and drop are optional now, and defined on tab-panel
 
 ## Version 1.0.4
 

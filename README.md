@@ -12,18 +12,17 @@ SEE DEMO : https://creamlib.github.io/ngx-cream-lib
 **In Developement**
 
 ## Sommaire
+
 - Installation
 - Updating
 - Credits
 
-
-Installation
-=====================
+# Installation
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
 Run
-`npm install ngx-cream-lib` 
+`npm install ngx-cream-lib`
 
 In your app.module.ts
 `import { NgxCreamLibModule } from 'ngx-cream-lib';`
@@ -34,14 +33,9 @@ And
    ]
   })`
 
-
-
-Snippets System
-=====================
+# Snippets System
 
 We use :
 `https://github.com/CreamNG/EntitifyIt` (Studio - Worldline)
-
- 
 
 2023 - CreamNG is part of the CreamLib initiative
