@@ -1,12 +1,7 @@
 <c3m-h class="head" [titleLevel]="titleLevel">
-  <button
-    type="button"
-    (click)="toggleOpen()"
-    [attr.aria-expanded]="isOpen"
-    [attr.aria-controls]="accPanelID"
-    [id]="accID">
+  <button type="button" (click)="toggleOpen()" [attr.aria-expanded]="isOpen" [attr.aria-controls]="accPanelID" [id]="accID">
     <span>{{ label }}</span>
-    <span class="total" *ngIf="total !== ''"> ({{ total }}) </span>
+    <span class="total" *ngIf="total !== ''">({{ total }})</span>
   </button>
 </c3m-h>
 

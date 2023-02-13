@@ -24,16 +24,15 @@ import { TabPanelComponent } from './tab-panel/tab-panel.component';
 })
 export class TabsComponent implements AfterViewInit, AfterContentInit {
   /* List of Tabs Element */
+
   @ViewChildren('tabs') tabsElement!: QueryList<ElementRef>;
-  @ContentChildren(TabPanelComponent)
-  tabComponents!: QueryList<TabPanelComponent>;
+  @ContentChildren(TabPanelComponent) tabComponents!: QueryList<TabPanelComponent>;
 
   @Input() isDisabled!: boolean;
-  @Input() hasNew = false;
-  @Input() label = '';
-  @Input() deletable = false;
-  @Input() tabIcon = '';
-  @Input() handleScroll = false;
+  @Input() hasNew: boolean = false;
+  @Input() label: string = '';
+  @Input() tabIcon: string = '';
+  @Input() handleScroll: boolean = false;
 
   @Output() activeTab = '';
   @Output() deletedTabIndex!: number;
@@ -189,12 +188,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-      transferArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
+      transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
     }
     this.changeTab.emit(event.currentIndex);
   }

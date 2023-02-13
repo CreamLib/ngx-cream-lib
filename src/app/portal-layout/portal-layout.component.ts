@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { CreamPage } from '../pages/cream-page';
 
 @Component({
@@ -13,15 +13,18 @@ export class PortalLayoutComponent {
   resourceType = 'Component';
   isThereSubNav = true;
   sections: Section[] = [];
-  currentUrl: string = this.router.url;
-  parsedUrl = new URL(window.location.href);
 
-  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, private Location: Location) {}
+
+  routeSkipLink(element: string) {
+    return `${this.Location.path()}#${element}`;
+  }
 
   onActivate(e: CreamPage) {
     this.pageTitle = e.pageTitle;
     this.componentName = e.componentName;
     this.resourceType = e.resourceType;
+
     this.cdr.detectChanges();
 
     const sectionDOM = document.querySelectorAll('section');

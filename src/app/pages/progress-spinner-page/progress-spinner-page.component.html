@@ -15,21 +15,42 @@
 
   <c3m-tabs class="block-style" label="Demo and Code">
     <c3m-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
-      <button (click)="stopProgress(process1); process1.ToggleOpen($event)">Open spinner</button>
-      <c3m-progress-spinner #process1>
-        <p>Please, wait...</p>
-      </c3m-progress-spinner>
+      <button
+        (click)="insertContent(process1); stopProgress(process1); process1.ToggleOpen($event)">
+        Open spinner
+      </button>
+      <c3m-progress-spinner #process1></c3m-progress-spinner>
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
 &lt;c3m-progress-spinner #process1&gt;
-  &lt;p&gt;Please, wait...&lt;/p&gt;
 &lt;/c3m-progress-spinner&gt;
 
 EXAMPLE TO TRIGGER THE SPINNER
 
-&lt;button (click)=&#34;process1.ToggleOpen($event); stopProgress(process1)&#34;&gt;Open spinner&lt;/button&gt;
+&lt;button (click)=&#34;insertContent(process1); process1.ToggleOpen($event); stopProgress(process1)&#34;&gt;
+  Open spinner
+&lt;/button&gt;
+
+insertContent(spinner: ProgressSpinnerComponent) &#123;
+  spinner.progressText = &#34;Loading...&#34;;
+&#125;
+
+// Demo for progress spinner
+// Sends signal to stop progress and close spinner
+stopProgress(el: any) &#123;
+  setTimeout(function () &#123;
+    el.isOpen = false;
+    el.progressText = &#34;&#34;;
+  &#125;, 3000);
+&#125;
       </pre>
+
+      <c3m-message-block [isWarning]="true">
+        <p>
+          The text to be announced by screen readers must be injected dynamically to the component.
+        </p>
+      </c3m-message-block>
     </c3m-tab-panel>
   </c3m-tabs>
 </section>
@@ -51,8 +72,8 @@ EXAMPLE TO TRIGGER THE SPINNER
     <tr>
       <td data-head="Name">progressText</td>
       <td data-head="Type">string</td>
-      <td data-head="Default">"Please, wait..."</td>
-      <td>Allows to customize alternative text for screen readers</td>
+      <td data-head="Default">--</td>
+      <td>Dynamic text to be announced by screen readers.</td>
     </tr>
   </table>
   <p><em>* mandatory properties</em></p>

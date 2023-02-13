@@ -7,7 +7,7 @@
   }
 }
 
-div.progress {
+div.progress div.content {
   display: none;
   position: fixed;
   width: 100%;
@@ -17,7 +17,7 @@ div.progress {
   z-index: 1000;
 }
 
-div.progress[aria-hidden='false'] {
+div.progress div.content[aria-hidden='false'] {
   display: block;
 }
 
@@ -30,8 +30,7 @@ div.progress div.overlay {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-div.progress::before,
-div.progress::after {
+div.progress div.content::before, div.progress div.content::after {
   display: block;
   position: absolute;
   content: '';
@@ -44,18 +43,18 @@ div.progress::after {
   border: 15px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
-div.progress::before {
+div.progress div.content::before {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
-div.progress::after {
+div.progress div.content::after {
   border-left: 15px solid rgba(255, 255, 255, 0.85);
   transform-origin: 50% 50%;
   animation: spin 1.1s infinite linear;
 }
 
 @media (prefers-reduced-motion) {
-  div.progress::after {
+  div.progress div.content::after {
     animation: spin 6s infinite linear;
   }
 }

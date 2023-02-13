@@ -5,13 +5,15 @@ import { NgxCreamLibModule } from '../ngx-cream-lib.module';
 import { AccordionComponent } from './accordion.component';
 
 @Component({
-  template: `<c3m-accordion><c3m-accordion-item></c3m-accordion-item></c3m-accordion>`,
+  template: `
+    <c3m-accordion><c3m-accordion-item></c3m-accordion-item></c3m-accordion>
+  `,
 })
 class TestDefaultTitleLevelComponent {}
 @Component({
-  template: `<c3m-accordion titleLevel="4"
-    ><c3m-accordion-item></c3m-accordion-item
-  ></c3m-accordion>`,
+  template: `
+    <c3m-accordion titleLevel="4"><c3m-accordion-item></c3m-accordion-item></c3m-accordion>
+  `,
 })
 class TestDefaultTitleLevel4Component {}
 
@@ -21,11 +23,7 @@ describe('AccordionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AccordionComponent,
-        TestDefaultTitleLevelComponent,
-        TestDefaultTitleLevel4Component,
-      ],
+      declarations: [AccordionComponent, TestDefaultTitleLevelComponent, TestDefaultTitleLevel4Component],
       imports: [NgxCreamLibModule],
       providers: [{ provide: ComponentFixtureAutoDetect, useValue: true }],
     }).compileComponents();

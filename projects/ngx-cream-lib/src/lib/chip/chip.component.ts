@@ -23,10 +23,7 @@ export class ChipComponent implements OnInit {
   }
 
   deleteChip(): void {
-    this.renderer.removeChild(
-      this.elementRef.nativeElement.parentNode,
-      this.elementRef.nativeElement
-    );
+    this.renderer.removeChild(this.elementRef.nativeElement.parentNode, this.elementRef.nativeElement);
   }
 
   randomID() {

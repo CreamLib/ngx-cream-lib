@@ -10,7 +10,7 @@
   <nav *ngIf="isThereSubNav" aria-label="Sections on this page">
     <ul>
       <li *ngFor="let section of sections">
-        <a [attr.href]="currentUrl + '#' + section.id">
+        <a [href]="routeSkipLink(section.id)">
           {{ section.label }}
         </a>
       </li>
