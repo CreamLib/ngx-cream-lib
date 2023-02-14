@@ -103,7 +103,11 @@
                 "output": "/assets/"
               }
             ],
-            "styles": ["./projects/ngx-cream-lib/assets/css/main.css", "src/assets/css/local.css",  "./node_modules/highlight.js/styles/github.css"],
+            "styles": [
+              "./projects/ngx-cream-lib/assets/css/main.css",
+              "src/assets/css/local.css",
+              "./node_modules/highlight.js/styles/github.css"
+            ],
             "scripts": []
           }
         },
