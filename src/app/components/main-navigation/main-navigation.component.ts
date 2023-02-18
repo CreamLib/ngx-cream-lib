@@ -112,6 +112,9 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
         },
       ],
     },
+  ];
+
+  navDataGuide = [
     {
       label: 'CreamNg UX/ UI',
       subs: [
@@ -201,6 +204,11 @@ export class MainNavigationComponent implements OnInit, AfterViewInit {
   // Return sub array
   getSubData(levelOne: string) {
     const navData = Object.values(this.navData).filter(data => data.label === levelOne);
+    return navData[0].subs;
+  }
+  // Return sub array
+  getSubDataGuide(levelOne: string) {
+    const navData = Object.values(this.navDataGuide).filter(data => data.label === levelOne);
     return navData[0].subs;
   }
 

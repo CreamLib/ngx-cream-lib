@@ -13,7 +13,7 @@ header h1 {
 }
 
 h1 img {
-  max-width: 175px;
+  max-width: 155px;
 }
 h1 a {
   position: relative;
@@ -48,7 +48,7 @@ button.nav-control svg {
     height: 100%;
     top: 0;
     left: 0;
-    padding: 1.5rem 0 0;
+    padding: 2rem 0 0;
     z-index: 2;
   }
   header .logo {
