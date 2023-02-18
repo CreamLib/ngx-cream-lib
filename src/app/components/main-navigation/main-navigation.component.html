@@ -2,6 +2,8 @@
   <p class="skip-link">
     <a [href]="routeSkipLink('page-body')">Skip navigation</a>
   </p>
+
+  <h2>Components</h2>
   <ul>
     <li *ngFor="let section of navData">
       <button
@@ -18,6 +20,38 @@
 
       <ul class="level2" [id]="navSectionID">
         <li *ngFor="let subSection of getSubData(section.label)">
+          <a
+            #navLink
+            [routerLink]="subSection.url"
+            routerLinkActive="active"
+            #ariaRouterLink="routerLinkActive"
+            [attr.aria-current]="ariaRouterLink.isActive ? 'page' : null"
+            (click)="closeNavCondition()"
+            (blur)="isLast($event)">
+            {{ subSection.label }}
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Documentation</h2>
+  <ul>
+    <li *ngFor="let section of navDataGuide">
+      <button
+        class="level1"
+        #levelOne
+        (click)="openSection($event)"
+        aria-expanded="false"
+        [attr.aria-controls]="navSectionID">
+        <svg role="img" width="24" height="24" aria-hidden="true">
+          <use href="./assets/img/sprite.svg#accordion-down"></use>
+        </svg>
+        {{ section.label }}
+      </button>
+
+      <ul class="level2" [id]="navSectionID">
+        <li *ngFor="let subSection of getSubDataGuide(section.label)">
           <a
             #navLink
             [routerLink]="subSection.url"

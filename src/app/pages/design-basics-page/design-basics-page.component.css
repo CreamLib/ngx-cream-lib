@@ -7,10 +7,12 @@ dl.palette {
 }
   dl.palette div {
     flex: 0 1 21%;
+    min-width: 120px;
   }
   dl.palette dt {
     position: relative;
-    font-variation-settings: var(--fvs-bold);
+    font-size: 0.8em;
+    font-family: var(--stack-b);
   }
   dl.palette dt::before {
     content: "";
@@ -34,10 +36,10 @@ dl.palette {
   dl.palette dt.contrast::before {
     border: 1px solid var(--n-medium);
   }
+  dl.palette dd {font-size: 0.8em;}
 
   dl.palette code {
     display: block;
-    font-size: 80%;
     margin: 0.25rem 0;
   }
 
