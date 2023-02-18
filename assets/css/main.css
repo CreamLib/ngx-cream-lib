@@ -322,7 +322,6 @@ button.as-submit,
 input[type='reset'],
 button[type='reset'],
 button.as-reset {
-  font-size: 120%;
   line-height: 1;
   font-family: var(--stack-b);
   color: var(--text-inv);
@@ -560,6 +559,10 @@ div.explain p {
   top: auto;
   width: 1px;
   height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 /* Skip navigation */
