@@ -30,14 +30,16 @@ nav :focus-visible {
   outline-offset: -2px;
 }
 
+nav h2 {
+  position: relative;
+  font: 1em var(--stack);
+  margin: 0 2rem 1rem;
+}
+
 nav ul {
   display: none;
   list-style-type: none;
-  margin: 1rem;
-}
-nav > ul {
-  height: 80vh;
-  overflow-y: auto;
+  margin: 0.7rem 2rem 2rem;
 }
 
 nav > ul::-webkit-scrollbar {
@@ -51,8 +53,8 @@ nav > ul::-webkit-scrollbar-thumb {
 }
 
 nav ul li + li {
-  padding-top: 1rem;
-  margin-top: 1rem;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
   border-top: 1px dotted currentColor;
 }
 
@@ -158,10 +160,10 @@ nav.opened + div.overlay {
     box-shadow: none;
     z-index: 110;
   }
-  nav > ul {
+  nav.opened {
     display: block;
     overflow-y: auto;
-    height: calc(100vh - 250px);
+    height: calc(100vh - 250px - 2rem);
     scroll-behavior: smooth;
     scrollbar-width: thin;
   }

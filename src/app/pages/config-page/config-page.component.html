@@ -39,50 +39,43 @@
   </c3m-message-block>
 </section>
 
-<section id="config" class="editorial">
+<section id="internationalisation" class="editorial">
   <h3>Internationalisation</h3>
 
   <p>
     <strong>CreamNg</strong>
-    components use the i18n system for internationalisation. If your application is not in English,
-    you may follow the steps hereafter to translate the library components:
+    components use the i18n system for internationalisation. Projects that need other languages
+    other than en-US can do the following to translate CreamNg components:
   </p>
 
-  <ol>
+  <ul>
     <li>
-      Get CreamNg internationalisation file on Github:
-      <a
-        href="https://github.com/CreamLib/ngx-cream-lib/blob/main/src/locale/messages.xlf"
-        target="_blank">
-        messages.xlf
+      <a href="https://angular.io/guide/i18n-common-add-package" target="blank_">
+        Add the localize package
       </a>
     </li>
-    <li>Place the file in the "src/locale" directory</li>
     <li>
-      Copy the file and change the name for you local language, for example
-      <em>
-        "messages.
-        <strong>fr</strong>
-        .xlf"
-      </em>
+      <a
+        href="https://angular.io/guide/i18n-common-translation-files#extract-the-source-language-file">
+        Extract the source language file
+      </a>
     </li>
     <li>
-      Edit this new file with the wanted translation using the &lt;target&gt; element:
-      <!--div class="command"-->
-      <pre class="command">
-          <code [highlight]="codeInternationalisation"></code>
-  </pre>
-      <!--/div-->
+      <a
+        href="https://angular.io/guide/i18n-common-translation-files#create-a-translation-file-for-each-language">
+        Create a translation file for each language
+      </a>
     </li>
-  </ol>
-
-  <c3m-message-block>
-    <p>
-      For more information on how to merge translations into your application, consult
-      <a href="https://angular.io/guide/i18n-common-merge" target="_blank">
+    <li>
+      <a
+        href="https://angular.io/guide/i18n-common-translation-files#translate-each-translation-file">
+        Translate each translation file
+      </a>
+    </li>
+    <li>
+      <a href="https://angular.io/guide/i18n-common-merge">
         Merge translations into the application
       </a>
-      of the Angular documentation.
-    </p>
-  </c3m-message-block>
+    </li>
+  </ul>
 </section>
