@@ -24,13 +24,7 @@
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
-&lt;c3m-modal-trigger [modal]=&#34;exempleModal&#34;&gt;
-  Label of the button
-&lt;/c3m-modal-trigger&gt;
-
-&lt;c3m-modal #exempleModal modalTitle=&#34;This is the title of the modal&#34;&gt;
-  &lt;p&gt;Content of the modal&lt;/p&gt;
-&lt;/c3m-modal&gt;
+        <code [highlight]="codeModalFull"></code>
       </pre>
     </c3m-tab-panel>
   </c3m-tabs>
@@ -55,15 +49,7 @@
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
-&lt;c3m-modal-button [modal]=&#34;exempleModal2&#34;&gt;
-  Opens small modal
-&lt;/c3m-modal-trigger&gt;
-&lt;c3m-modal class=&#34;simple-dialog&#34; #exempleModal2 modalTitle=&#34;Cancel contract&#34;&gt;
-  &lt;p&gt;Content of the modal&lt;/p&gt;
-  &lt;p class=&#34;buttons-bar&#34;&gt;
-    &lt;button (click)=&#34;test();exempleModal2.ToggleOpen()&#34;&gt;Ok&lt;/button&gt;
-  &lt;/p&gt;
-&lt;/c3m-modal&gt;
+        <code [highlight]="codeModalDialog"></code>
       </pre>
     </c3m-tab-panel>
   </c3m-tabs>

@@ -36,18 +36,7 @@
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
-&lt;c3m-toast id=&#34;toast3&#34; #toast3
-  class=&#34;normal&#34;
-  styleClass=&#34;slide-to-top&#34;
-  toastText=&#34;This is a generic message&#34;&gt;
-&lt;/c3m-toast&gt;
-
-
-EXAMPLE TO TRIGGER THE TOAST
-
-&lt;button aria-controls=&#34;toast3&#34; (click)=&#34;openToast($event, toast3)&#34;&gt;
-  General Toast with option
-&lt;/button&gt;
+        <code [highlight]="codeToastGeneric"></code>
       </pre>
     </c3m-tab-panel>
   </c3m-tabs>
@@ -74,15 +63,7 @@ EXAMPLE TO TRIGGER THE TOAST
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
-&lt;c3m-toast id=&#34;toast&#34; #toast toastText=&#34;Positive feedback message&#34;&gt;
-&lt;/c3m-toast&gt;
-
-
-EXAMPLE TO TRIGGER THE TOAST
-
-&lt;button aria-controls=&#34;toast&#34; (click)=&#34;openToast($event, toast)&#34;&gt;
-  Success Toast (default)
-&lt;/button&gt;
+        <code [highlight]="codeToastSuccess"></code>
       </pre>
     </c3m-tab-panel>
   </c3m-tabs>
@@ -119,18 +100,7 @@ EXAMPLE TO TRIGGER THE TOAST
     </c3m-tab-panel>
     <c3m-tab-panel class="block-style" tabTitle="Application">
       <pre>
-&lt;c3m-toast id=&#34;toast2&#34; #toast2
-  role=&#34;alert&#34;
-  toastText=&#34;This is an alert message&#34;
-  closeBtnTitle=&#34;Close alert&#34;&gt;
-  This is an alert message
-&lt;/c3m-toast&gt;
-
-EXAMPLE TO TRIGGER THE TOAST
-
-&lt;button aria-controls=&#34;toast&#34; (click)=&#34;openToast($event, toast2)&#34;&gt;
-  Success Toast (default)
-&lt;/button&gt;
+        <code [highlight]="codeToastAlert"></code>
       </pre>
     </c3m-tab-panel>
   </c3m-tabs>
