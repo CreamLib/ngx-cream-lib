@@ -22,6 +22,7 @@ import { DesignBasicsPageComponent } from './pages/design-basics-page/design-bas
 import { FormDesignPageComponent } from './pages/form-design-page/form-design-page.component';
 import { IconographyPageComponent } from './pages/iconography-page/iconography-page.component';
 import { FocusOnChangePageComponent } from './pages/focus-on-change-page/focus-on-change-page.component';
+import { AutocompletePageComponent } from './pages/autocomplete-page/autocomplete-page.component';
 
 const routes: Routes = [
   //Portal (doc) routes goes here
@@ -33,6 +34,11 @@ const routes: Routes = [
         path: 'accordion',
         component: AccordionPageComponent,
         data: { title: 'Accordion Component' },
+      },
+      {
+        path: 'autocomplete',
+        component: AutocompletePageComponent,
+        data: { title: 'Autocomplete Component' },
       },
       {
         path: 'tabs',

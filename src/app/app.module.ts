@@ -30,6 +30,7 @@ import { FormDesignPageComponent } from './pages/form-design-page/form-design-pa
 import { AutofocusPageComponent } from './pages/autofocus-page/autofocus-page.component';
 import { FocusOnChangePageComponent } from './pages/focus-on-change-page/focus-on-change-page.component';
 import { CheckAllPageComponent } from './pages/check-all-page/check-all-page.component';
+import { AutocompletePageComponent } from './pages/autocomplete-page/autocomplete-page.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { CheckAllPageComponent } from './pages/check-all-page/check-all-page.com
     AutofocusPageComponent,
     FocusOnChangePageComponent,
     CheckAllPageComponent,
+    AutocompletePageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxCreamLibModule],
   providers: [],

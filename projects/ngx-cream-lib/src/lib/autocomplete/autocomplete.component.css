@@ -1,0 +1,18 @@
+#b1-listbox {
+  padding: 0.4rem;
+  position: absolute;
+  list-style: none;
+  background-color: white;
+  border: 1px solid grey;
+  min-width: 14.6rem;
+  max-height: 14rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-size: 95%;
+  cursor: pointer;
+}
+
+#b1-listbox li {
+  padding: 10px;
+}
+
