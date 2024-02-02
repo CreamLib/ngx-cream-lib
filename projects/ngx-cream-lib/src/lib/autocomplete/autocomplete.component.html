@@ -1,5 +1,5 @@
 <label for="b1-input">{{ label }}</label>
-<div class="box box-list" (focusout)="close()" (keydown)="escClose($event)">
+<div class="box box-list" (keydown)="escClose($event)" (focusout)="close()">
   <div class="group">
     <input
       #acInput
@@ -7,29 +7,18 @@
       class="b_edit"
       type="text"
       role="combobox"
-      (focus)="toggleOpen()"
+      (keypress.escape)="close()"
+      (focus)="open()"
       (click)="onChange($event)"
       (keyup)="onChange($event)"
-      aria-autocomplete="countries"
+      aria-autocomplete="values"
       [attr.aria-expanded]="isOpen"
       aria-controls="b1-listbox" />
-    <button
-      id="b1-button"
-      tabindex="-1"
-      aria-label="Regions"
-      [attr.aria-expanded]="isOpen"
-      (click)="toggleOpen()"
-      (close)="close()"
-      aria-controls="b1-listbox">
-      <svg width="18" height="16" aria-hidden="true" focusable="false" style="forced-color-adjust: auto">
-        <polygon class="arrow" stroke-width="0" fill-opacity="0.75" fill="currentcolor" points="3,6 15,6 9,14"></polygon>
-      </svg>
-    </button>
 
-    <ul id="b1-listbox" role="listbox" [hidden]="!isOpen" aria-label="Regions">
-      <p>
-        <li *ngFor="let li of filteredCountriesList">{{ li }}</li>
-      </p>
+    <ul id="b1-listbox" role="listbox" [hidden]="!isOpen" aria-label="Values">
+      <li *ngFor="let li of filteredList" (click)="getSelectedValue(li)">
+        {{ li }}
+      </li>
     </ul>
   </div>
 </div>

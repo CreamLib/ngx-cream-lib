@@ -10,7 +10,7 @@ export class AutocompletePageComponent {
   componentName = 'c3m-autocomplete';
   resourceType = 'Component';
 
-  countries = [
+  values = [
     'Hauts-de-France',
     'Normandie',
     'Grand Est',
