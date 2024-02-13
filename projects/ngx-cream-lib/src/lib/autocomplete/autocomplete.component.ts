@@ -12,7 +12,7 @@ export class AutocompleteComponent {
   @Input() acValue = '';
   @Input() filteredList: Array<string> = [];
   @Input() selectedValue = false;
-  @ViewChild('acInput') acInput!: ElementRef;
+  @ViewChild('acInput') acInput!: ElementRef<any>;
 
   open(): void {
     this.isOpen = !this.isOpen;
@@ -20,14 +20,42 @@ export class AutocompleteComponent {
   }
 
   close(): void {
-    setTimeout(() => {
+    if (this.selectedValue == false) {
+      // vérifier si acInput est vide pour que la scrollbar fonctionne
+      this.isOpen = true;
+    } else {
       this.isOpen = false;
-    }, 300);
+    }
   }
 
   escClose(event: KeyboardEvent): void {
     if (event.code === 'Escape') {
       this.isOpen = false;
+    }
+  }
+
+  navigationKeyDown(val: string) {
+    if (this.isOpen == true && this.selectedValue == true) {
+      //déplace le focus visuel vers la valeur suggérée suivante
+    }
+
+    this.acInput.nativeElement.value = val;
+    if (val == '' && this.isOpen == false) {
+      // déplace le focus visuel sur la première option
+    }
+  }
+
+  navigationKeyUp(val: string) {
+    if (this.isOpen == true && this.selectedValue == true) {
+      //déplace le focus visuel sur la dernière valeur suggérée
+    }
+
+    this.acInput.nativeElement.value = val;
+    if (val == '') {
+      if (this.isOpen == false) {
+        this.isOpen = true;
+      }
+      // déplace le focus visuel sur la dernière option
     }
   }
 
