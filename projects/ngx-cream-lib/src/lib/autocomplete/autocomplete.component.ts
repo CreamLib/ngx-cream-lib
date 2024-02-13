@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'c3m-autocomplete',
@@ -8,17 +8,24 @@ import { Component, Input } from '@angular/core';
 export class AutocompleteComponent {
   @Input() isOpen = false;
   @Input() label = '';
-  @Input() countries: Array<string> = [];
+  @Input() values: Array<string> = [];
   @Input() acValue = '';
-  @Input() filteredCountriesList: Array<string> = [];
+  @Input() filteredList: Array<string> = [];
+  @Input() selectedValue = false;
+  @ViewChild('acInput') acInput!: ElementRef<any>;
 
-  toggleOpen(): void {
+  open(): void {
     this.isOpen = !this.isOpen;
     this.onChange;
   }
 
   close(): void {
-    this.isOpen = false;
+    if (this.selectedValue == false) {
+      // vérifier si acInput est vide pour que la scrollbar fonctionne
+      this.isOpen = true;
+    } else {
+      this.isOpen = false;
+    }
   }
 
   escClose(event: KeyboardEvent): void {
@@ -27,8 +34,39 @@ export class AutocompleteComponent {
     }
   }
 
+  navigationKeyDown(val: string) {
+    if (this.isOpen == true && this.selectedValue == true) {
+      //déplace le focus visuel vers la valeur suggérée suivante
+    }
+
+    this.acInput.nativeElement.value = val;
+    if (val == '' && this.isOpen == false) {
+      // déplace le focus visuel sur la première option
+    }
+  }
+
+  navigationKeyUp(val: string) {
+    if (this.isOpen == true && this.selectedValue == true) {
+      //déplace le focus visuel sur la dernière valeur suggérée
+    }
+
+    this.acInput.nativeElement.value = val;
+    if (val == '') {
+      if (this.isOpen == false) {
+        this.isOpen = true;
+      }
+      // déplace le focus visuel sur la dernière option
+    }
+  }
+
   onChange(e: any) {
     this.acValue = e.target.value;
-    this.filteredCountriesList = this.countries.filter(country => country.toLowerCase().startsWith(this.acValue.toLowerCase()));
+    this.filteredList = this.values.filter(value => value.toLowerCase().startsWith(this.acValue.toLowerCase()));
+  }
+
+  getSelectedValue(val: string) {
+    this.acInput.nativeElement.value = val;
+    this.selectedValue = true;
+    this.close();
   }
 }
