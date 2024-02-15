@@ -23,6 +23,7 @@ import { FormDesignPageComponent } from './pages/form-design-page/form-design-pa
 import { IconographyPageComponent } from './pages/iconography-page/iconography-page.component';
 import { FocusOnChangePageComponent } from './pages/focus-on-change-page/focus-on-change-page.component';
 import { AutocompletePageComponent } from './pages/autocomplete-page/autocomplete-page.component';
+import { CardPageComponent } from './pages/card-page/card-page.component';
 
 const routes: Routes = [
   //Portal (doc) routes goes here
@@ -49,6 +50,11 @@ const routes: Routes = [
         path: 'messages',
         component: MessagePageComponent,
         data: { title: 'Messages Component' },
+      },
+      {
+        path: 'card',
+        component: CardPageComponent,
+        data: { title: 'Card' },
       },
       {
         path: 'custom-design',
