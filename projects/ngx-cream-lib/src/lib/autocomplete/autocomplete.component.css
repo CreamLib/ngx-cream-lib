@@ -1,4 +1,5 @@
 #b1-listbox {
+  display: none;
   position: absolute;
   list-style: none;
   background-color: white;
@@ -12,11 +13,15 @@
   cursor: pointer;
 }
 
+#b1-listbox.active {
+  display: block;
+}
+
 #b1-listbox li {
   padding: 0.5rem;
 }
 
 #b1-listbox li:hover {
-  background-color: grey;
+  background-color: rgb(172, 172, 172);
 }
 

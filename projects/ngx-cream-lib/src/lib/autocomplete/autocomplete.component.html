@@ -1,5 +1,5 @@
 <label for="b1-input">{{ label }}</label>
-<div class="box box-list" (keydown)="escClose($event)" (focusout)="close()">
+<div class="box box-list" (focusout)="close()" (keydown)="onKeyEsc()">
   <div class="group">
     <input
       #acInput
@@ -7,7 +7,9 @@
       class="b_edit"
       type="text"
       role="combobox"
-      (keypress.escape)="close()"
+      (keydown.escape)="close()"
+      (keydown.arrowDown)="goDown()"
+      (keydown.arrowUp)="goUp()"
       (focus)="open()"
       (click)="onChange($event)"
       (keyup)="onChange($event)"
@@ -15,8 +17,8 @@
       [attr.aria-expanded]="isOpen"
       aria-controls="b1-listbox" />
 
-    <ul id="b1-listbox" role="listbox" [hidden]="!isOpen" aria-label="Values">
-      <li *ngFor="let li of filteredList" (click)="getSelectedValue(li)">
+    <ul id="b1-listbox" role="listbox" [ngClass]="{ 'active': isOpen }" aria-label="Values">
+      <li #options *ngFor="let li of filteredList" (click)="getSelectedValue(li)">
         {{ li }}
       </li>
     </ul>

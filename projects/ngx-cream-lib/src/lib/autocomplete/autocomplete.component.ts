@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+/* eslint-disable prefer-const */
+import { Component, ElementRef, Input, ViewChild, ViewChildren, QueryList } from '@angular/core';
 
 @Component({
   selector: 'c3m-autocomplete',
@@ -6,60 +7,61 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
   styleUrls: ['./autocomplete.component.css'],
 })
 export class AutocompleteComponent {
-  @Input() isOpen = false;
-  @Input() label = '';
-  @Input() values: Array<string> = [];
   @Input() acValue = '';
-  @Input() filteredList: Array<string> = [];
+  @Input() label = '';
+  @Input() isOpen = false;
   @Input() selectedValue = false;
-  @ViewChild('acInput') acInput!: ElementRef<any>;
+  @Input() values: Array<string> = [];
+  @Input() filteredList: Array<string> = [];
+  @ViewChild('acInput') acInput!: ElementRef;
+  @ViewChildren('options') options!: QueryList<ElementRef>;
+  currentLi = -1;
+
+  close(): void {
+    setTimeout(() => {
+      this.isOpen = false;
+    }, 300);
+  }
 
   open(): void {
     this.isOpen = !this.isOpen;
     this.onChange;
   }
 
-  close(): void {
-    if (this.selectedValue == false) {
-      // vérifier si acInput est vide pour que la scrollbar fonctionne
-      this.isOpen = true;
+  onKeyEsc(): void {
+    this.isOpen = false;
+  }
+
+  ariaNull() {
+    this.options.forEach(option => option.nativeElement.setAttribute('aria-selected', null));
+  }
+
+  goDown() {
+    this.ariaNull();
+    if (this.currentLi + 1 > this.options.length) {
+      this.currentLi = 0;
     } else {
-      this.isOpen = false;
+      this.currentLi++;
     }
+
+    let li = this.options.toArray()[this.currentLi].nativeElement;
+    li.setAttribute('aria-selected', 'true');
   }
 
-  escClose(event: KeyboardEvent): void {
-    if (event.code === 'Escape') {
-      this.isOpen = false;
-    }
-  }
-
-  navigationKeyDown(val: string) {
-    if (this.isOpen == true && this.selectedValue == true) {
-      //déplace le focus visuel vers la valeur suggérée suivante
+  goUp() {
+    this.ariaNull();
+    if (this.currentLi + 1 > this.options.length) {
+      this.currentLi = 0;
+    } else {
+      this.currentLi--;
     }
 
-    this.acInput.nativeElement.value = val;
-    if (val == '' && this.isOpen == false) {
-      // déplace le focus visuel sur la première option
-    }
-  }
-
-  navigationKeyUp(val: string) {
-    if (this.isOpen == true && this.selectedValue == true) {
-      //déplace le focus visuel sur la dernière valeur suggérée
-    }
-
-    this.acInput.nativeElement.value = val;
-    if (val == '') {
-      if (this.isOpen == false) {
-        this.isOpen = true;
-      }
-      // déplace le focus visuel sur la dernière option
-    }
+    let li = this.options.toArray()[this.currentLi].nativeElement;
+    li.setAttribute('aria-selected', 'true');
   }
 
   onChange(e: any) {
+    this.isOpen = true;
     this.acValue = e.target.value;
     this.filteredList = this.values.filter(value => value.toLowerCase().startsWith(this.acValue.toLowerCase()));
   }
