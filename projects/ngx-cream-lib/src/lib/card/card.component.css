@@ -1,10 +1,43 @@
 .card {
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 8px;
-    padding: 1rem;
     background-color: white;
+    max-width: 300px;
+}
+
+.card-content {
+    padding: 1rem;
 }
 
 h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
+
+a.link-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(92, 92, 173);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2em;
+    margin-top: 1rem;
+  }
+  
+  a.link-button:hover {
+    background-color: rgb(7, 7, 158);
+  }
+
+  .picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .picture img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }

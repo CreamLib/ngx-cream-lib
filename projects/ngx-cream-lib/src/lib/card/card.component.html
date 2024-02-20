@@ -1,4 +1,15 @@
 <div class="card">
-    <h2>{{ title }}</h2>
-    <p><ng-content></ng-content></p>
+    <p class="picture">
+        <img [src]="'../../../../../assets/img/' + imageName" alt="">
+    </p>
+    <div class="card-content">
+    <!-- <c3m-h [titleLevel]="titleLevel">
+        {{ title }}
+      </c3m-h> -->
+      <h2>
+        {{ title }}
+      </h2>
+        <p><ng-content></ng-content></p>
+        <p><a class="link-button" [attr.href]="linkUrl">{{labelButton}}</a></p>
+    </div>
 </div>
