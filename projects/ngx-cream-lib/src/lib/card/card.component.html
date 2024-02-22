@@ -3,12 +3,9 @@
         <img [src]="'../../../../../assets/img/' + imageName" alt="">
     </p>
     <div class="card-content">
-    <!-- <c3m-h [titleLevel]="titleLevel">
+    <c3m-h titleLevel="3">
         {{ title }}
-      </c3m-h> -->
-      <h2>
-        {{ title }}
-      </h2>
+      </c3m-h>
         <p><ng-content></ng-content></p>
         <p><a class="link-button" [attr.href]="linkUrl">{{labelButton}}</a></p>
     </div>

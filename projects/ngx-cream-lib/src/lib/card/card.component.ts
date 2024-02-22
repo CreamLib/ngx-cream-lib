@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input() title: string = '';
-  @Input() titleLevel = '3';
+  // @Input() cardtitleLevel = '';
   @Input() imageName = '';
   @Input() linkUrl = "";
   @Input() labelButton = "";
