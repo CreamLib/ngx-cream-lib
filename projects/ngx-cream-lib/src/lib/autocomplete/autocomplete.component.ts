@@ -14,6 +14,7 @@ export class AutocompleteComponent {
   @Input() values: Array<string> = [];
   @Input() filteredList: Array<string> = [];
   @ViewChild('acInput') acInput!: ElementRef;
+  @ViewChild('listbox') listbox!: ElementRef;
   @ViewChildren('options') options!: QueryList<ElementRef>;
   currentLi = -1;
 
@@ -24,7 +25,7 @@ export class AutocompleteComponent {
   }
 
   open(): void {
-    this.isOpen = !this.isOpen;
+    this.isOpen = true;
     this.onChange;
   }
 
@@ -45,13 +46,14 @@ export class AutocompleteComponent {
     }
 
     let li = this.options.toArray()[this.currentLi].nativeElement;
+    console.log(li);
     li.setAttribute('aria-selected', 'true');
   }
 
   goUp() {
     this.ariaNull();
-    if (this.currentLi + 1 > this.options.length) {
-      this.currentLi = 0;
+    if (this.currentLi === 0) {
+      this.currentLi = this.options.length - 1;
     } else {
       this.currentLi--;
     }
@@ -61,7 +63,9 @@ export class AutocompleteComponent {
   }
 
   onChange(e: any) {
-    this.isOpen = true;
+    if (!this.isOpen) {
+      this.open();
+    }
     this.acValue = e.target.value;
     this.filteredList = this.values.filter(value => value.toLowerCase().startsWith(this.acValue.toLowerCase()));
   }
@@ -70,5 +74,48 @@ export class AutocompleteComponent {
     this.acInput.nativeElement.value = val;
     this.selectedValue = true;
     this.close();
+  }
+
+  // A vérifier
+
+  selectOption(li: HTMLElement) {
+    this.ariaNull();
+    li.setAttribute('aria-selected', 'true');
+  }
+
+  isOptionInView(li: HTMLElement) {
+    let listPosPage = this.listbox.nativeElement.offsetHeight;
+    let liPosPage = li.offsetTop;
+    let liHeight = li.offsetHeight;
+    let result;
+
+    if (liPosPage + liHeight > listPosPage) {
+      result = true;
+    } else {
+      result = false;
+    }
+    return result;
+  }
+
+  nullActiveDescendant() {
+    this.options.forEach(option => option.nativeElement.setAttribute('aria-activedescendant', null));
+  }
+
+  setActiveDescendant(li: HTMLElement) {
+    const acInput = this.acInput.nativeElement;
+    const listbox = this.listbox.nativeElement;
+
+    if (li && listbox.classList.contains('focus')) {
+      let id = li.getAttribute('id');
+      acInput.setAttribute('aria-activedescendant', id);
+      if (this.isOptionInView(li)) {
+        li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        listbox.scrollTo(0, 0);
+      }
+      this.selectOption(li);
+    } else {
+      this.nullActiveDescendant();
+    }
   }
 }

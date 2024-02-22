@@ -21,7 +21,7 @@
   padding: 0.5rem;
 }
 
-#b1-listbox li:hover {
+#b1-listbox li[aria-selected=true] {
   background-color: rgb(172, 172, 172);
 }
 

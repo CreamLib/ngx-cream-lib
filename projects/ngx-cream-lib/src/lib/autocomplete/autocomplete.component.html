@@ -1,9 +1,9 @@
-<label for="b1-input">{{ label }}</label>
+<label for="b1Input">{{ label }}</label>
 <div class="box box-list" (focusout)="close()" (keydown)="onKeyEsc()">
   <div class="group">
     <input
       #acInput
-      id="b1-input"
+      id="b1Input"
       class="b_edit"
       type="text"
       role="combobox"
@@ -17,8 +17,12 @@
       [attr.aria-expanded]="isOpen"
       aria-controls="b1-listbox" />
 
-    <ul id="b1-listbox" role="listbox" [ngClass]="{ 'active': isOpen }" aria-label="Values">
-      <li #options *ngFor="let li of filteredList" (click)="getSelectedValue(li)">
+    <ul #listbox id="b1-listbox" role="listbox" [ngClass]="{ 'active': isOpen }" aria-label="Values">
+      <li
+        #options
+        [attr.id]="'option-' + acInput.id + '-' + i"
+        *ngFor="let li of filteredList; let i = index"
+        (click)="getSelectedValue(li)">
         {{ li }}
       </li>
     </ul>
