@@ -1,0 +1,29 @@
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.steps div{
+  padding: 0.5rem;
+}
+
+.steps div p{
+  padding: 0.5rem;
+}
+
+.steps div p a {
+  padding: 0.6rem 1rem;
+  border-radius: 100%;
+  background-color: var(--main-color);
+  color: var(--text-inv);
+}
+
+@media (min-width: 550px) {
+  .steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

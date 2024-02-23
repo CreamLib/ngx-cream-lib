@@ -26,6 +26,7 @@ import { IconButtonComponent } from './icon-button/icon-button.component';
 import { TooltipDirective } from './directives/tooltip.directive';
 import { CheckAllDirective } from './directives/check-all.directive';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { StepsComponent } from './steps/steps.component';
 
 const components = [
   AccordionComponent,
@@ -50,10 +51,11 @@ const components = [
   TooltipDirective,
   CheckAllDirective,
   AutocompleteComponent,
+  StepsComponent,
 ];
 
 @NgModule({
-  declarations: [...components],
+  declarations: [...components, StepsComponent],
   imports: [CommonModule, RouterModule, DragDropModule, BrowserModule, BrowserAnimationsModule],
   exports: [...components],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

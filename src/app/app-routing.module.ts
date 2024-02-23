@@ -23,6 +23,7 @@ import { FormDesignPageComponent } from './pages/form-design-page/form-design-pa
 import { IconographyPageComponent } from './pages/iconography-page/iconography-page.component';
 import { FocusOnChangePageComponent } from './pages/focus-on-change-page/focus-on-change-page.component';
 import { AutocompletePageComponent } from './pages/autocomplete-page/autocomplete-page.component';
+import { StepsPageComponent } from './pages/steps-page/steps-page.component';
 
 const routes: Routes = [
   //Portal (doc) routes goes here
@@ -74,6 +75,11 @@ const routes: Routes = [
         path: 'snackbar',
         component: SnackbarPageComponent,
         data: { title: 'Snackbar' },
+      },
+      {
+        path: 'steps',
+        component: StepsPageComponent,
+        data: { title: 'Steps' },
       },
       {
         path: 'toast',
