@@ -9,6 +9,7 @@ export class CardComponent {
   @Input() title: string = '';
   // @Input() cardtitleLevel = '';
   @Input() imageName = '';
-  @Input() linkUrl = "";
-  @Input() labelButton = "";
+  @Input() linkUrl = '';
+  @Input() labelButton = '';
+  @Input() altImg = '';
 }
