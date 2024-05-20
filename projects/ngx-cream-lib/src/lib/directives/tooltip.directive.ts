@@ -15,11 +15,7 @@ export class TooltipDirective {
     const elLeft = el.getBoundingClientRect().left;
     const windowLeft = window.innerWidth;
 
-    if (elLeft + 250 > windowLeft) {
-      return true;
-    } else {
-      return false;
-    }
+    return elLeft + 250 > windowLeft;
   }
 
   storeOriginalPosition(el: any) {
@@ -67,36 +63,37 @@ export class TooltipDirective {
   // Mouse and keyboard events
   @HostListener('mouseenter', ['$event'])
   handleMouseEnter(event: MouseEvent) {
-    this.openTooltip();
     event.stopPropagation();
+    this.openTooltip();
   }
 
   @HostListener('focus', ['$event'])
   handleFocus(event: MouseEvent) {
-    this.openTooltip();
     event.stopPropagation();
+    this.openTooltip();
   }
 
   @HostListener('mouseleave', ['$event'])
   handleMouseLeave(event: MouseEvent) {
-    this.closeAllTooltips();
     event.stopPropagation();
+    this.closeAllTooltips();
   }
 
   @HostListener('mousedown', ['$event'])
   handleMouseDown(event: MouseEvent) {
-    this.closeAllTooltips();
     event.stopPropagation();
+    this.closeAllTooltips();
   }
 
   @HostListener('focusout', ['$event'])
   handleFocusOut(event: MouseEvent) {
-    this.closeAllTooltips();
     event.stopPropagation();
+    this.closeAllTooltips();
   }
 
   @HostListener('click', ['$event'])
   handleClick(event: any) {
+    event.stopPropagation();
     this.closeAllTooltips();
   }
 }
