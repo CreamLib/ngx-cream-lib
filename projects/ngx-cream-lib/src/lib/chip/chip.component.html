@@ -1,11 +1,15 @@
 <span class="chip">
-  <a *ngIf="linkUrl !== ''" [routerLink]="linkUrl">
-    {{ label }}
-  </a>
-  <span *ngIf="linkUrl === ''">
-    {{ label }}
-  </span>
-
+  
+  @if(linkUrl !== ''){
+    <a *ngIf="" [routerLink]="linkUrl">
+      {{ label }}
+    </a>
+  } @else {
+    <span>
+      {{ label }}
+    </span>
+  } 
+  
   <button *ngIf="deletable" type="button" [disabled]="disabled" (click)="deleteChip()" [attr.aria-label]="'Delete chip ' + label">
     <svg role="img" width="25" height="25" aria-hidden="true">
       <use href="./assets/img/sprite.svg#bt-close"></use>

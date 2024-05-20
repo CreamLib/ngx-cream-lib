@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProgressSpinnerComponent {
   @Input() progressText!: string;
-
+  
   isOpen: boolean = false;
   theId = this.randomID();
   spinnerTextId = 'progress' + this.theId;
